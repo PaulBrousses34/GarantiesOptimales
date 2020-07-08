@@ -1,0 +1,17 @@
+<div class="col-lg-4 mr-auto d-none d-lg-block nav__category p-0 pt-4 left-nav">
+    <nav class="nav" role="navigation">
+        <ul class="nav__list">
+            {% for category in categorie %}
+                <ul class="group-list px-3">
+                {% for subCategory in category.sousCategories %}
+                <li>
+                    <input id="sub-group-{{loop.index0 + 100}}" type="checkbox" hidden />
+                    <label class="left-nav-label left-nav-label-subCategory" data-subcategory="{{subCategory.slug}}" for="sub-group-{{loop.index0 + 100}}"><a class="left-nav-link" href="{{ path('particuliers_categorie', {'slug': subCategory.slug })}}">{{subCategory.name}}</a></label>
+                </li>
+                <br>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
