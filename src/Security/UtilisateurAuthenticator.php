@@ -85,7 +85,7 @@ class UtilisateurAuthenticator extends AbstractFormLoginAuthenticator implements
     /**
      * Used to upgrade (rehash) the user's password automatically over time.
      */
-    public function getPassword($credentials): ?string
+    public function getpassword($credentials): ?string
     {
         return $credentials['password'];
     }
@@ -96,8 +96,9 @@ class UtilisateurAuthenticator extends AbstractFormLoginAuthenticator implements
             return new RedirectResponse($targetPath);
         }
 
-        // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
+        $referer = filter_var($request->headers->get('referer'), FILTER_SANITIZE_URL);
+
+        return new RedirectResponse($referer);
     }
 
     protected function getLoginUrl()

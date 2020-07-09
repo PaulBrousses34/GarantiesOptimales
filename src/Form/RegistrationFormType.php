@@ -25,7 +25,7 @@ class RegistrationFormType extends AbstractType
     {
         $builder
 
-            ->add('username', null, [
+            ->add('lastname', null, [
                 'label'=>'Nom',
                 'help'=>'Le nom d\'utilisateur ne peut pas contenir d\'espace ni de caractères spéciaux à l\'exception de \'-\' et \'_\'',
                 'constraints'=> [
@@ -68,7 +68,7 @@ class RegistrationFormType extends AbstractType
             ])
 
             // This add is for the edit and not for the add (create a new account)
-            ->add('plainPassword', RepeatedType::class,[
+            ->add('password', RepeatedType::class,[
                 'type'=>PasswordType::class,
                 'required'=>false,
                 'help'=>'Votre mot de passe doit être compris entre 8 et 20 caractères et doit contenir au moins une minuscle,
@@ -114,8 +114,8 @@ class RegistrationFormType extends AbstractType
                         ],
                     ]);
                     // Password input required to create a new user
-                    $form->remove('plainPassword');
-                    $form->add('plainPassword', RepeatedType::class,[
+                    $form->remove('password');
+                    $form->add('password', RepeatedType::class,[
                         'type'=>PasswordType::class,
                         'help'=>'Votre mot de passe doit être compris entre 8 et 20 caractères et doit contenir au moins une minuscle,
                         une majuscule, un chiffre et un des caractères spéciaux $ @ % * + - _ !',

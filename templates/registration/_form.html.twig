@@ -1,7 +1,7 @@
 {{ form_start(registrationForm, {'attr': {'id': 'form'}}) }}
-    <div class="user-form-label">{{form_label (registrationForm.username) }} <span class="form-asterisk-mandatory">*</span></div>
-    <div>{{form_help (registrationForm.username) }}</div>
-    <div>{{form_widget (registrationForm.username) }}</div>
+    <div class="user-form-label">{{form_label (registrationForm.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_help (registrationForm.lastname) }}</div>
+    <div>{{form_widget (registrationForm.lastname) }}</div>
 
     <div class="user-form-label">{{form_label (registrationForm.firstname) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_help (registrationForm.firstname) }}</div>
@@ -10,15 +10,15 @@
     <div class="user-form-label">{{form_label (registrationForm.email) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_widget (registrationForm.email) }}</div>
     
-    <div class="user-form-label">{{form_label (registrationForm.plainPassword.first)}} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
-    <div>{{form_help (registrationForm.plainPassword) }}</div>
-    <div>{{form_widget (registrationForm.plainPassword.first) }}</div>
+    <div class="user-form-label">{{form_label (registrationForm.password.first)}} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
+    <div>{{form_help (registrationForm.password) }}</div>
+    <div>{{form_widget (registrationForm.password.first) }}</div>
     <div class="row mt-1 px-4 justify-content-end">
       <button type="button" class="btnEye" id="eye">Afficher le mot de passe</button>
     </div>
 
-    <div class="user-form-label">{{form_label (registrationForm.plainPassword.second) }} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
-    <div>{{form_widget (registrationForm.plainPassword.second) }}</div>
+    <div class="user-form-label">{{form_label (registrationForm.password.second) }} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
+    <div>{{form_widget (registrationForm.password.second) }}</div>
     <div class="row mt-1 px-4 justify-content-end">
       <button type="button" class="btnEye" id="eyeConfirm">Afficher le mot de passe</button>
     </div>

@@ -32,7 +32,8 @@ class Utilisateur implements UserInterface
      * @var string The hashed password
      * @ORM\Column(type="string")
      */
-    private $plainPassword;
+    private $password;
+     
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -95,30 +96,6 @@ class Utilisateur implements UserInterface
         return $this;
     }
 
-
-    /**
-     * Get the hashed password
-     * @see UserInterface
-     */
-    public function getPlainPassword()
-    {
-        return $this->plainPassword;
-    }
-
-    /**
-     * Set the hashed password
-     *
-     * @param  string  $plainPassword  The hashed password
-     *
-     * @return  self
-     */ 
-    public function setPlainPassword(string $plainPassword)
-    {
-        $this->plainPassword = $plainPassword;
-
-        return $this;
-    }
-
     /**
      * @see UserInterface
      */
@@ -171,4 +148,28 @@ class Utilisateur implements UserInterface
         return $this;
     }
 
+
+    /**
+     * Get the hashed password
+     *
+     * @return  string
+     */ 
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Set the hashed password
+     *
+     * @param  string  $password  The hashed password
+     *
+     * @return  self
+     */ 
+    public function setPassword(string $password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
 }
