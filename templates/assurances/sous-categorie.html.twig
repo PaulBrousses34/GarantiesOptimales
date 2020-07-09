@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MGL Courtage - {{ sousCategorie.name }} {% endblock %}
+
+{% block body %}
+
+<main class="container-fluid">
+  <div class="container-body row justify-content-center main-content">
+    {{ include('partials/left-nav.html.twig') }}
+      <div class="container-card row justify-content-center">
+    {% for type in sousCategorie.types %}
+    {{ include('partials/cards-type-particuliers.html.twig') }}
+    {% endfor %}
+      </div>
+  </div>
+</main>
+{% endblock %}

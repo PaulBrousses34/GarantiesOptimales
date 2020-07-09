@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\SousCategorie;
 use App\Entity\Categorie;
+use App\Repository\CategorieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 

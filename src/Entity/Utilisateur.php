@@ -4,11 +4,12 @@ namespace App\Entity;
 
 use App\Repository\UtilisateurRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UtilisateurRepository::class)
  */
-class Utilisateur
+class Utilisateur implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -18,75 +19,156 @@ class Utilisateur
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=500)
+     * @ORM\Column(type="string", length=180, unique=true)
      */
-    private $Mail;
+    private $email;
+
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
+
+    /**
+     * @var string The hashed password
+     * @ORM\Column(type="string")
+     */
+    private $plainPassword;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Prenom;
+    private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Nom;
+    private $lastname;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\Column(type="boolean")
      */
-    private $Documents = [];
+    private $isVerified = false;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getMail(): ?string
+    public function getEmail(): ?string
     {
-        return $this->Mail;
+        return $this->email;
     }
 
-    public function setMail(string $Mail): self
+    public function setEmail(string $email): self
     {
-        $this->Mail = $Mail;
+        $this->email = $email;
 
         return $this;
     }
 
-    public function getPrenom(): ?string
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
     {
-        return $this->Prenom;
+        return (string) $this->email;
     }
 
-    public function setPrenom(string $Prenom): self
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
     {
-        $this->Prenom = $Prenom;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
 
         return $this;
     }
 
-    public function getNom(): ?string
+
+    /**
+     * Get the hashed password
+     * @see UserInterface
+     */
+    public function getPlainPassword()
     {
-        return $this->Nom;
+        return $this->plainPassword;
     }
 
-    public function setNom(string $Nom): self
+    /**
+     * Set the hashed password
+     *
+     * @param  string  $plainPassword  The hashed password
+     *
+     * @return  self
+     */ 
+    public function setPlainPassword(string $plainPassword)
     {
-        $this->Nom = $Nom;
+        $this->plainPassword = $plainPassword;
 
         return $this;
     }
 
-    public function getDocuments(): ?array
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
     {
-        return $this->Documents;
+        // not needed when using the "bcrypt" algorithm in security.yaml
     }
 
-    public function setDocuments(?array $Documents): self
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
     {
-        $this->Documents = $Documents;
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
 
         return $this;
     }
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function isVerified(): bool
+    {
+        return $this->isVerified;
+    }
+
+    public function setIsVerified(bool $isVerified): self
+    {
+        $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
 }

@@ -17,7 +17,7 @@
             <header class="sticky-top">
             <nav class="navbar justify-content-space-around navbar-top">
                 <a class="navbar-brand" href="{{ path('home') }}">
-                    <img src="{{ asset('assets/images/logo.jpg') }}" height="auto" alt="logo" loading="lazy" class="d-none d-sm-block">
+                    <img src="{{ asset('assets/images/logo.jpg') }}" height="80px" alt="logo" loading="lazy" class="d-none d-sm-block">
                     <img src="{{ asset('assets/images/logo.jpg') }}" height="60px" alt="logo" loading="lazy" class="d-sm-none">
                 </a>
                 <div class="slogan d-none d-sm-block">
@@ -28,90 +28,82 @@
                     <p> Ouvert du lundi au vendredi de 9h à 18h </p>
                     <i class="fa fa-facebook fa-2x" alt="lien facebook" aria-hidden="true"></i>
                     <i class="fa fa-twitter fa-2x" alt="lien twitter" aria-hidden="true"></i>
-                    <div class="navConnect">
-                    <a>Créer un Compte</a> -
-                    <a>Se connecter</a>
-                    </div>
+                    <br>
+                    <a href="{{ path('app_register')}}">Créer un compte</a> |
+                    <a href="{{ path('app_login')}}">Se connecter</a>
                 </div>
             </nav>
-            {% set route = app.request.attributes.get('_route') %}
-            {% set appSubCategory = app.request.attributes.get('SousCategorie') %}
-            {{ dump(app.request.attributes.get)}}
-        <nav id="menu">
-          <label for="tm" id="toggle-menu"><span class="drop-icon-burger">&equiv;</span></label>
-          <input type="checkbox" id="tm">
+        {% set route = app.request.attributes.get('_route') %}
+        {% set appSubCategory = app.request.attributes.get('SousCategorie') %}
+        {% set appType = app.request.attributes.get('type') %}
 
-            <ul class="main-menu clearfix">
-              <li>
-              {% if route == 'home' %}
-              <a class="nav-link active" href="{{ path('home') }}">Accueil<span class="sr-only">(current)</span></a></li>
-              {% else %}
-              <a class="nav-link" href="{{ path('home') }}">Accueil<span class="sr-only">(current)</span></a></li>
-              {% endif %}
-              </li>
+            <nav id="menu">
+                <label for="tm" id="toggle-menu"><span class="drop-icon-burger">&equiv;</span></label>
+                <input type="checkbox" id="tm">
 
-              {% if route == 'particuliers' %}
-              <li>
-              <a class="nav-link active" href="{{ path('particuliers_index') }}">Assurances Particuliers</a></li>
-              {% else %}
-              <a class="nav-link" href="{{ path('particuliers_index') }}">Assurances Particuliers</a></li>
-              {% endif %}
-              </li>
-
-              {% if route == 'professionnels' %}
-              <li>
-              <a class="nav-link active" href="{{ path('professionnels_index') }}">Assurances Professionnels</a></li>
-              {% else %}
-              <a class="nav-link" href="{{ path('professionnels_index') }}">Assurances Professionnels</a></li>
-              {% endif %}
-              </li>
-
-              {% for category in allCategory %}
-              <li>
-                {% if category.slug == app.request.attributes.get('slug') %}
-                <a class="nav-link active" href="{{ path('professionnels_index') }}">{{category.name}}<span class="drop-icon">▾</span><label title="Toggle Drop-down" class="drop-icon" for="sm{{loop.index}}"><span class="fa fa-plus fa-lg" aria-hidden="true"></span></label></a>
-
-                {% elseif appSubCategory is not null and appSubCategory.category == category %}
-                <a class="nav-link active" href="{{ path('particuliers_index') }}">{{category.name}}<span class="drop-icon">▾</span><label title="Toggle Drop-down" class="drop-icon" for="sm{{loop.index}}"><span class="fa fa-plus fa-lg" aria-hidden="true"></span></label></a>
-                
-                {% endif %}
-                {#}
-                <input type="checkbox" id="sm{{loop.index}}">
-                <ul class="sub-menu">
-                {% for subCategory in category.SousCategories %}
-                  <li><a class="nav-link" href="">{{subCategory.name}}
-                      <span class="drop-icon">&rtrif;</span>
-                      {% if category.id == 1 %}
-                      <label title="Toggle Drop-down" class="drop-icon" for="sm{{100 + loop.index}}"><span class="fa fa-plus fa-lg" aria-hidden="true"></span></label>
-                      {% else %}
-                      <label title="Toggle Drop-down" class="drop-icon" for="sm{{200 + loop.index}}"><span class="fa fa-plus fa-lg" aria-hidden="true"></span></label>
-                      {% endif %}
-                    </a>
-                    {% if category.id == 1 %}
-                    <input type="checkbox" id="sm{{100 + loop.index}}">
+                    <ul class="main-menu clearfix">
+                    <li>
+                    {% if route == 'home' %}
+                    <a class="nav-link active" href="{{ path('home') }}">Accueil<span class="sr-only">(current)</span></a></li>
                     {% else %}
-                    <input type="checkbox" id="sm{{200 + loop.index}}">
+                    <a class="nav-link" href="{{ path('home') }}">Accueil<span class="sr-only">(current)</span></a></li>
                     {% endif %}
-                    <ul class="sub-menu">
-                    {% for type in subCategory.types %}
-                      <li><a class="nav-link" href="">{{type.name}}</a></li>
-                    {% endfor %}
-                    </ul>
-                  </li>
-                {% endfor %}
-                </ul>
-                
-              </li>
-              {#}
-              {% endfor %}
+                    </li>
 
-            
+                    {% for category in allCategory %}
+                    <li>
+                        {% if category.slug == app.request.attributes.get('slug') %}
+                        <a class="nav-link active" href="{{ path('assurances_categorie', {'slug': category.slug}) }}">{{category.name}} <span class="drop-icon">▾</span><label title="Toggle Drop-down" class="drop-icon" for="sm{{loop.index}}"><span class="fa fa-plus fa-lg" aria-hidden="true"></span></label></a>
+
+                        {% elseif appSubCategory is not null and appSubCategory.category == category %}
+                        <a class="nav-link active" href="{{ path('assurances_categorie', {'slug': category.slug}) }}">{{category.name}} <span class="drop-icon">▾</span><label title="Toggle Drop-down" class="drop-icon" for="sm{{loop.index}}"><span class="fa fa-plus fa-lg" aria-hidden="true"></span></label></a>
+
+                        {% elseif appType is not null and appType.subCategory.category == category %}
+                        <a class="nav-link active" href="{{ path('assurances_categorie', {'slug': category.slug}) }}">{{category.name}} <span class="drop-icon">▾</span><label title="Toggle Drop-down" class="drop-icon" for="sm{{loop.index}}"><span class="fa fa-plus fa-lg" aria-hidden="true"></span></label></a>
+
+                        {% else %}
+                        <a class="nav-link" href="{{ path('assurances_categorie', {'slug': category.slug}) }}">{{category.name}} <span class="drop-icon">▾</span><label title="Toggle Drop-down" class="drop-icon" for="sm{{loop.index}}"><span class="fa fa-plus fa-lg" aria-hidden="true"></span></label></a>
+                        {% endif %}
+
+                        <input type="checkbox" id="sm{{loop.index}}">
+                        <ul class="sub-menu">
+                        {% for sousCategories in category.SousCategories %}
+                        <li><a class="nav-link" href="{{ path('assurances_sous-categorie', {'slug': sousCategories.slug}) }}">{{sousCategories.name}}
+                            {% if category.id == 1 %}
+                            <label title="Toggle Drop-down" class="drop-icon" for="sm{{100 + loop.index}}"></label>
+                            {% else %}
+                            <label title="Toggle Drop-down" class="drop-icon" for="sm{{200 + loop.index}}"></label>
+                            {% endif %}
+                            </a>
+                            {% if category.id == 1 %}
+                            <input type="checkbox" id="sm{{100 + loop.index}}">
+                            {% else %}
+                            <input type="checkbox" id="sm{{200 + loop.index}}">
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                        </ul>
+                        
+                    </li>
+                    {% endfor %}
+                    <li>
+                        <form class="form-inline my-2 align-self-center d-lg-flex flex-nowrap" method="get">
+                        <input class="form-control mr-sm-2" name="search" type="text" placeholder="Rechercher" aria-label="Rechercher">
+                        <button class="btn my-sm-0 btn-search" type="submit" formaction=""><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+                    </li>
+                    </ul>
+                </nav>
+
+
         </header>
+
         {% endblock %}
-        <div class="container-body">
-            {% block body %}{% endblock %}
-        </div>
+        <div class="container-nav-body">
+            {% block body %}{% endblock %}  
+        </div>   
         {% block footer %}
+        {#}
         <footer>
             <div>
                 <a class="footer-link" href="#">Plan du site</a> - 
@@ -121,51 +113,14 @@
             </div>
                 <p class="mt-4">Tous droits réservés © 2020 MGL Courtage</p>
         </footer>
+        {#}
         {% endblock %}
             {% block javascripts %}    
             <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="{{ asset('assets/js/app.js') }}"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         {% endblock %}
     </body>
 </html>
-
-
-{#}
-<nav id="menu">
-            <label for="tm" id="toggle-menu"><span class="drop-icon-burger">&equiv;</span></label>
-            <input type="checkbox" id="tm">
-
-                <ul class="main-menu clearfix">
-                <li>
-                {% if route == 'home' %}
-                <a class="nav-link active" href="{{ path('home') }}">Accueil<span class="sr-only">(current)</span></a></li>
-                {% else %}
-                <a class="nav-link" href="{{ path('home') }}">Accueil<span class="sr-only">(current)</span></a></li>
-                {% endif %}
-                </li>
-
-                {% if route == 'particuliers' %}
-                <li>
-                <a class="nav-link active" href="{{ path('particuliers_index') }}">Assurances Particuliers</a></li>
-                {% else %}
-                <a class="nav-link" href="{{ path('particuliers_index') }}">Assurances Particuliers</a></li>
-                {% endif %}
-                </li>
-
-                {% if route == 'professionnels' %}
-                <li>
-                <a class="nav-link active" href="{{ path('professionnels_index') }}">Assurances Professionnels</a></li>
-                {% else %}
-                <a class="nav-link" href="{{ path('professionnels_index') }}">Assurances Professionnels</a></li>
-                {% endif %}
-                </li>
-                <li>
-                    <form class="form-inline my-2 align-self-center d-lg-flex flex-nowrap" method="get">
-                    <input class="form-control mr-sm-2" name="search" type="text" placeholder="Rechercher" aria-label="Rechercher">
-                    <button class="btn my-sm-0 btn-search" type="submit" formaction="#"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </li>
-                </ul>
-            </nav>
-{#}
+   

@@ -38,6 +38,7 @@ class Type
      */
     private $SousCategorie;
 
+
     public function getId(): ?int
     {
         return $this->id;

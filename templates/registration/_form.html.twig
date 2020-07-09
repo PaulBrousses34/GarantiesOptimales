@@ -1,0 +1,81 @@
+{{ form_start(registrationForm, {'attr': {'id': 'form'}}) }}
+    <div class="user-form-label">{{form_label (registrationForm.username) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_help (registrationForm.username) }}</div>
+    <div>{{form_widget (registrationForm.username) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.firstname) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_help (registrationForm.firstname) }}</div>
+    <div>{{form_widget (registrationForm.firstname) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.email) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (registrationForm.email) }}</div>
+    
+    <div class="user-form-label">{{form_label (registrationForm.plainPassword.first)}} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
+    <div>{{form_help (registrationForm.plainPassword) }}</div>
+    <div>{{form_widget (registrationForm.plainPassword.first) }}</div>
+    <div class="row mt-1 px-4 justify-content-end">
+      <button type="button" class="btnEye" id="eye">Afficher le mot de passe</button>
+    </div>
+
+    <div class="user-form-label">{{form_label (registrationForm.plainPassword.second) }} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
+    <div>{{form_widget (registrationForm.plainPassword.second) }}</div>
+    <div class="row mt-1 px-4 justify-content-end">
+      <button type="button" class="btnEye" id="eyeConfirm">Afficher le mot de passe</button>
+    </div>
+
+
+    <div class="mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
+ 
+ {% if registrationForm.agreeTerms is defined %}
+    <div class="modal fade" id="cguModal" tabindex="-1" role="dialog" aria-labelledby="cguModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cguModalTitle">Conditions générales d'utilisation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="btn-close-modal" aria-hidden="true">×
+            </button>
+          </div>
+          <div class="modal-body">
+
+            {{ include('partials/cgu.html.twig') }}
+
+            <div class="modal-footer">
+              <button type="button" class="btn cgu-btn" data-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>     
+    <div class="user-form-label">{{form_label (registrationForm.agreeTerms) }} </div>
+    <div>{{form_widget (registrationForm.agreeTerms, {'attr': {'data-toggle': 'modal', 'data-target':'#cguModal'}}) }}</div>
+
+  {% endif %}
+
+    <div class="submit-button-container">
+      <button type="submit" class="btn form-btn">{{ button_label|default('Ajouter') }}</button>
+    </div>
+
+{{ form_end(registrationForm)  }}
+
+
+<script>
+  document.getElementById("eye").addEventListener("click", function(e){
+  var pwd = document.getElementById("user_password_first");
+  if(pwd.getAttribute("type")=="password"){
+  pwd.setAttribute("type","text");
+  } else {
+  pwd.setAttribute("type","password");
+  }
+  });
+  </script>
+  <script>
+  document.getElementById("eyeConfirm").addEventListener("click", function(e){
+  var pwd = document.getElementById("user_password_second");
+  if(pwd.getAttribute("type")=="password"){
+  pwd.setAttribute("type","text");
+  } else {
+  pwd.setAttribute("type","password");
+  }
+  });
+</script>

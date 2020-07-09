@@ -40,7 +40,7 @@ class SousCategorie
     private $slug;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="SousCategories")
+     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="sousCategories")
      * @ORM\JoinColumn(nullable=false)
      */
     private $categorie;
