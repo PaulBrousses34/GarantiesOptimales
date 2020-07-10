@@ -4,7 +4,7 @@
 
 {% block body %}
     <main class="container">
-            <div class="row px-3 pt-3 main-title">
+            <div class="row px-3 pt-3 main-title justify-content-center">
         <h2>Se connecter</h2>
             </div>
         <form method="post">
@@ -22,6 +22,9 @@
             <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
             <label for="inputPassword" class="user-form-label">Mot de passe</label>
             <input type="password" name="password" id="inputPassword" class="form-control" required>
+            <div class="row mt-1 px-4 justify-content-end">
+            <a class="form-link-password" href="{{ path('app_forgot_password_request')}}"> Mot de passe oublié</a>
+            </div>
 
             <input type="hidden" name="_csrf_token"
                 value="{{ csrf_token('authenticate') }}"

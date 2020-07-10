@@ -1,0 +1,23 @@
+body {
+    background-color: #F0F6E8;
+    color: black;
+    text-align: justify;
+}
+
+main {
+    max-width: 600px;
+    height: 100%;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+header {
+    background-color: #739377;
+    text-align: center;
+    padding: 1rem;
+}

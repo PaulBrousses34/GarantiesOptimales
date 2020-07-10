@@ -1,0 +1,17 @@
+{% extends 'email/base.html.twig' %}
+
+{% block body %}
+
+<main>
+    <p>Bonjour</p><br>
+
+    <p>Pour réinitialiser votre mot de passe, vous pouvez <a href="{{ url('app_reset_password', {token: resetToken.token}) }}">cliquer ici</a>.</p>
+
+    <p>Le lien expire dans {{ tokenLifetime|date('g') }} heures.</p><br>
+
+    <p>Cordialement,</p>
+
+    <p><strong>L'équipe MGL Courtage</strong></p>
+</main>
+
+{% endblock %}

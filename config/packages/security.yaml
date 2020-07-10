@@ -21,10 +21,19 @@ security:
             guard:
                 authenticators:
                     - App\Security\UtilisateurAuthenticator
+            form_login:
+                use_referer: true
+                csrf_token_generator: security.csrf.token_manager
+                username_parameter: email
+                password_parameter: password
+
             logout:
                 path: app_logout
-                # where to redirect after logout
-                # target: app_any_route
+                target: home
+                invalidate_session: true
+
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication

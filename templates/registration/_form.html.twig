@@ -53,7 +53,7 @@
   {% endif %}
 
     <div class="submit-button-container">
-      <button type="submit" class="btn form-btn">{{ button_label|default('Ajouter') }}</button>
+      <button type="submit" class="btn form-btn">{{ button_label|default('S\'inscrire') }}</button>
     </div>
 
 {{ form_end(registrationForm)  }}
@@ -61,7 +61,7 @@
 
 <script>
   document.getElementById("eye").addEventListener("click", function(e){
-  var pwd = document.getElementById("user_password_first");
+  var pwd = document.getElementById("registration_form_password_first");
   if(pwd.getAttribute("type")=="password"){
   pwd.setAttribute("type","text");
   } else {
@@ -71,7 +71,7 @@
   </script>
   <script>
   document.getElementById("eyeConfirm").addEventListener("click", function(e){
-  var pwd = document.getElementById("user_password_second");
+  var pwd = document.getElementById("registration_form_password_second");
   if(pwd.getAttribute("type")=="password"){
   pwd.setAttribute("type","text");
   } else {
