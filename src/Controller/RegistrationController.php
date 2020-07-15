@@ -46,7 +46,11 @@ class RegistrationController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
-
+            
+            $this->addFlash(
+                'success',
+                'Le compte à bien été créé. Un email de confirmation a été envoyé sur votre boîte mail.'
+            );
             // generate a signed url and email it to the user
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
                 (new TemplatedEmail())
@@ -55,15 +59,18 @@ class RegistrationController extends AbstractController
                     ->subject('Merci de confirmer votre adresse email')
                     ->htmlTemplate('registration/confirmation_email.html.twig')
             );
-            // do anything else you need here, like send an email
 
+            return $this->redirectToRoute('home');
+            // do anything else you need here, like send an email
+            /*
             return $guardHandler->authenticateUserAndHandleSuccess(
                 $user,
                 $request,
                 $authenticator,
                 'main' // firewall name in security.yaml
-            );
-        }
+            );*/
+        };
+        
 
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),

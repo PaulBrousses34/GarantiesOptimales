@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+  {% apply inline_css(source('@css/email.css')) %}
 <html lang="fr">
-    {% apply inline_css(source('@css/email.css')) %}
     <body>
         <header class="sticky-top">
-            <img src="{{ email.image('@images/logo.jpg') }}" height="80px" alt="logo" loading="lazy" class="d-none d-sm-block">
+            <img src="" height="80px" alt="logo" loading="lazy" class="d-none d-sm-block">
         </header>
 
         {% block body %}
@@ -11,6 +11,6 @@
         
         {% endblock %}
 
-    {% endapply %}
     </body>
 </html>
+    {% endapply %}

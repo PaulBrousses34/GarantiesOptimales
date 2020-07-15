@@ -47,6 +47,10 @@ class ResetPasswordController extends AbstractController
                 $form->get('email')->getData(),
                 $mailer
             );
+            $this->addFlash(
+                'success',
+                'Un email de réinitialisation de mot de passe vous a été envoyé.'
+            );
         }
 
         return $this->render('reset_password/request.html.twig', [
@@ -121,6 +125,10 @@ class ResetPasswordController extends AbstractController
 
             // The session is cleaned up after the password has been changed.
             $this->cleanSessionAfterReset();
+            $this->addFlash(
+                'success',
+                'Le mot de passe a bien été modifié.'
+            );
 
             return $this->redirectToRoute('home');
         }
@@ -165,6 +173,10 @@ class ResetPasswordController extends AbstractController
                 'tokenLifetime' => $this->resetPasswordHelper->getTokenLifetime(),
             ])
         ;
+        $this->addFlash(
+            'success',
+            'Le mot de passe a bien été modifié.'
+        );
 
         $mailer->send($email);
 

@@ -14,13 +14,13 @@
     <div>{{form_help (registrationForm.password) }}</div>
     <div>{{form_widget (registrationForm.password.first) }}</div>
     <div class="row mt-1 px-4 justify-content-end">
-      <button type="button" class="btnEye" id="eye">Afficher le mot de passe</button>
+      <button type="button" class="btnEye" id="eye">Afficher</button>
     </div>
 
     <div class="user-form-label">{{form_label (registrationForm.password.second) }} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
     <div>{{form_widget (registrationForm.password.second) }}</div>
     <div class="row mt-1 px-4 justify-content-end">
-      <button type="button" class="btnEye" id="eyeConfirm">Afficher le mot de passe</button>
+      <button type="button" class="btnEye" id="eyeConfirm">Afficher</button>
     </div>
 
 
@@ -46,10 +46,12 @@
           </div>
         </div>
       </div>
-    </div>     
+    </div>   
     <div class="user-form-label">{{form_label (registrationForm.agreeTerms) }} </div>
-    <div>{{form_widget (registrationForm.agreeTerms, {'attr': {'data-toggle': 'modal', 'data-target':'#cguModal'}}) }}</div>
-
+    <div class="container-cgu">
+    <a class="link-cgu" data-toggle="modal" data-target="#cguModal">Lire les CGU</a>  
+    </div>
+    <div>{{form_widget (registrationForm.agreeTerms) }}</div>
   {% endif %}
 
     <div class="submit-button-container">
@@ -79,3 +81,6 @@
   }
   });
 </script>
+
+
+{#}{'attr': {'data-toggle': 'modal', 'data-target':'#cguModal'}}{#}

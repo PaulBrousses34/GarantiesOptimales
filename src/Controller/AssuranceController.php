@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Categorie;
 use App\Entity\SousCategorie;
+use App\Repository\CategorieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -15,24 +16,13 @@ class AssuranceController extends AbstractController
 {
 
     /**
-     * @Route("/categorie/{slug}", name="categorie")
-     */
-    public function browseByCategory(Categorie $category) {
-        
-
-        return $this->render('assurances/categorie.html.twig', [
-            'categorie' => $category,
-        ]);
-
-    }
-    /**
      * @Route("/sous-categorie/{slug}", name="sous-categorie")
      */
-    public function browseBySubCategory(SousCategorie $SousCategory) {
+    public function browseBySubCategory(SousCategorie $sousCategorie) {
         
 
         return $this->render('assurances/sous-categorie.html.twig', [
-            'sousCategorie' => $SousCategory,
+            'sousCategorie' => $sousCategorie,
         ]);
 
     }

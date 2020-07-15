@@ -1,21 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Inscription | {{ societyName }}{% endblock %}
 
 {% block body %}
-    {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
-
-<main class="container">
+<main class="container-main">
+            {% for message in app.flashes('success') %}
+            <div class="flash-notice-success my-3">
+                <div class="alert alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{message}}</p>
+                </div>
+            </div>
+            {% endfor %}
   <div class="row px-3 pt-3 main-title justify-content-center">
-    <h2>Inscription</h2>
+    <h2 class= "title-register">Inscription</h2>
   </div>
   <div class="row px-3 justify-content-center">
     {{ include('registration/_form.html.twig') }}
-  </div>
-  <div class="row mt-4">
-    <a class="form-link-back" href="{{ path('home') }}">Revenir à l'accueil</a>
   </div>
 </main>
 {% endblock %}

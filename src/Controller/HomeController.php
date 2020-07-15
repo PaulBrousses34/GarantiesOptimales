@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 
+use App\Repository\CategorieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
@@ -12,10 +12,14 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(Request $request)
+    public function index(CategorieRepository $categorieRepository)
     {
-        return $this->render('home/index.html.twig', [
 
+        $professionnels = $categorieRepository->findById(1);
+        $particuliers = $categorieRepository->findById(2);
+        return $this->render('home/index.html.twig', [
+            'professionnels' => $professionnels,
+            'particuliers' => $particuliers,
         ]);
     }
 }
