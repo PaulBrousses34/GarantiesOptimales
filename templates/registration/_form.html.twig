@@ -1,4 +1,15 @@
 {{ form_start(registrationForm, {'attr': {'id': 'form'}}) }}
+
+{% set route = app.request.attributes.get('_route')%}
+    {% if route == 'user_edit' %}
+    <div class="row px-3 pt-3 main-title justify-content-center">
+      <h2 class= "title-register">Modifier mon profil</h2>
+    </div>
+    {% else %}
+    <div class="row px-3 pt-3 main-title justify-content-center">
+      <h2 class= "title-register">Inscription</h2>
+    </div>
+    {% endif %}
     <div class="user-form-label">{{form_label (registrationForm.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_help (registrationForm.lastname) }}</div>
     <div>{{form_widget (registrationForm.lastname) }}</div>

@@ -22,7 +22,7 @@ security:
                 authenticators:
                     - App\Security\UtilisateurAuthenticator
             form_login:
-                use_referer: true
+                target_path_parameter: go_to
                 csrf_token_generator: security.csrf.token_manager
                 username_parameter: email
                 password_parameter: password
@@ -44,5 +44,5 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+         - { path: ^/admin, roles: ROLE_ADMIN }
+         - { path: ^/profil, roles: ROLE_USER }

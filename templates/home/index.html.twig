@@ -137,7 +137,7 @@
                         <h2 class="text-black mt-0">Mon espace personnel</h2>
                         <hr class="divider light my-4" />
                         <p class="text-black-50 mb-4">Retrouver tout vos documents plus facilement</p>
-                        <a href="" class="btn btn-outline-primary">Accéder à mon espace personnel</a>
+                        <a href="{{ path('user_read', {'lastname' : app.user.lastname})}}" class="btn btn-outline-primary">Accéder à mon espace personnel</a>
                     </div>
                 </div>
             </div>

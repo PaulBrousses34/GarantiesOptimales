@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur 500 {{ parent() }}{% endblock %}
+
+{% block body %}
+<main class="container-error">
+  <div class="row mt-3 justify-content-center">
+    <p class="col-12 message-error">Oups, une erreur est survenue...</p>
+    <img class="img-fluid" src="{{ asset('assets/images/500.png') }}"  alt="erreur 500">
+  </div>
+</main>
+{% endblock %}

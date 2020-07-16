@@ -25,7 +25,7 @@
         {% if route == 'home' %}
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">{{ societyName }}</a>
+                <a class="navbar-brand js-scroll-trigger" class="societyName" href="#page-top">{{ societyName }}</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
@@ -39,6 +39,9 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#inscription-connexion">Inscription/Connexion</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        {% if app.user is not null %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('app_logout')}}">Déconnexion</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -75,12 +78,19 @@
                 <div class="row">
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <p>Par téléphone</p>
                         <div>+33 6 46 42 66 08</div>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
                         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <p>Par email</p>
                         <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
                         <a class="d-block" href="mailto:contact@yourwebsite.com">contact@liguori-assurances.com</a>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-align-justify fa-3x mb-3 text-muted"></i>
+                         <p>Via notre formulaire de contact</p>
+                        <a class="d-block" href="{{ path('contact')}}">En cliquant ici</a><br>
                     </div>
                 </div>
             </div>

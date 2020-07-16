@@ -54,6 +54,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
@@ -66,7 +67,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background: linear-gradient(to right, grey, white);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4000,7 +4001,7 @@ input[type=button].btn-block {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: inherit;
   white-space: nowrap;
 
@@ -10272,16 +10273,19 @@ justify-content: left;
 }
 
 #form {
-  border: 5px solid orange;
-  padding: 10px;
+  border: 5px solid white;
+  padding: 20px;
   border-radius: 15px;
   margin-bottom: 50px;
-  background-color: lightgrey;
+  background: linear-gradient(lightblue, white);
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 100px;
 }
 .title-register {
   text-transform: uppercase;
-  color: lightskyblue;
-  margin-top: 50px;
+  color: grey;
+  padding-bottom: 15px;
 }
 
 .nav-link-other{
@@ -10328,5 +10332,13 @@ text-transform: uppercase;
 }
 
 .container-main {
-  margin-top: 70px;
+  margin-top: 100px;
+}
+
+.container-error {
+  margin-top: 200px;
+}
+
+.card-sous-categorie {
+  margin-top: 300px;
 }
