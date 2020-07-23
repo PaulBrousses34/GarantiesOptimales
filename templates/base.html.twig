@@ -13,10 +13,42 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Open+Sans&family=Tangerine:wght@700&display=swap" rel="stylesheet">
         <!-- Third party plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script type="text/javascript" src="{{ asset('assets/js/tarteaucitron/tarteaucitron.js') }}"></script>
+
+        <script type="text/javascript">
+        tarteaucitron.init({
+    	  "privacyUrl": "/protection-des-donnees", /* Privacy policy url */
+
+    	  "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+    	  "cookieName": "tarteaucitron", /* Cookie name */
+    
+    	  "orientation": "middle", /* Banner position (top - bottom) */
+    	  "showAlertSmall": true, /* Show the small banner on bottom right */
+    	  "cookieslist": true, /* Show the cookie list */
+
+    	  "adblocker": true, /* Show a Warning if an adblocker is detected */
+    	  "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+    	  "highPrivacy": true, /* Disable auto consent */
+    	  "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+    	  "removeCredit": false, /* Remove credit link */
+    	  "moreInfoLink": true, /* Show more info link */
+    	  "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
+
+    	  //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+                          
+          "readmoreLink": "/protection-des-donnees", /* Change the default readmore link */
+
+          "mandatory": true, /* Show a message about mandatory cookies */
+        });
+        </script>
     </head>
     
     <body id="page-top">
@@ -31,8 +63,8 @@
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">A propos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#actualites">Actualités</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professionnels">Assurances professionnels</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#particuliers">Assurances particuliers</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professionnels">Assurances professionnels</a></li>
                         {% if app.user is not null %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil">Mon espace personnel</a></li>
                         {% else %}
@@ -73,6 +105,7 @@
                         <h2 class="mt-0">Contactez nous</h2>
                         <hr class="divider my-4" />
                         <p class="text-dark mb-5">Pour toutes questions ou pour être aidé dans vos démarches</p>
+                        <p class="link-contact"><a href="">Cliquez ici pour plus d'infomations</a></p><br>
                     </div>
                 </div>
                 <div class="row">
@@ -81,22 +114,76 @@
                         <p>Par téléphone</p>
                         <div>+33 6 46 42 66 08</div>
                     </div>
-                    <div class="col-lg-4 mr-auto text-center">
+                    <div class="col-lg-4 mr-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
                         <p>Par email</p>
                         <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
                         <a class="d-block" href="mailto:contact@yourwebsite.com">contact@liguori-assurances.com</a>
                     </div>
-                    <div class="col-lg-4 mr-auto text-center">
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-align-justify fa-3x mb-3 text-muted"></i>
                          <p>Via notre formulaire de contact</p>
-                        <a class="d-block" href="{{ path('contact')}}">En cliquant ici</a><br>
+                        <a class="d-block" href="{{ path('contact_form')}}">En cliquant ici</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
+        {{ include('partials/modal-login.html.twig') }}
+            <div class="container-footer">
+            <div class="row">
+                <div class="footer-link-principal col-lg-3 col-md-6 text-center">
+                    <ul>
+                        <li><a href="#about">A propos</a></li>
+                        <li><a href="#actualites">Actualités</a></li>
+                        {% if app.user is null %}
+                        <li><a href="{{ path('app_register')}}">Inscription</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#connexionModale">Connexion</a></li>
+                        {% else %}
+                        <li><a href="{{ path('user_read', {'lastname' : app.user.lastname})}}">Mon espace personnel</a></li>
+                        <li><a href="">Déclarer un sinistre</a></li>
+                        {% endif %}
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-particuliers col-lg-3 col-md-6 text-center">
+                    <ul>
+                    {% for category in allCategory %}
+                        {% if category.id == 1 %}
+                            <h6>{{category.name}}</h6>
+                    {% for sousCategorie in category.sousCategories %}
+                            <li><a href="{{ path('assurances_sous-categorie_particuliers', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
+                    {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="sitemap-professionnels col-lg-3 col-md-6 text-center">
+                    <ul>
+                    {% for category in allCategory %}
+                        {% if category.id == 2 %}
+                            <h6>{{category.name}}</h6>
+                    {% for sousCategorie in category.sousCategories %}
+                            <li><a href="{{ path('assurances_sous-categorie_professionnels', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
+                    {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="footer-link-about col-lg-3 col-md-6 text-center">
+                    <ul>
+                        <li><a href="{{ path('newsletter')}}">Newsletter</a></li>
+                        <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
+                        <li><a href="{{ path('cgu')}}">Conditions Generales d'Utilisation</a></li>
+                        <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
+                        <li><a href="{{ path('protection')}}">Protection des données personnelles</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#tarteaucitron">Gestion des cookies</a></li>
+                        <li><a href="{{ path('avis')}}">Avis Clients</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
             <div class="container"><div class="small text-center text-muted">Copyright © 2020 - {{ societyName }}</div></div>
         </footer>
         {% endblock %}
@@ -108,7 +195,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <!-- Core theme JS-->
-        <script src="assets/js/scripts.js"></script>
+        <script src="{{ asset('assets/js/scripts.js')}}"></script>
         {% endblock %}
     </body>
 </html>

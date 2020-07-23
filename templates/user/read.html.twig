@@ -1,10 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mon profil | {{ societyName }}{% endblock %}
+{% block title %}Mon espace personnel | {{ societyName }}{% endblock %}
 
 {% block body %}
-
-<div id="form">
+<main class="container-main">
   {% for message in app.flashes('success') %}
     <div class="flash-notice-success my-3">
       <div class="alert alert-dismissible">
@@ -12,8 +11,15 @@
         <p class="mb-0">{{message}}</p>
       </div>
     </div>
-  {% endfor %}
-
+{% endfor %}
+<div class="row px-3 justify-content-center">
+  <div id="form">
+      <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a>
+        </p>
+      </div>
   {% if is_granted('ROLE_ADMIN') %}
     <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
       <h2>Admin</h2>
@@ -24,23 +30,46 @@
   {% endif %}
   {% if app.user == user %}
     <div class="row justify-content-between pt-3 px-3 mb-3 ml-md-2 mr-md-1 main-title">
-      <h2>Mon Espace Personnel</h2>
+      <h2>Mon espace personnel</h2>
     </div>
     <div class="row justify-content-center align-items-center mb-3">
       <div class="col-12 col-sm-6 text-center text-sm-left">
-        <p>Prénom : {{user.firstname}}<br>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-        Email : {{user.email}}</p>
-        <a href="{{ path('user_edit', {'lastname' : app.user.lastname })}}"><button class="btn banner-top-btn" type="button">Modifier le profil</button></a>
-        {% endif %}
+        <p>Prenom: {{user.firstname}}<br>
+           Nom: {{user.lastname}}<br>
+           Email : {{user.email}}
+        </p>
+        <a href="{{ path('user_edit', {'lastname' : app.user.lastname })}}"><button class="btn btn-outline-primary" type="button">Modifier le profil</button></a>
       </div>
     </div>
-  <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
-    <h2>Mes documents</h2>
-  </div>
-  <div class="row justify-content-center mb-4">
-  </div>
-    {% endif %}
+  {% endif %}
+    <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
+      <h2>Mes documents</h2>
+    </div>
+    <div class="row justify-content-end mb-4">
+    <button href="" class="add-button btn btn-outline-primary">Ajouter un document</button>
+    </div>
+    <div class="row justify-content-center mb-4">
+    <table>
+      <tr>
+          <th>Type</th>
+          <th>Nom du fichier</th>
+          <th>Date d'ajout sur le site</th>
+          <th>Telecharger</th>
+      </tr>
+      {% if user.document is not empty %}
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      {% endif %}
+    </table>
+    </div>
+  {% endif %}
 </div>
+</div>
+</main>
 
 {% endblock %}

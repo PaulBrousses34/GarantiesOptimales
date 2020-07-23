@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UtilisateurRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -49,6 +51,31 @@ class Utilisateur implements UserInterface
      * @ORM\Column(type="boolean")
      */
     private $isVerified = false;
+
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ville;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $codePostal;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Document::class, mappedBy="utilisateur")
+     */
+    private $Document;
+
+    public function __construct()
+    {
+        $this->Document = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -169,6 +196,73 @@ class Utilisateur implements UserInterface
     public function setPassword(string $password)
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(?string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?string $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getCodePostal(): ?int
+    {
+        return $this->codePostal;
+    }
+
+    public function setCodePostal(?int $codePostal): self
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Document[]
+     */
+    public function getDocument(): Collection
+    {
+        return $this->Document;
+    }
+
+    public function addDocument(Document $document): self
+    {
+        if (!$this->Document->contains($document)) {
+            $this->Document[] = $document;
+            $document->setUtilisateur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDocument(Document $document): self
+    {
+        if ($this->Document->contains($document)) {
+            $this->Document->removeElement($document);
+            // set the owning side to null (unless already changed)
+            if ($document->getUtilisateur() === $this) {
+                $document->setUtilisateur(null);
+            }
+        }
 
         return $this;
     }

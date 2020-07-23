@@ -34,7 +34,16 @@ class RegistrationController extends AbstractController
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        $secretKey = '6LfxjrMZAAAAACZFfvRRIlg16JTUBF0-XbW7iM8i';
+        $responseKey = $request->request->get('g-recaptcha-response');
+        $userIP = $_SERVER['REMOTE_ADDR'];
+
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$responseKey.'&remoteip='.$userIP.'';
+        $response = file_get_contents($url);
+
+        $response = json_decode($response);
+
+        if ($form->isSubmitted() && $form->isValid()&& $response->success == true) {
             // encode the plain password
             $user->setPassword(
                 $passwordEncoder->encodePassword(
@@ -61,15 +70,12 @@ class RegistrationController extends AbstractController
             );
 
             return $this->redirectToRoute('home');
-            // do anything else you need here, like send an email
-            /*
-            return $guardHandler->authenticateUserAndHandleSuccess(
-                $user,
-                $request,
-                $authenticator,
-                'main' // firewall name in security.yaml
-            );*/
-        };
+        
+
+        } elseif ($form->isSubmitted() && $form->isValid()&& $response->success != true) {
+            $this->addFlash('error',
+            'Problème de Captcha');
+        }
         
 
         return $this->render('registration/register.html.twig', [

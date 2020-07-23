@@ -1,0 +1,5 @@
+{{ form_start(form, {'attr': {'id': 'form'}}) }}
+<h2 class="title-register">Ajouter un Document</h2>
+    {{ form_widget(form) }}
+    <button class="btn form-btn">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(form) }}

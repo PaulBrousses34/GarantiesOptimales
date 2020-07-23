@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MGL Courtage - {{ type.name }} {% endblock %}
+
+{% block body %}
+<h2 class="title-categorie">{{type.name}}</h2>
+      <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('assurances_sous-categorie_particuliers', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a> - 
+          <a href="{{ path('assurances_type_particuliers', {'slug': type.slug})}}">{{type.name}}</a>
+        </p>
+      </div>
+      
+<main class="container-main">
+
+
+
+
+
+
+
+</main>
+{% endblock %}

@@ -1,14 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}MGL | Réinitialiser votre mot de passe{% endblock %}
+{% block title %}Réinitialiser votre mot de passe | {{societyName}} {% endblock %}
 
 {% block body %}
-<main class="container">
 
+
+<main class="container">
+<div class="error">
   {% for flashError in app.flashes('reset_password_error') %}
   <div class="alert alert-danger" role="alert">{{ flashError }}</div>
   {% endfor %}
-  
+</div>  
   {{ form_start(requestForm, {'attr': {'id': 'form'}}) }}
     <div class="row px-3 pt-3 main-title">
     <h2 class="title-register">Réinitialiser votre mot de passe</h2>

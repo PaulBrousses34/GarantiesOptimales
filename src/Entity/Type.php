@@ -38,6 +38,11 @@ class Type
      */
     private $SousCategorie;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
+
 
     public function getId(): ?int
     {
@@ -88,6 +93,18 @@ class Type
     public function setSousCategorie(?SousCategorie $SousCategorie): self
     {
         $this->SousCategorie = $SousCategorie;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }

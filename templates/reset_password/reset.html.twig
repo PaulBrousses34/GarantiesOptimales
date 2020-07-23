@@ -4,11 +4,12 @@
 
 {% block body %}
 <main class="container">
-  <div class="row px-3 pt-3 main-title">
-    <h2>Réinitialiser votre mot de passe</h2>
-  </div>
   <div class="row px-3 justify-content-center">
-    {{ form_start(resetForm) }}
+    {{ form_start(resetForm, {'attr': {'id': 'form'}}) }}
+
+        <div class="row px-3 pt-3 main-title">
+          <h2 class="title-register">Réinitialiser votre mot de passe</h2>
+        </div>
         <div class="user-form-label">{{form_label (resetForm.plainPassword.first) }} <span class="form-asterisk-mandatory">*</span></div>
         <div>{{form_help (resetForm.plainPassword) }}</div>
         <div>{{form_widget (resetForm.plainPassword.first) }}</div>

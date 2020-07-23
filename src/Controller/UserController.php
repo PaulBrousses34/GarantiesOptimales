@@ -77,7 +77,7 @@ class UserController extends AbstractController
                     );
 
                     return $this->redirectToRoute('user_read', [
-                        'slug' => $utilisateur->getLastname(),
+                        'lastname' => $utilisateur->getLastname(),
                     ]);
                 } else {
                     $em->refresh($utilisateur);
@@ -123,7 +123,7 @@ class UserController extends AbstractController
             $em->flush();
 
             // We create a request for send a email of confirmation
-/*
+
             $email = (new TemplatedEmail())
             ->from('paul.brousses@gmail.com')
             ->to($utilisateur->getEmail())
@@ -134,7 +134,7 @@ class UserController extends AbstractController
                     ]);
     
             $mailer->send($email);
-*/
+
             $this->addFlash(
                 'success',
                 'Votre compte a bien été supprimé.'

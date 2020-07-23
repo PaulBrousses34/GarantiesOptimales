@@ -1,0 +1,16 @@
+                <div class="row justify-content-center">
+                    {% for particulier in particuliers %}
+                            {% for type in sousCategorie.types %}
+                    <div class="card col-11 col-sm-5 col-lg-3 pb-4 mt-3 my-md-4 mx-1 mx-md-2  align-content-center">
+                        <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}">
+                            <img class="card-img-top" src="{{asset('assets/images/photos/' ~ type.image) }}" alt="photo lien {{ type.name }}">
+                        </a>
+                        <div class="card-body">
+                            <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}"><h5 class="card-title justify-content-center">{{ type.name }}</h5></a>
+                            <p>{{ type.description }}</p>
+                            <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}">Obtenir un devis</a>
+                        </div>
+                    </div>
+                            {% endfor %}
+                    {% endfor %}
+                </div>

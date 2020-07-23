@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{sousCategorie.name}} | {{ societyName }}{% endblock %}
+
+
+{% block body %}
+
+<h2 class="title-categorie">{{sousCategorie.name}}</h2>
+
+      <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('assurances_sous-categorie_professionnels', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a>
+        </p>
+      </div>
+      
+<main class="container-main">
+<section class="card-sous-categorie">
+
+
+{{ include('partials/professionnels/cards.sousCategories.html.twig') }}
+
+</section>
+</main>
+{% endblock %}

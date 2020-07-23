@@ -3,9 +3,11 @@
 namespace App\Form;
 
 use App\Entity\Utilisateur;
+use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -66,6 +68,19 @@ class RegistrationFormType extends AbstractType
                 ]),
                 ]
             ])
+
+            ->add('adresse', null, [
+                'label'=> 'Numero, type et nom de voie',
+            ])
+
+            ->add('codePostal', NumberType::class, [
+                'label'=> 'Code Postal',
+                'required'=>false,
+            ])
+            ->add('ville', null, [
+                'label'=> 'Ville',
+            ])
+
 
             // This add is for the edit and not for the add (create a new account)
             ->add('password', RepeatedType::class,[

@@ -1,15 +1,40 @@
+
+  {% for flashError in app.flashes('error') %}
+    <div class="flash-notice-failed my-3">
+      <div class="alert alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p class="mb-0">{{ flashError }}</p>
+      </div>
+    </div>
+  {% endfor %}
 {{ form_start(registrationForm, {'attr': {'id': 'form'}}) }}
+
+<input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
+
 
 {% set route = app.request.attributes.get('_route')%}
     {% if route == 'user_edit' %}
     <div class="row px-3 pt-3 main-title justify-content-center">
-      <h2 class= "title-register">Modifier mon profil</h2>
+      <h2 class="title-register">Modifier mon profil</h2>
     </div>
+      <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('user_edit', {'lastname': app.user.lastname})}}">Modifier mon profil</a>
+        </p>
+      </div>
     {% else %}
     <div class="row px-3 pt-3 main-title justify-content-center">
-      <h2 class= "title-register">Inscription</h2>
+      <h2 class="title-register">Inscription</h2>
+    </div>
+    <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('app_register')}}">Inscription</a>
+        </p>
     </div>
     {% endif %}
+
     <div class="user-form-label">{{form_label (registrationForm.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_help (registrationForm.lastname) }}</div>
     <div>{{form_widget (registrationForm.lastname) }}</div>
@@ -20,18 +45,30 @@
 
     <div class="user-form-label">{{form_label (registrationForm.email) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_widget (registrationForm.email) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.adresse) }}</div>
+    <div>{{form_help (registrationForm.adresse) }}</div>
+    <div>{{form_widget (registrationForm.adresse, {'attr': {'id': 'adresse'}}) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.codePostal) }}</div>
+    <div>{{form_help (registrationForm.codePostal) }}</div>
+    <div>{{form_widget (registrationForm.codePostal, {'attr': {'id': 'codePostal'}}) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.ville) }}</div>
+    <div>{{form_help (registrationForm.ville) }}</div>
+    <div>{{form_widget (registrationForm.ville, {'attr': {'id': 'ville'}}) }}</div>
     
     <div class="user-form-label">{{form_label (registrationForm.password.first)}} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
     <div>{{form_help (registrationForm.password) }}</div>
     <div>{{form_widget (registrationForm.password.first) }}</div>
     <div class="row mt-1 px-4 justify-content-end">
-      <button type="button" class="btnEye" id="eye">Afficher</button>
+      <button type="button" class="btnEye" id="eye"><i class="fas fa-eye"></i></button>
     </div>
 
     <div class="user-form-label">{{form_label (registrationForm.password.second) }} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
     <div>{{form_widget (registrationForm.password.second) }}</div>
     <div class="row mt-1 px-4 justify-content-end">
-      <button type="button" class="btnEye" id="eyeConfirm">Afficher</button>
+      <button type="button" class="btnEye" id="eyeConfirm"><i class="fas fa-eye"></i></button>
     </div>
 
 
@@ -59,15 +96,21 @@
       </div>
     </div>   
     <div class="user-form-label">{{form_label (registrationForm.agreeTerms) }} </div>
-    <div class="container-cgu">
-    <a class="link-cgu" data-toggle="modal" data-target="#cguModal">Lire les CGU</a>  
-    </div>
+
     <div>{{form_widget (registrationForm.agreeTerms) }}</div>
+    <div class="container-cgu">
+    <a class="link-cgu" data-toggle="modal" data-target="#cguModal">Voir les CGU</a>  
+    </div>
+    <div class="container-captcha">
+     <div class="g-recaptcha" data-sitekey="6LfxjrMZAAAAANwcUdUVYBH2MwYGSUoHfUMKPU7e"></div>
+    </div>
   {% endif %}
 
     <div class="submit-button-container">
-      <button type="submit" class="btn form-btn">{{ button_label|default('S\'inscrire') }}</button>
+      <button type="submit"
+      class="btn form-btn">{{ button_label|default('S\'inscrire') }}</button>
     </div>
+
 
 {{ form_end(registrationForm)  }}
 

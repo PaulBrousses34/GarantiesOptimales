@@ -5,4 +5,4 @@ twig:
         '%kernel.project_dir%/public/assets/images': images
         '%kernel.project_dir%/public/assets/css': css
     globals:
-        societyName: Liguori Assurances
+        societyName: Prim'Assur

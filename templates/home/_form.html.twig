@@ -1,7 +1,27 @@
+
+  {% for flashError in app.flashes('error') %}
+    <div class="flash-notice-failed my-3">
+      <div class="alert alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p class="mb-0">{{ flashError }}</p>
+      </div>
+    </div>
+  {% endfor %}
+
+
 {{ form_start(form, { 'attr': {'id': 'form' }}) }} 
+
     <div class="row px-3 pt-3 main-title justify-content-center">
       <h2 class= "title-register">Nous contacter</h2>
     </div>
+      <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('contact_form')}}">Contact</a>
+        </p>
+      </div>
+
+    <input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
 
     <div class="contact-form-label">{{form_label (form.email) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_help (form.email) }}</div>
@@ -12,7 +32,7 @@
     <div>{{form_widget (form.email)}}</div>
     {% endif %}
 
-    <div class="user-form-label">{{form_label (form.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="contact-form-label">{{form_label (form.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_help (form.lastname) }}</div>
     {% if app.user.lastname is defined %}
     <div>{{form_widget (form.lastname, { 'attr': {'value': app.user.lastname }}) }}</div>
@@ -20,7 +40,7 @@
     <div>{{form_widget (form.lastname)}}</div>
     {% endif %}
 
-    <div class="user-form-label">{{form_label (form.firstname) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="contact-form-label">{{form_label (form.firstname) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_help (form.firstname) }}</div>
     {% if app.user.firstname is defined %}
     <div>{{form_widget (form.firstname, { 'attr': {'value': app.user.firstname }}) }}</div>
@@ -41,7 +61,11 @@
     <div class="contact-form-label">{{form_label (form.file) }}</div>
     <div>{{form_help (form.file) }}</div>
     <div>{{form_widget (form.file) }}</div>
+    <br>
 
+    <div class="container-captcha">
+     <div class="g-recaptcha" data-sitekey="6LfxjrMZAAAAANwcUdUVYBH2MwYGSUoHfUMKPU7e"></div>
+    </div>
 
 
     <div class="mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>

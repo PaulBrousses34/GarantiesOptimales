@@ -22,7 +22,7 @@ security:
                 authenticators:
                     - App\Security\UtilisateurAuthenticator
             form_login:
-                target_path_parameter: go_to
+                target_path_parameter: home
                 csrf_token_generator: security.csrf.token_manager
                 username_parameter: email
                 password_parameter: password
