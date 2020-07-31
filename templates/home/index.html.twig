@@ -31,6 +31,21 @@
                 </div>
         </div>
         </header>
+                {% if app.user is not null  %}
+        <section class="page-section" id="profil">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-black mt-0">Mon espace personnel</h2>
+                        <hr class="divider light my-4" />
+                        <p class="text-black-50 mb-4">Bonjour {{app.user.firstname}} !</p>
+                        <a href="{{ path('user_read', {'lastname' : app.user.lastname})}}" class="btn btn-outline-success">Accéder à mon espace personnel</a><br><br>
+                        <a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}" class="btn btn-outline-primary">Déclarer un sinistre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+                {% endif %}
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
@@ -38,7 +53,7 @@
                     <div class="col-lg-8 text-center">
                         <h2 class="text-black mt-0">Nous avons ce qu'il vous faut!</h2>
                         <hr class="divider my-4" />
-                        <p class="text-black-50 mb-4">{{societyName}} se charge de trouver le produit qu'il vous faut, le jour de votre demande et au meilleur prix</p>
+                        <p class="text-black-50 mb-4">{{societyName}} se charge de trouver le produit qu'il vous faut, le jour de votre demande et au meilleur prix.</p>
                     </div>
                 </div>
             </div>
@@ -46,28 +61,28 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-4x fa fa-info-circle text-primary mb-4"></i>
+                            <i class="fas fa-9x fa-comments"></i>
                             <h3 class="h4 mb-2">24 heures sur 24<br> 7 jours sur 7</h3>
                             <p class="text-muted mb-0">Nous sommes disponible et répondons à vos questions à n'importe quel moment</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                            <i class="fas fa-9x fa-search-dollar"></i>
                             <h3 class="h4 mb-2">Des garanties au meilleur prix</h3>
                             <p class="text-muted mb-0">{{societyName}} se charge de trouver les meilleures garanties au meilleur prix</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+                            <i class="far fa-9x fa-folder-open"></i>
                             <h3 class="h4 mb-2">Retrouvez facilement vos documents</h3>
                             <p class="text-muted mb-0">Vous pouvez retrouver facilement vos documents dans votre espace personnel</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+                            <i class="fas fa-9x fa-people-arrows"></i>
                             <h3 class="h4 mb-2">Un conseiller proche de vous</h3>
                             <p class="text-muted mb-0">Avec {{societyName}}, une seule et unique personne se charge de votre dossier.</p>
                         </div>
@@ -120,19 +135,5 @@
             </div>
         </section>
         {{ include('partials/modal-login.html.twig') }}
-        {% else %}
-        <section class="page-section" id="profil">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-black mt-0">Mon espace personnel</h2>
-                        <hr class="divider light my-4" />
-                        <p class="text-black-50 mb-4">Bonjour {{app.user.firstname}} !</p>
-                        <a href="{{ path('user_read', {'lastname' : app.user.lastname})}}" class="btn btn-outline-primary">Accéder à mon espace personnel</a><br><br>
-                        <a href="" class="btn btn-outline-primary">Déclarer un sinistre</a>
-                    </div>
-                </div>
-            </div>
-        </section>
         {% endif %}
 {% endblock %}

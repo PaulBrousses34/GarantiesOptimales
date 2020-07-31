@@ -1,5 +1,3 @@
-
-
 <div class="row justify-content-center">
     {% for particulier in particuliers %}
     {% for sousCategories in particulier.sousCategories %}
@@ -10,7 +8,7 @@
 		
 		<!-- 	Product Name -->
 	            <a href="{{ path('assurances_sous-categorie_particuliers',  {'slug' : sousCategories.slug })}}">
-                <h4>{{ sousCategories.name }}</h4>
+                <h4 class="categorie-name-card">{{ sousCategories.name }}</h4>
 		        </a>
 		            <p class="information">" Nos assurances"</p>
 

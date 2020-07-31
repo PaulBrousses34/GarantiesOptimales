@@ -12,18 +12,21 @@
       </div>
     </div>
 {% endfor %}
-<div class="row px-3 justify-content-center">
-  <div id="form">
+
       <div class="row px-3 mt-2 fil-ariane">
         <p>
           <a href="{{ path('home')}}">Accueil</a> -
           <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a>
         </p>
       </div>
+      
+<div class="row px-3 justify-content-center">
+  <div id="form">
   {% if is_granted('ROLE_ADMIN') %}
     <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
       <h2>Admin</h2>
     </div>
+    <hr class="divide light my-4" />
     <div class="row justify-content-center pt-3">
       <a href="{{ path('admin') }}"><button class="btn banner-top-btn my-4" type="button">Accéder au BackOffice</button></a>
     </div>
@@ -32,6 +35,7 @@
     <div class="row justify-content-between pt-3 px-3 mb-3 ml-md-2 mr-md-1 main-title">
       <h2>Mon espace personnel</h2>
     </div>
+    <hr class="divide light my-4" />
     <div class="row justify-content-center align-items-center mb-3">
       <div class="col-12 col-sm-6 text-center text-sm-left">
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
@@ -39,35 +43,25 @@
            Nom: {{user.lastname}}<br>
            Email : {{user.email}}
         </p>
-        <a href="{{ path('user_edit', {'lastname' : app.user.lastname })}}"><button class="btn btn-outline-primary" type="button">Modifier le profil</button></a>
+        <a href="{{ path('user_edit', {'lastname' : app.user.lastname })}}"><button class="btn btn-outline-success" type="button">Modifier le profil</button></a>
+        <br><br>
+        <a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}"><button class="btn btn-outline-primary" type="button">Déclarer un sinistre</button></a>
       </div>
     </div>
   {% endif %}
     <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
       <h2>Mes documents</h2>
     </div>
+    <hr class="divide black my-4" />
     <div class="row justify-content-end mb-4">
-    <button href="" class="add-button btn btn-outline-primary">Ajouter un document</button>
+    <a href="{{ path('document_new') }}"><button class="btn btn-outline-success">Ajouter un document</button></a>
     </div>
-    <div class="row justify-content-center mb-4">
-    <table>
-      <tr>
-          <th>Type</th>
-          <th>Nom du fichier</th>
-          <th>Date d'ajout sur le site</th>
-          <th>Telecharger</th>
-      </tr>
-      {% if user.document is not empty %}
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      {% endif %}
-    </table>
-    </div>
+
+      {{ include('partials/user-documents.html.twig') }}
+
   {% endif %}
+
+
 </div>
 </div>
 </main>

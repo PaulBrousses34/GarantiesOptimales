@@ -24,7 +24,7 @@
 
         <script type="text/javascript">
         tarteaucitron.init({
-    	  "privacyUrl": "/protection-des-donnees", /* Privacy policy url */
+    	  "privacyUrl": "/mentions-legales", /* Privacy policy url */
 
     	  "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
     	  "cookieName": "tarteaucitron", /* Cookie name */
@@ -44,7 +44,7 @@
 
     	  //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
                           
-          "readmoreLink": "/protection-des-donnees", /* Change the default readmore link */
+          "readmoreLink": "/mentions-legales", /* Change the default readmore link */
 
           "mandatory": true, /* Show a message about mandatory cookies */
         });
@@ -61,13 +61,14 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        {% if app.user is not null %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil">Mon espace personnel</a></li>
+                        {% endif %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">A propos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#actualites">Actualités</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#particuliers">Assurances particuliers</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professionnels">Assurances professionnels</a></li>
-                        {% if app.user is not null %}
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil">Mon espace personnel</a></li>
-                        {% else %}
+                        {% if app.user is null %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#inscription-connexion">Inscription/Connexion</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
@@ -98,32 +99,36 @@
  
     {% block footer %}
         <!-- Contact-->
-        <section class="page-section bg-info" id="contact">
+        <section class="page-section" id="contact">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
                         <h2 class="mt-0">Contactez nous</h2>
                         <hr class="divider my-4" />
                         <p class="text-dark mb-5">Pour toutes questions ou pour être aidé dans vos démarches</p>
-                        <p class="link-contact"><a href="">Cliquez ici pour plus d'infomations</a></p><br>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
                         <p>Par téléphone</p>
                         <div>+33 6 46 42 66 08</div>
                     </div>
-                    <div class="col-lg-4 mr-auto text-center mb-5 mb-lg-0">
+                    <div class="col-lg-3 mr-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
                         <p>Par email</p>
                         <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
                         <a class="d-block" href="mailto:contact@yourwebsite.com">contact@liguori-assurances.com</a>
                     </div>
-                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-align-justify fa-3x mb-3 text-muted"></i>
                          <p>Via notre formulaire de contact</p>
                         <a class="d-block" href="{{ path('contact_form')}}">En cliquant ici</a>
+                    </div>
+                    <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <a class="d-block" href="" data-toggle="modal" data-target="#callModale">Demander à être rappellé</a>
+                        {{ include('partials/modal-call.html.twig') }}
                     </div>
                 </div>
             </div>
@@ -142,9 +147,8 @@
                         <li><a href="" data-toggle="modal" data-target="#connexionModale">Connexion</a></li>
                         {% else %}
                         <li><a href="{{ path('user_read', {'lastname' : app.user.lastname})}}">Mon espace personnel</a></li>
-                        <li><a href="">Déclarer un sinistre</a></li>
+                        <li><a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}">Déclarer un sinistre</a></li>
                         {% endif %}
-                        <li><a href="">Contact</a></li>
                     </ul>
                 </div>
                 <div class="sitemap-particuliers col-lg-3 col-md-6 text-center">
@@ -175,9 +179,7 @@
                     <ul>
                         <li><a href="{{ path('newsletter')}}">Newsletter</a></li>
                         <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
-                        <li><a href="{{ path('cgu')}}">Conditions Generales d'Utilisation</a></li>
                         <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
-                        <li><a href="{{ path('protection')}}">Protection des données personnelles</a></li>
                         <li><a href="" data-toggle="modal" data-target="#tarteaucitron">Gestion des cookies</a></li>
                         <li><a href="{{ path('avis')}}">Avis Clients</a></li>
                     </ul>
@@ -196,6 +198,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('assets/js/scripts.js')}}"></script>
+        <script>
+                $('.custom-file-input').on('change', function(event) {
+                    var inputFile = event.currentTarget;
+                    $(inputFile).parent()
+                        .find('.custom-file-label')
+                        .html(inputFile.files[0].name);
+                });
+            </script>
         {% endblock %}
     </body>
 </html>

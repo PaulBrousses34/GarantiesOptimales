@@ -1,13 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
+<main class="container-main">
+      <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a> - 
+          <a href="{{ path('user_edit', {'lastname': app.user.lastname})}}">Modifier mon profil</a>
+        </p>
+      </div>
   <div class="row px-3 justify-content-center">
     {{ include('registration/_form.html.twig', {'button_label': 'Modifier'}) }}
   </div>
   <div class="row justify-content-center mt-3">
     <button type="button" data-toggle="modal" data-target="#confirmModal" class="confirmModalLink form-btn-delete">Supprimer mon profil</button>
-  </div>
+  </div><br><br>
 </main>
 
 <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">

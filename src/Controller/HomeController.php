@@ -14,11 +14,29 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/", name="home", methods={"GET", "POST"})
      */
-    public function index(CategorieRepository $categorieRepository)
+    public function index(CategorieRepository $categorieRepository, MailerInterface $mailer)
     {
+        if(isset($_POST['meeting-time']) && isset($_POST['meeting-number'])) {
 
+            $time = $_POST['meeting-time'];
+            $number = $_POST['meeting-number'];
+
+            $emailToSend = (new TemplatedEmail())
+
+            ->from('paul.brousses@gmail.com')
+            ->to('paul.brousses@gmail.com')
+            ->subject('Demande de rappel')
+            ->htmlTemplate('email/contact/rappel.html.twig')
+            ->context([
+                'time' => $time,
+                'number' => $number,
+            ]);
+
+            $mailer->send($emailToSend);
+            
+        }
         $professionnels = $categorieRepository->findById(2);
         $particuliers = $categorieRepository->findById(1);
         return $this->render('home/index.html.twig', [
@@ -52,6 +70,7 @@ class HomeController extends AbstractController
                     $email = $form->get('email')->getData();
                     $subject = $form->get('subject')->getData();
                     $message = $form->get('message')->getData();
+                    $type = $form->get('type')->getData();
 
                     $fileName = $fileUploader->saveFile($form['file'], 'assets/images/attachment');
             
@@ -69,6 +88,7 @@ class HomeController extends AbstractController
                 'mail' => $email,
                 'subject' => $subject,
                 'message' => $message,
+                'type' => $type,
             ]);
                 
                         $mailer->send($emailToSend);
@@ -102,7 +122,7 @@ class HomeController extends AbstractController
 
                     $this->addFlash(
                         'success',
-                        'Votre message a bien été envoyé.'
+                        'Votre message a bien été envoyé une confirmation par mail vous a été envoyé. Nous répondrons à votre demande dans les plus brefs délais'
                     );
 
                     return $this->redirectToRoute('home');
@@ -128,16 +148,6 @@ class HomeController extends AbstractController
         ]);
     }
 
-    /**
-     * Method for the page about us
-     * @Route("/contact", name="contact")
-     */
-    public function contact() {
-
-        return $this->render('home/contact.html.twig', [
-
-        ]);
-    }
 
     /**
      * Method for the page legal mentions

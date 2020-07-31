@@ -1,39 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Document index{% endblock %}
+{% block title %}Document index | {{societyName}}{% endblock %}
 
 {% block body %}
-    <h1>Document index</h1>
-
-    <table class="table">
+<div class="row px-3 justify-content-center form-doc">
+    <table class="table" id='form'>
         <thead>
             <tr>
-                <th>Id</th>
-                <th>NomFichier</th>
-                <th>Type</th>
-                <th>DateTelechargement</th>
-                <th>actions</th>
+                <th>Type de document</th>
+                <th>Date d'ajout</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for document in documents %}
+        {% for document in app.user.document %}
             <tr>
-                <td>{{ document.id }}</td>
-                <td>{{ document.NomFichier }}</td>
                 <td>{{ document.Type }}</td>
-                <td>{{ document.DateTelechargement ? document.DateTelechargement|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ document.DateTelechargement ? document.DateTelechargement|date('d-m-Y H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('document_show', {'id': document.id}) }}">show</a>
-                    <a href="{{ path('document_edit', {'id': document.id}) }}">edit</a>
+                    <a href="{{ path('document_show', {'id': document.id}) }}">Voir</a> | 
+                    <a href="{{ path('document_delete', {'id': document.id}) }}">Supprimer</a>
+                    <a href="{{ path('document_delete', {'id': document.id}) }}">Supprimer</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucun Document</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('document_new') }}">Create new</a>
+</div>
 {% endblock %}

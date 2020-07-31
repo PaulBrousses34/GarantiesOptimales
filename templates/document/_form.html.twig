@@ -1,5 +1,8 @@
 {{ form_start(form, {'attr': {'id': 'form'}}) }}
-<h2 class="title-register">Ajouter un Document</h2>
+
+    <div class="row px-3 pt-3 main-title justify-content-center">
+      <h2 class= "title-register">Ajouter un document</h2>
+    </div>
     {{ form_widget(form) }}
-    <button class="btn form-btn">{{ button_label|default('Ajouter') }}</button>
+    <button class="btn btn-outline-success">{{ button_label|default('Ajouter') }}</button>
 {{ form_end(form) }}

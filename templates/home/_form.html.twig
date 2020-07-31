@@ -8,18 +8,12 @@
     </div>
   {% endfor %}
 
-
 {{ form_start(form, { 'attr': {'id': 'form' }}) }} 
 
     <div class="row px-3 pt-3 main-title justify-content-center">
       <h2 class= "title-register">Nous contacter</h2>
     </div>
-      <div class="row px-3 mt-2 fil-ariane">
-        <p>
-          <a href="{{ path('home')}}">Accueil</a> -
-          <a href="{{ path('contact_form')}}">Contact</a>
-        </p>
-      </div>
+
 
     <input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
 
@@ -61,6 +55,11 @@
     <div class="contact-form-label">{{form_label (form.file) }}</div>
     <div>{{form_help (form.file) }}</div>
     <div>{{form_widget (form.file) }}</div>
+   
+
+    <div class="contact-form-label">{{form_label (form.type) }}</div>
+    <div>{{form_help (form.type) }}</div>
+    <div>{{form_widget (form.type) }}</div>
     <br>
 
     <div class="container-captcha">
@@ -70,6 +69,6 @@
 
     <div class="mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
     <div class="submit-button-container">
-        <button type="submit" class="btn form-btn">{{ button_label|default('Envoyer') }}</button>
+        <button type="submit" class="btn btn-outline-success">{{ button_label|default('Envoyer') }}</button>
     </div>
 {{ form_end(form) }}

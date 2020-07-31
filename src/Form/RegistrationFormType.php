@@ -119,7 +119,7 @@ class RegistrationFormType extends AbstractType
                 if($user->getId() === null){
                     // we want to add the input where we need to accept the CGU
                     $form->add('agreeTerms', CheckboxType::class, [
-                        'label'=>'J\'accepte les CGU',
+                        'label'=>' J\'accepte les CGU',
                         'required'=>true,
                         'mapped'=>false,
                         'constraints' => [

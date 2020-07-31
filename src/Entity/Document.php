@@ -29,12 +29,15 @@ class Document
 
     /**
      * @ORM\Column(type="datetime", nullable=false)
+     * @ORM\OrderBy({"DateTelechargement" = "DESC"})
      */
     private $DateTelechargement;
 
     /**
      * @ORM\ManyToOne(targetEntity=Utilisateur::class, inversedBy="Document")
+     * @ORM\JoinColumn(nullable=false)
      */
+
     private $utilisateur;
 
     public function getId(): ?int

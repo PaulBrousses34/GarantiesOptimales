@@ -7,8 +7,12 @@
 <p>Nouvelle demande de contact de <em>{{ mail }}</em></p>
 
 <p>Sujet de la demande : <em>{{ subject }}</em></p>
+{% if type is defined %}
+<p>Type de Pièce Jointe : {{ type }}</p>
+{% endif %}
 <p> Contenu du message : </p>
 <p><em>{{ message|nl2br }}</em></p>
+
 
 </main>
 

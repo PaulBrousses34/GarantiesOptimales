@@ -6,10 +6,12 @@ use App\Repository\UtilisateurRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UtilisateurRepository::class)
+ * @UniqueEntity(fields={"email"}, message="Cette adresse email est déjà utilisée.")
  */
 class Utilisateur implements UserInterface
 {
@@ -69,6 +71,7 @@ class Utilisateur implements UserInterface
 
     /**
      * @ORM\OneToMany(targetEntity=Document::class, mappedBy="utilisateur")
+     * @ORM\OrderBy({"DateTelechargement" = "DESC"})
      */
     private $Document;
 

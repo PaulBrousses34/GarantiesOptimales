@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<main class="container-main">
+
+{% for message in app.flashes('success') %}
+    <div class="flash-notice-success my-3">
+      <div class="alert alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p class="mb-0">{{message}}</p>
+      </div>
+    </div>
+{% endfor %}
+{% for flashError in app.flashes('reset_password_error') %}
+    <div class="flash-notice-failed my-3">
+        <div class="alert alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <p class="mb-0">{{ flashError }}</p>
+        </div>
+    </div>
+{% endfor %}
+      <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a> - 
+          <a href="{{ path('user_sinistre', {'lastname' : app.user.lastname })}}">Déclaration de sinistre</a>
+        </p>
+      </div>
+
+
+    <div class="row px-3 justify-content-center">
+
+{{ form_start(formSinistre, { 'attr': {'id': 'form' }}) }} 
+
+
+    <div class="row px-3 pt-3 main-title justify-content-center">
+        <h2 class="title-register">Déclaration de sinistre</h2>
+    </div>
+
+        <input type="hidden" name="email" value="{{app.user.email}}">
+        <input type="hidden" name="prenom" value="{{app.user.firstname}}">
+        <input type="hidden" name="nom" value="{{app.user.lastname}}">
+
+    <div class="contact-form-label">{{form_label (formSinistre.numberContract) }} <span class="form-asterisk-mandatory">*</span></div>
+    {#<div>{{form_help (formSinistre.numberContract) }}</div>#}
+    <div>{{form_widget (formSinistre.numberContract) }}</div>
+
+
+    <div class="contact-form-label">{{form_label (formSinistre.constat) }} <span class="form-asterisk-mandatory">*</span></div>
+    {#<div>{{formSinistre_help (formSinistre.constat) }}</div>#}
+    <div>{{form_widget (formSinistre.constat) }}</div>
+    
+    <div class="contact-form-label">{{form_label (formSinistre.other) }}</div>
+    {#<div>{{formSinistre_help (formSinistre.other) }}</div>#}
+    <div>{{form_widget (formSinistre.other) }}</div>
+    
+    <div class="contact-form-label">{{form_label (formSinistre.type) }}</div>
+    {#<div>{{formSinistre_help (formSinistre.type) }}</div>#}
+    <div>{{form_widget (formSinistre.type) }}</div>
+
+    <div class="contact-form-label">{{form_label (formSinistre.message) }}</div>
+    {#<div>{{formSinistre_help (formSinistre.message) }}</div>#}
+    <div>{{form_widget (formSinistre.message) }}</div>
+
+    <div class="mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
+    <div class="submit-button-container">
+        <button type="submit" class="btn btn-outline-success">{{ button_label|default('Envoyer') }}</button>
+    </div>
+{{ form_end(formSinistre) }}
+</div>
+</main>
+
+{% endblock %}

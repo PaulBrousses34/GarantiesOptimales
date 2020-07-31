@@ -11,9 +11,17 @@
           </div>
       </div>
     {% endfor %}
-        <div class="col-12 col-lg-8 mx-auto mb-5">
+          <div class="row px-3 mt-2 justify-content-left fil-ariane ">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('contact_form')}}">Formulaire de Contact</a>
+        </p>
+      </div>
+
+
     <div class="row px-3 justify-content-center">
       {{ include('home/_form.html.twig') }}
     </div>
+
 </main>
 {% endblock %}

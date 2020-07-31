@@ -4,6 +4,7 @@ namespace App\Form;
 
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -102,6 +103,27 @@ class ContactType extends AbstractType
                 'label' => 'Joindre un fichier',
                 'attr' => ['placeholder' => 'Sélectionner votre fichier'],
                 'mapped' => false,
+            ])
+            ->add('type', ChoiceType::class, [
+                'label' => 'Type de document',
+                'placeholder' => 'Choisissez le type de document',
+                'choices' => [
+                    'Pièce d\'identité' => 'Pièce d\'identité',
+                    'Permis de conduire' => 'Permis de conduire',
+                    'Carte grise' => 'Carte grise',
+                    'Bail de location' => 'Bail de location',
+                    'Justificatif de domicile' => 'Justificatif de domicile',
+                    'Certificat de cession' => 'Certificat de cession',
+                    'Relevé d\'information' => 'Relevé d\'information',
+                    'RIB' => 'RIB',
+                    'Constat' => 'Constat',
+                    'Etat des lieux' => 'Etat des lieux',
+                    'Carte grise' => 'Carte grise',
+                    'K-BIS' => 'K-BIS',
+                    'Justificatif d\'experience' => 'Justificatif d\'experience',
+                    'Autre' => 'Autre',
+                    ],
+                'multiple' => false,
             ]);
 
     }

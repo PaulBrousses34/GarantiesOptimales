@@ -1,34 +1,49 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Document{% endblock %}
+{% block title %}Document | {{societyName}} {% endblock %}
 
 {% block body %}
-    <h1>Document</h1>
+{% if app.user.id == document.utilisateur.id %}
+<main class="container-main">
+      <div class="row px-3 mt-2 fil-ariane">
+        <p>
+          <a href="{{ path('home')}}">Accueil</a> -
+          <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a> -
+          <a href="{{ path('document_show', {'id' : document.id })}}">Document</a>
+        </p>
+      </div>
+<div class="row px-3 justify-content-center">
 
+<div id="form" class="form-doc"> 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ document.id }}</td>
+                <th>Fichier</th>
+                <td>{{ document.Fichier }}</td>
             </tr>
             <tr>
-                <th>NomFichier</th>
-                <td>{{ document.NomFichier }}</td>
-            </tr>
-            <tr>
-                <th>Type</th>
+                <th>Type de document</th>
                 <td>{{ document.Type }}</td>
             </tr>
             <tr>
-                <th>DateTelechargement</th>
+                <th>Date d'ajout</th>
                 <td>{{ document.DateTelechargement ? document.DateTelechargement|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('document_index') }}">back to list</a>
+ 
+    <object type="application/pdf" width="100%" height="50%">
+   <param name="src" value="{{asset('assets/images/attachment/tmp/' ~ document.fichier)}}" />
+   </object>
+    
+    <a href="{{asset('assets/images/attachment/tmp/' ~ document.fichier)}}"><button class="btn btn-outline-success">Télécharger</button></a>
 
-    <a href="{{ path('document_edit', {'id': document.id}) }}">edit</a>
-
+    <a href="{{ path('user_read', {'lastname' : app.user.lastname})}}"><button class="btn btn-outline-info">Revenir à mon espace personnel</button></a>
+    <br><br>
     {{ include('document/_delete_form.html.twig') }}
+</div>
+</div>
+</main>
+{% endif %}
 {% endblock %}
