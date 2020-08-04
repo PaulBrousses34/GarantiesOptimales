@@ -80,6 +80,12 @@ class RegistrationFormType extends AbstractType
             ->add('ville', null, [
                 'label'=> 'Ville',
             ])
+            ->add('newsletter', CheckboxType::class,
+            [
+                'help' => 'Cocher la case si vous souhaitez vous abonner a notre newsletter et recevoir nos dernières offres et actualités',
+                'label' => 'Newsletter',
+                'required' => false,
+            ])
 
 
             // This add is for the edit and not for the add (create a new account)

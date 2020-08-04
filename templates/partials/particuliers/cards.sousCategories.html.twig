@@ -3,11 +3,11 @@
     {% for type in sousCategorie.types %}
     <div id="container">	
 	    <div class="product-details">
-	    <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}">
-        <h4 class="categorie-name-card">{{ type.name }}</h4>
-		</a>
-		<p class="information">{{ type.description }}</p>
-        <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}">Obtenir un devis</a>
+            <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}">
+            <h4 class="categorie-name-card">{{ type.name }}</h4>
+            </a>
+            <p class="information">{{ type.description }}</p>
+            <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}">Obtenir un devis</a>
         </div>
         <div class="product-image">
             <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}">
@@ -16,6 +16,6 @@
         </div>
     </div>
     {% endfor %}
-{% endfor %}
+    {% endfor %}
 </div>
 

@@ -10233,7 +10233,7 @@ font-size: 14px;
 .btnEye {
   color: white;
   border: 0px;
-  background-color: lightskyblue;
+  background-color: orange;
   border: 2px solid orange;
   margin-right: 30px;
 }
@@ -10705,4 +10705,31 @@ table {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#registration_form_newsletter_help {
+  text-align: left;
+}
+
+#container-news {
+box-shadow: 0 15px 30px 1px grey;
+background: lightgrey;
+text-align: center;
+border-radius: 25px;
+overflow: hidden;
+margin: 3em auto;
+height: auto;
+width: 1200px;
+font-size: 19px;
+}
+
+.img-top {
+  width: 500px;
+  border-radius: 25px;
+
+}
+
+.card-title-news {
+  font-size : 25px;
+  font-weight: bolder;
 }

@@ -140,8 +140,14 @@
             <div class="row">
                 <div class="footer-link-principal col-lg-3 col-md-6 text-center">
                     <ul>
+                    {% set route =  app.request.attributes.get('_route') %}
+                    {% if route == 'home' %}
                         <li><a href="#about">A propos</a></li>
                         <li><a href="#actualites">Actualités</a></li>
+                    {% else %}
+                        <li><a href="{{ path('home')}}">A propos</a></li>
+                        <li><a href="{{ path('home')}}">Actualités</a></li>
+                    {% endif %}
                         {% if app.user is null %}
                         <li><a href="{{ path('app_register')}}">Inscription</a></li>
                         <li><a href="" data-toggle="modal" data-target="#connexionModale">Connexion</a></li>
@@ -177,7 +183,7 @@
                 </div>
                 <div class="footer-link-about col-lg-3 col-md-6 text-center">
                     <ul>
-                        <li><a href="{{ path('newsletter')}}">Newsletter</a></li>
+                        <li><a href="{{ path('newsletter_index')}}">Newsletter</a></li>
                         <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
                         <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
                         <li><a href="" data-toggle="modal" data-target="#tarteaucitron">Gestion des cookies</a></li>

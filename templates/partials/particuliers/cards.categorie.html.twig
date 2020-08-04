@@ -2,23 +2,16 @@
     {% for particulier in particuliers %}
     {% for sousCategories in particulier.sousCategories %}
     <div id="container">	
-	
-<!-- Start	Product details -->
 	    <div class="product-details">
-		
-		<!-- 	Product Name -->
 	            <a href="{{ path('assurances_sous-categorie_particuliers',  {'slug' : sousCategories.slug })}}">
                 <h4 class="categorie-name-card">{{ sousCategories.name }}</h4>
 		        </a>
-		            <p class="information">" Nos assurances"</p>
-
+		            <p class="information">"Nos assurances"</p>
         </div>
 	
         <div class="product-image">
-	
-	        <img src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
-	
-<!-- 	product Information-->
+        {% if sousCategories.name == "2 roues & Quad" or sousCategories.name == "Plaisance" or sousCategories.name == "Santé" %}
+                <img src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
             <div class="info">
                 <ul>
                 {% for type in sousCategories.types %}
@@ -28,27 +21,15 @@
             </div>
         </div>
     </div>
-    {% endfor %}
-{% endfor %}
-</div>
-{#}
-                <div class="row justify-content-center">
-                    {% for particulier in particuliers %}
-                        {% for sousCategories in particulier.sousCategories %}
-                    <div class="card col-11 col-sm-5 col-lg-3 pb-4 mt-3 my-md-4 mx-1 mx-md-2 align-content-center">
-                        <a href="{{ path('assurances_sous-categorie_particuliers',  {'slug' : sousCategories.slug })}}">
-                            <img class="card-img-top" src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
-                        </a>
-                        <div class="card-body">
-                            <a href="{{ path('assurances_sous-categorie_particuliers',  {'slug' : sousCategories.slug })}}"><h5 class="card-title justify-content-center">{{ sousCategories.name }}</h5></a>
-                            <ul>
-                            {% for type in sousCategories.types %}
-                            <a href="{{ path('assurances_type_particuliers',  {'slug' : type.slug })}}"><li class="card-type">{{ type.name }}</li></a><br>
-                            {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                        {% endfor %}
-                    {% endfor %}
+        {% else %}
+            <a href="{{ path('assurances_sous-categorie_particuliers',  {'slug' : sousCategories.slug })}}">
+                    <img class="card-img-top" src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
+                    </a>
                 </div>
-{#}
+    </div>
+
+        {% endif %}
+
+                    {% endfor %}
+                    {% endfor %}
+</div>

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Newsletters | {{ societyName }}{% endblock %}
+
+{% block body %}
+
+<main class="container-main">
+<div class="row justify-content-center">
+<div id="container-news">            
+    <img class="img-top" src="{{asset('assets/images/photos/' ~ newsletter.image) }}" alt="photo lien {{ newsletter.title }}">
+    <div class="card-body">
+    <h5 class="card-title-news">{{ newsletter.title }}</h5>
+    <p class="card-text">{{ newsletter.content}} </p>
+    <small>{{ newsletter.createdAt | date("m/d/Y H:m", "Europe/Paris") }}</small>
+    </div>
+</div>                      
+</div>
+</main>
+{% endblock %}

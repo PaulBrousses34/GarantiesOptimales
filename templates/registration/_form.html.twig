@@ -7,6 +7,7 @@
       </div>
     </div>
   {% endfor %}
+
 {{ form_start(registrationForm, {'attr': {'id': 'form'}}) }}
 
 <input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
@@ -65,6 +66,10 @@
       <button type="button" class="btnEye" id="eyeConfirm"><i class="fas fa-eye"></i></button>
     </div>
 
+    <div class="user-form-label">{{form_label (registrationForm.newsletter) }}</div>
+    <div>{{form_widget (registrationForm.newsletter) }}</div>
+    <div>{{form_help (registrationForm.newsletter) }}</div>
+
 
     <div class="mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
  
@@ -83,13 +88,14 @@
             {{ include('partials/cgu.html.twig') }}
 
             <div class="modal-footer">
-              <button type="button" class="btn cgu-btn" data-dismiss="modal">Fermer</button>
+              <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fermer</button>
             </div>
           </div>
         </div>
       </div>
     </div>   
     <div class="user-form-label">{{form_label (registrationForm.agreeTerms) }} </div>
+
 
     <div>{{form_widget (registrationForm.agreeTerms) }}</div>
     <div class="container-cgu">
@@ -99,12 +105,15 @@
      <div class="g-recaptcha" data-sitekey="6LfxjrMZAAAAANwcUdUVYBH2MwYGSUoHfUMKPU7e"></div>
     </div>
   {% endif %}
-
+    <br>
+    
     <div class="submit-button-container">
       <button type="submit"
-      class="btn form-btn">{{ button_label|default('S\'inscrire') }}</button>
+      class="btn btn-outline-success">{{ button_label|default('S\'inscrire') }}</button>
     </div>
-
+  <div class="row justify-content-center mt-3">
+    <button type="button" data-toggle="modal" data-target="#confirmModal" class="confirmModalLink btn btn-outline-danger">Supprimer mon profil</button>
+  </div><br><br>
 
 {{ form_end(registrationForm)  }}
 

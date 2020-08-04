@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Newsletter;
 use App\Form\ContactType;
 use App\Repository\CategorieRepository;
+use App\Repository\NewsletterRepository;
 use App\Services\FileUploader;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -160,16 +162,27 @@ class HomeController extends AbstractController
             ]); 
     }
 
+    /**
+     * Method for the page legal mentions
+     * @Route("/newsletter", name="newsletter_index", methods={"GET"})
+     */
+    public function newsletterIndex(NewsletterRepository $newsletterRepository) {
+
+
+        $newsletters = $newsletterRepository->findAll();
+        return $this->render('newsletter/index.html.twig', [
+            'newsletters' => $newsletters,
+            ]); 
+    }
 
     /**
-     * 
-     * @Route("/newsletter", name="newsletter")
+     * @Route("/newsletter/{id}", name="newsletter_show", methods={"GET"})
      */
-    public function Newsletter() {
-
-        return $this->render('home/newsletter.html.twig', [
-
-            ]);  
+    public function show(Newsletter $newsletter)
+    {
+        return $this->render('newsletter/show.html.twig', [
+            'newsletter' => $newsletter,
+        ]);
     }
 
     /**

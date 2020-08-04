@@ -55,6 +55,11 @@ class SousCategorie
      */
     private $Image;
 
+    /**
+     * @ORM\Column(type="string", length=5000, nullable=true)
+     */
+    private $description;
+
     public function __construct()
     {
         $this->types = new ArrayCollection();
@@ -164,6 +169,18 @@ class SousCategorie
     public function setImage(?string $Image): self
     {
         $this->Image = $Image;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

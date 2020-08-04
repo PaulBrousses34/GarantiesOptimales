@@ -75,6 +75,11 @@ class Utilisateur implements UserInterface
      */
     private $Document;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $Newsletter;
+
     public function __construct()
     {
         $this->Document = new ArrayCollection();
@@ -266,6 +271,18 @@ class Utilisateur implements UserInterface
                 $document->setUtilisateur(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getNewsletter(): ?bool
+    {
+        return $this->Newsletter;
+    }
+
+    public function setNewsletter(bool $Newsletter): self
+    {
+        $this->Newsletter = $Newsletter;
 
         return $this;
     }
