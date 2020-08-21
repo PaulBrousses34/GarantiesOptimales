@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Categorie;
 use App\Entity\Newsletter;
 use App\Form\ContactType;
 use App\Repository\CategorieRepository;
@@ -13,12 +14,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="home", methods={"GET", "POST"})
      */
-    public function index(CategorieRepository $categorieRepository, MailerInterface $mailer)
+    public function index(CategorieRepository $categorieRepository,  NewsletterRepository $newsletterRepository, MailerInterface $mailer)
     {
         if(isset($_POST['meeting-time']) && isset($_POST['meeting-number'])) {
 
@@ -39,11 +41,12 @@ class HomeController extends AbstractController
             $mailer->send($emailToSend);
             
         }
-        $professionnels = $categorieRepository->findById(2);
-        $particuliers = $categorieRepository->findById(1);
+
+        $newsletter = $newsletterRepository->findByLatest();
+        $category = $categorieRepository->findAll();
         return $this->render('home/index.html.twig', [
-            'professionnels' => $professionnels,
-            'particuliers' => $particuliers,
+            'category' => $category,
+            'newsletters' => $newsletter,
         ]);
     }
 

@@ -22,6 +22,7 @@ class DocumentType extends AbstractType
                     'Pièce d\'identité' => 'Pièce d\'identité',
                     'Permis de conduire' => 'Permis de conduire',
                     'Carte grise' => 'Carte grise',
+                    'Contrat' => 'Contrat',
                     'Bail de location' => 'Bail de location',
                     'Justificatif de domicile' => 'Justificatif de domicile',
                     'Certificat de cession' => 'Certificat de cession',

@@ -15,7 +15,6 @@ class NewsletterType extends AbstractType
             ->add('Title')
             ->add('Image')
             ->add('Content')
-            ->add('createdAt')
             ->add('updatedAt')
         ;
     }

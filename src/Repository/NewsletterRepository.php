@@ -19,22 +19,19 @@ class NewsletterRepository extends ServiceEntityRepository
         parent::__construct($registry, Newsletter::class);
     }
 
-    // /**
-    //  * @return Newsletter[] Returns an array of Newsletter objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+    * @return Newsletter[] Returns an array of Newsletter objects
+    */
+    public function findByLatest()
     {
         return $this->createQueryBuilder('n')
-            ->andWhere('n.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('n.id', 'ASC')
-            ->setMaxResults(10)
+            ->orderBy('n.createdAt', 'ASC')
+            ->setMaxResults(6)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+    
 
     /*
     public function findOneBySomeField($value): ?Newsletter

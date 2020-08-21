@@ -18,6 +18,7 @@
     <div class="row px-3 pt-3 main-title justify-content-center">
       <h2 class="title-register">Modifier mon profil</h2>
     </div>
+
     {% else %}
     <div class="row px-3 pt-3 main-title justify-content-center">
       <h2 class="title-register">Inscription</h2>
@@ -111,9 +112,7 @@
       <button type="submit"
       class="btn btn-outline-success">{{ button_label|default('S\'inscrire') }}</button>
     </div>
-  <div class="row justify-content-center mt-3">
-    <button type="button" data-toggle="modal" data-target="#confirmModal" class="confirmModalLink btn btn-outline-danger">Supprimer mon profil</button>
-  </div><br><br>
+
 
 {{ form_end(registrationForm)  }}
 

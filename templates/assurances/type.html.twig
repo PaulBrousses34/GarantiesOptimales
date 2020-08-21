@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Assurance {{type.name}} | {{ societyName }}{% endblock %}
+
+{% block body %}
+
+      
+<main class="container-main">
+
+{% set template = app.request.attributes.get('slug')%}
+
+{{ include('partials/types/' ~ template ~ '.html.twig') }}
+
+</main>
+{% endblock %}

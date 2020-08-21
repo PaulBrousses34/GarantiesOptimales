@@ -2,7 +2,7 @@
 
     {% block body %}
         <header class="masthead">
-        <div class="container h-100">
+        <div class="container h-50">
             {% for message in app.flashes('success') %}
             <div class="flash-notice-success my-3">
                 <div class="alert alert-dismissible">
@@ -26,7 +26,6 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 font-weight-light mb-5">L'assurance des professionnels et des particuliers.<br> Les meilleures garanties au meilleur prix</p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">En savoir plus</a>
                     </div>
                 </div>
         </div>
@@ -97,7 +96,11 @@
                     <div class="col-lg-8 text-center">
                         <h2 class="text-black mt-0">Les dernières actualités et promotions!</h2>
                         <hr class="divider my-4" />
-                        <p class="text-black-50 mb-4">Actualités et Promos</p>
+                        {% for newsletter in newsletters %}
+
+                        {{ include('partials/card.newsletter.html.twig') }}
+
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -105,18 +108,26 @@
         <!-- Categories -->
 
 
-            <section class="page-section" id="particuliers">
-                <h2 class="text-center mt-0">Nos assurances pour particuliers</h2>
+            <section class="page-section" id="particuliers"><a href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">
+                <h2 class="text-center mt-0">Nos assurances pour particuliers</h2></a>
                 <hr class="divider my-4" />
-                {{ include('partials/particuliers/cards.categorie.html.twig') }}
+                {% for categorie in category %}
+                {% if categorie.name == "Assurances Particuliers" %}
+                {{ include('partials/cards.categorie.html.twig') }}
+                {% endif %}
+                {% endfor %}
             </section>
 
- 
 
-            <section class="page-section" id="professionnels">
-                <h2 class="text-center mt-0">Nos assurances pour professionnels</h2>
+
+            <section class="page-section" id="professionnels"><a href="{{ path('assurances_categorie', {'slug': 'professionnels'})}}">
+                <h2 class="text-center mt-0">Nos assurances pour professionnels</h2></a>
                 <hr class="divider my-4" />
-                {{ include('partials/professionnels/cards.categorie.html.twig') }}
+                {% for categorie in category %}
+                {% if categorie.name == "Assurances Professionnels" %}
+                {{ include('partials/cards.categorie.html.twig') }}
+                {% endif %}
+                {% endfor %}
             </section>
 
 

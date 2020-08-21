@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\NewsletterRepository;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +42,11 @@ class Newsletter
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
+
+    public function __construct() {
+
+        $this->createdAt = new \DateTime();
+    }
 
     public function getId(): ?int
     {

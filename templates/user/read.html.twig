@@ -21,48 +21,48 @@
       </div>
       
 <div class="row px-3 justify-content-center">
-  <div id="form">
-  {% if is_granted('ROLE_ADMIN') %}
-    <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
-      <h2>Admin</h2>
-    </div>
-    <hr class="divide light my-4" />
-    <div class="row justify-content-center pt-3">
-      <a href="{{ path('admin') }}"><button class="btn banner-top-btn my-4" type="button">Accéder au BackOffice</button></a>
-    </div>
-  {% endif %}
-  {% if app.user == user %}
-    <div class="row justify-content-between pt-3 px-3 mb-3 ml-md-2 mr-md-1 main-title">
-      <h2>Mon espace personnel</h2>
-    </div>
-    <hr class="divide light my-4" />
-    <div class="row justify-content-center align-items-center mb-3">
-      <div class="col-12 col-sm-6 text-center text-sm-left">
-        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-        <p>Prenom: {{user.firstname}}<br>
-           Nom: {{user.lastname}}<br>
-           Email : {{user.email}}
-        </p>
-        <a href="{{ path('user_edit', {'lastname' : app.user.lastname })}}"><button class="btn btn-outline-success" type="button">Modifier le profil</button></a>
-        <br><br>
-        <a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}"><button class="btn btn-outline-primary" type="button">Déclarer un sinistre</button></a>
-      </div>
-    </div>
-  {% endif %}
-    <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
-      <h2>Mes documents</h2>
-    </div>
-    <hr class="divide black my-4" />
-    <div class="row justify-content-end mb-4">
-    <a href="{{ path('document_new') }}"><button class="btn btn-outline-success">Ajouter un document</button></a>
-    </div>
+  <div id="form-user">
+        {% if is_granted('ROLE_ADMIN') %}
+          <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
+            <h2>Admin</h2>
+          </div>
+            <hr class="divide light my-4" />
+          <div class="row justify-content-center pt-3">
+            <a href="{{ path('admin') }}"><button class="btn banner-top-btn my-4" type="button">Accéder au BackOffice</button></a>
+          </div>
+        {% endif %}
+        {% if app.user == user %}
+          <div class="row justify-content-between pt-3 px-3 mb-3 ml-md-2 mr-md-1 main-title">
+            <h2>Mon espace personnel</h2>
+          </div>
+            <hr class="divide light my-4" />
+          <div class="row justify-content-center align-items-center mb-3">
+            <div class="col-12 col-sm-6 text-center text-sm-left">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <p>Prenom: {{user.firstname}}<br>
+                  Nom: {{user.lastname}}<br>
+                  Email : {{user.email}}
+                </p>
+                <a href="{{ path('user_edit', {'lastname' : app.user.lastname })}}"><button class="btn btn-outline-success" type="button">Modifier le profil</button></a>
+                <br><br>
+                <a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}"><button class="btn btn-outline-primary" type="button">Déclarer un sinistre</button></a>
+            </div>
+          </div>
+        {% endif %}
+          <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">
+            <h2>Mes documents</h2>
+          </div>
+            <hr class="divide black my-4" />
+          <div class="row justify-content-end mb-4">
+            <a href="{{ path('document_new') }}"><button class="btn btn-outline-success">Ajouter un document</button></a>
+          </div>
 
-      {{ include('partials/user-documents.html.twig') }}
+            {{ include('partials/user-documents.html.twig') }}
 
-  {% endif %}
+        {% endif %}
 
 
-</div>
+  </div>
 </div>
 </main>
 

@@ -64,8 +64,6 @@
                         {% if app.user is not null %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil">Mon espace personnel</a></li>
                         {% endif %}
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">A propos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#actualites">Actualités</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#particuliers">Assurances particuliers</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professionnels">Assurances professionnels</a></li>
                         {% if app.user is null %}
@@ -157,13 +155,22 @@
                         {% endif %}
                     </ul>
                 </div>
+                <div class="footer-link-about col-lg-3 col-md-6 text-center">
+                    <ul>
+                        <li><a href="{{ path('newsletter_index')}}">Newsletter</a></li>
+                        <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
+                        <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#tarteaucitron">Gestion des cookies</a></li>
+                        <li><a href="{{ path('avis')}}">Avis Clients</a></li>
+                    </ul>
+                </div>
                 <div class="sitemap-particuliers col-lg-3 col-md-6 text-center">
                     <ul>
                     {% for category in allCategory %}
                         {% if category.id == 1 %}
                             <h6>{{category.name}}</h6>
                     {% for sousCategorie in category.sousCategories %}
-                            <li><a href="{{ path('assurances_sous-categorie_particuliers', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
+                            <li><a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
                     {% endfor %}
                         {% endif %}
                     {% endfor %}
@@ -175,35 +182,28 @@
                         {% if category.id == 2 %}
                             <h6>{{category.name}}</h6>
                     {% for sousCategorie in category.sousCategories %}
-                            <li><a href="{{ path('assurances_sous-categorie_professionnels', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
+                            <li><a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
                     {% endfor %}
                         {% endif %}
                     {% endfor %}
                     </ul>
                 </div>
-                <div class="footer-link-about col-lg-3 col-md-6 text-center">
-                    <ul>
-                        <li><a href="{{ path('newsletter_index')}}">Newsletter</a></li>
-                        <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
-                        <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
-                        <li><a href="" data-toggle="modal" data-target="#tarteaucitron">Gestion des cookies</a></li>
-                        <li><a href="{{ path('avis')}}">Avis Clients</a></li>
-                    </ul>
-                </div>
             </div>
-        </div>
+        </div><br>
             <div class="container"><div class="small text-center text-muted">Copyright © 2020 - {{ societyName }}</div></div>
         </footer>
         {% endblock %}
         <!-- Bootstrap core JS-->
         {% block javascripts %} 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('assets/js/scripts.js')}}"></script>
+       <script src="{{ asset('assets/js/scriptnv.js')}}"></script>
+        <script src="{{ asset('assets/js/jquery.js')}}"></script>
         <script>
                 $('.custom-file-input').on('change', function(event) {
                     var inputFile = event.currentTarget;
@@ -211,8 +211,7 @@
                         .find('.custom-file-label')
                         .html(inputFile.files[0].name);
                 });
-            </script>
-        <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/39a1620c1005d3e1e9ed7e21b4f5508bac591f838058b13433dad3f7fb955f2d.js"></script>
+        </script>
         {% endblock %}
     </body>
 </html>

@@ -38,7 +38,7 @@
    </object>
     
     <a href="{{asset('assets/images/attachment/tmp/' ~ document.fichier)}}"><button class="btn btn-outline-success">Télécharger</button></a>
-
+    <br><br>
     <a href="{{ path('user_read', {'lastname' : app.user.lastname})}}"><button class="btn btn-outline-info">Revenir à mon espace personnel</button></a>
     <br><br>
     {{ include('document/_delete_form.html.twig') }}
