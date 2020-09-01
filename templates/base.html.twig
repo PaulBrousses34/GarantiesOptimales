@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>{% block title %}Accueil | {{ societyName }}{% endblock %}</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />
+        <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -68,13 +68,11 @@
                 </div>
                 </div>
             {% endfor %}
-                <div class="row h-100 align-items-left justify-content-left text-left">
-                    <div class="col-lg-10 align-self-start">
-
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                    </div>
-                </div>
+            <div class="container-first">
+            <img class="logoSite" src="{{ asset('assets/images/logo3.png')}}">
+            <h1 class="siteBrand">Meilleures-garanties.com</h1>
+            <p class="slogan">Des garanties optimales à prix minimal</p>
+            </div>
         </div>
         </header>
     
@@ -113,7 +111,7 @@
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('home')}}">Accueil</a></li>
                         {% if app.user is not null %}
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{path('user_read')}}">Mon espace personnel</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('user_read', {'lastname' : app.user.lastname})}}">Mon espace personnel</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">Assurances particuliers</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('assurances_categorie', {'slug': 'professionnels'})}}">Assurances professionnels</a></li>

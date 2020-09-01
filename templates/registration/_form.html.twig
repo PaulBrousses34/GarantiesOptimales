@@ -11,8 +11,6 @@
 {{ form_start(registrationForm, {'attr': {'id': 'form'}}) }}
 
 <input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
-
-
 {% set route = app.request.attributes.get('_route')%}
     {% if route == 'user_edit' %}
     <div class="row px-3 pt-3 main-title justify-content-center">
@@ -23,13 +21,8 @@
     <div class="row px-3 pt-3 main-title justify-content-center">
       <h2 class="title-register">Inscription</h2>
     </div>
-    <div class="row px-3 mt-2 fil-ariane">
-        <p>
-          <a href="{{ path('home')}}">Accueil</a> -
-          <a href="{{ path('app_register')}}">Inscription</a>
-        </p>
-    </div>
     {% endif %}
+
 
     <div class="user-form-label">{{form_label (registrationForm.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_help (registrationForm.lastname) }}</div>
@@ -112,8 +105,9 @@
       <button type="submit"
       class="btn btn-outline-success">{{ button_label|default('S\'inscrire') }}</button>
     </div>
-
-
+    {% if app.request.attributes.get('_route') == 'user_edit' %}
+    <button type="button" data-toggle="modal" data-target="#confirmModal" class="confirmModalLink btn btn-outline-danger">Supprimer mon profil</button>
+    {% endif %}
 {{ form_end(registrationForm)  }}
 
 
@@ -137,6 +131,3 @@
   }
   });
 </script>
-
-
-{#}{'attr': {'data-toggle': 'modal', 'data-target':'#cguModal'}}{#}

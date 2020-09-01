@@ -26,6 +26,7 @@ class HomeController extends AbstractController
 
             $time = $_POST['meeting-time'];
             $number = $_POST['meeting-number'];
+            $motif = $_POST['motif'];
 
             $emailToSend = (new TemplatedEmail())
 
@@ -36,9 +37,14 @@ class HomeController extends AbstractController
             ->context([
                 'time' => $time,
                 'number' => $number,
+                'motif' => $motif,
             ]);
 
             $mailer->send($emailToSend);
+            $this->addFlash(
+                'success',
+                'Votre demande de rappel a bien été envoyé. Nous vous rappellerons comme convenu'
+            );
             
         }
 

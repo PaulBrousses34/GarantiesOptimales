@@ -11,7 +11,10 @@
             <form method="post" action="{{ path('home')}}">
                     <label  for="meeting-time">Choisir une date et une heure:</label>
                     <input class="call-form-label" type="datetime-local" id="meeting-time"
-                    name="meeting-time" placeholder="22-09 16:30" style="text-align:center" required><br>
+                    name="meeting-time" placeholder="22-09 16:30" style="text-align:center" required><br><br>
+                    <label  for="motif">Motif de votre demande :</label>
+                    <input class="call-form-label" type="text" id="motif"
+                    name="motif" style="text-align:center" required><br>
                     <label for="meeting-number">Votre numero : </label><br>
                     <input class="call-form-label" type="phone" id="meeting-number"
                     name="meeting-number" placeholder="06.00.00.00.00" style="text-align:center" required>

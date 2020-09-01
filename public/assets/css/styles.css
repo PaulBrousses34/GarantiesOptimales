@@ -7311,7 +7311,7 @@ header.masthead h1 {
 @media (min-width: 992px) {
   header.masthead {
     height: 20vh;
-    min-height: 30rem;
+    min-height: 35rem;
     padding-top: 4.5rem;
     padding-bottom: 0;
   }
@@ -22879,4 +22879,60 @@ body #page-container .et_pb_section
   display: flex;
   justify-content: center;
   margin-top: 20px;
+}
+
+.logo-pres {
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-floating, .btn-floating:focus, .btn-floating:hover {
+  color: #ffffff;
+  margin: 1rem 1rem;
+  background-color: #757393;
+  border-radius: 2rem;
+  padding: .5rem 1rem;
+}
+
+/* Error 403/404 */
+.container-error {
+  margin-top: 50px;
+}
+
+
+.img-error {
+  width: 120px;
+  margin-bottom: 50px;
+}
+.message-error{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.message-error {
+  color: #d11931;
+}
+
+.link-error {
+  margin-left: 80px;
+}
+@media only screen and (min-width: 992px) {
+  .message-error {
+      font-size: 3rem;
+  }
+}
+
+.container-first {
+  display: flex;
+}
+
+.logoSite {
+  width: 250px;
 }

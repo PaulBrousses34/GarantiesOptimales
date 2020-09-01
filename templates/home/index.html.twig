@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 
     {% block body %}
-      
+
+    
                 {% if app.user is not null  %}
         <section class="page-section" id="profil">
             <div class="container">
@@ -17,66 +18,168 @@
             </div>
         </section>
                 {% endif %}
-        <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-black mt-0">Nous avons ce qu'il vous faut!</h2>
-                        <hr class="divider my-4" />
-                        <p class="text-black-50 mb-4">{{societyName}} se charge de trouver le produit qu'il vous faut, le jour de votre demande et au meilleur prix.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 text-center">
+        <section class="page-section" id="presentation">
+        <div class="container-presentation">
+            
+            <img class="logo-pres" src="{{ asset('assets/images/logo1.png')}}">
+        
+            <div class="content-presentation">
+
+                    <div class="col-lg-12 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-9x fa-comments"></i>
+                            <i class="fas fa-3x fa-comments"></i>
                             <h3 class="h4 mb-2">24 heures sur 24<br> 7 jours sur 7</h3>
                             <p class="text-muted mb-0">Nous sommes disponible et répondons à vos questions à n'importe quel moment</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+
+                    <div class="col-lg-12 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-9x fa-search-dollar"></i>
-                            <h3 class="h4 mb-2">Des garanties au meilleur prix</h3>
-                            <p class="text-muted mb-0">{{societyName}} se charge de trouver les meilleures garanties au meilleur prix</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <i class="far fa-9x fa-folder-open"></i>
+                            <i class="far fa-3x fa-folder-open"></i>
                             <h3 class="h4 mb-2">Retrouvez facilement vos documents</h3>
                             <p class="text-muted mb-0">Vous pouvez retrouver facilement vos documents dans votre espace personnel</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 text-center">
+                    <div class="col-lg-12 col-md-6 text-center">
                         <div class="mt-5">
-                            <i class="fas fa-9x fa-people-arrows"></i>
+                            <i class="fas fa-3x fa-people-arrows"></i>
                             <h3 class="h4 mb-2">Un conseiller proche de vous</h3>
                             <p class="text-muted mb-0">Avec {{societyName}}, une seule et unique personne se charge de votre dossier.</p>
                         </div>
                     </div>
+               
+
                 </div>
-            </div>
+        </div>
         </section>
+        
         <!-- Actualités-->
-        <section class="page-section" id="actualites">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-black mt-0">Les dernières actualités et promotions!</h2>
-                        <hr class="divider my-4" />
-                        {% for newsletter in newsletters %}
-
-                        {{ include('partials/card.newsletter.html.twig') }}
-
-                        {% endfor %}
-                    </div>
+      <!--MOBILE-->
+      <!--Carousel Wrapper-->
+    <section class="page-section" id="actualites">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+                    <h2 class="text-black mt-0">Les dernières actualités et promotions!</h2>
+                    <hr class="divider my-4" />
+                              <!--MOBILE-->
+                              <!--Carousel Wrapper-->
+            <div id="carousel-newsletters-mobile" class="carousel slide carousel-multi-item  d-md-none" data-ride="carousel">
+                              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                              <!--First slide-->
+                <div class="carousel-item active">
+                  <div class="row justify-content-center newsletter">
+                    {% for newsletter in newsletters|slice(0,1) %}
+                      {{ include('partials/card.newsletter.html.twig') }}
+                    {% endfor %}
+                  </div>
                 </div>
+                            <!--/.First slide-->
+                            <!--Other slides-->
+                    {% for newsletter in newsletters|slice(1) %}
+                    <div class="carousel-item">
+                      <div class="row justify-content-center newsletter">
+                        {{ include('partials/card.newsletter.html.twig') }}
+                      </div>
+                    </div>
+                    {% endfor %}
+                            <!--/.Other slides-->
+              </div>
+                            <!--/.Slides-->
+                            <!--Controls-->
+                <div class="controls-top row justify-content-center">
+                  <a class="btn-floating" href="#carousel-newsletters-mobile" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                  <a class="btn-floating" href="#carousel-newsletters-mobile" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                </div>
+                          <!--/.Controls-->
+                        <!--/.Carousel Wrapper-->
+          </div>
+      <!--/.MOBILE-->
+
+      <!--MEDIUM SCREEN-->
+      <!--Carousel Wrapper-->
+      <div id="carousel-newsletters-medium" class="carousel slide carousel-multi-item d-none d-md-block d-lg-none" data-ride="carousel">
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <!--First slide-->
+          <div class="carousel-item active">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(0,2) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
             </div>
-        </section>
+          </div>
+          <!--/.First slide-->
+          <!--Second slide-->
+          <div class="carousel-item">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(2,2) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.Second slide-->
+          <!--Second slide-->
+          <div class="carousel-item">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(4,2) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.Second slide-->
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <div class="controls-top row justify-content-center">
+          <a class="btn-floating" href="#carousel-newsletters-medium" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-floating" href="#carousel-newsletters-medium" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <!--/.Controls-->
+      <!--/.Carousel Wrapper-->
+      </div>
+      <!--/.MEDIUM SCREEN-->
+
+      <!--LARGE SCREEN-->
+      <!--Carousel Wrapper-->
+      <div id="carousel-newsletters-large" class="carousel slide carousel-multi-item d-none d-lg-block" data-ride="carousel">
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <!--First slide-->
+          <div class="carousel-item active">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(0,3) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.First slide-->
+          <!--Second slide-->
+          <div class="carousel-item">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(3,3) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.Second slide-->
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <div class="controls-top row justify-content-center">
+          <a class="btn-floating" href="#carousel-newsletters-large" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-floating" href="#carousel-newsletters-large" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <!--/.Controls-->
+      <!--/.Carousel Wrapper-->
+      </div>
+      <!--/.LARGE SCREEN-->
+      </div>
+                      
+      </div>
+    </div>
+  </section>
         <!-- Categories -->
 
 
@@ -119,5 +222,6 @@
         </section>
 
         {{ include('partials/modal-login.html.twig') }}
+
         {% endif %}
 {% endblock %}
