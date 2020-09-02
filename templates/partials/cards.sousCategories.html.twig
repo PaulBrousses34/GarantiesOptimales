@@ -6,7 +6,9 @@
             <a href="{{ path('assurances_type', {'slug' : type.slug })}}">
              <h4 class="categorie-name-card">{{ type.name }}</h4>
             </a>
-            <p class="information">{{ type.description }}</p>
+            <div class="information">
+            <p>{{ type.description }}</p>
+            </div>
             <a class="linkdevis" href="{{ path('assurances_type', {'slug' : type.slug })}}"> Obtenir un devis </a>
         </div>
         <div class="product-image">

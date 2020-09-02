@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>{% block title %}Accueil | {{ societyName }}{% endblock %}</title>
         <!-- Favicon-->
-        <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" />
+         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -69,10 +69,12 @@
                 </div>
             {% endfor %}
             <div class="container-first">
-            <img class="logoSite" src="{{ asset('assets/images/logo3.png')}}">
-            <h1 class="siteBrand">Meilleures-garanties.com</h1>
-            <p class="slogan">Des garanties optimales à prix minimal</p>
-            </div>
+                    <img class="logoSite" src="{{ asset('assets/images/logo3.png')}}">
+                <div class="container-brand">
+                    <h1 class="siteBrand">Garanties-Optimales</h1>
+                    <p class="slogan">Des garanties optimales à prix minimal</p>
+                    <p class="slogan">Pour professionnels et particuliers</p>
+                </div>
         </div>
         </header>
     

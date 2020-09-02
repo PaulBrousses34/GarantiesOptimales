@@ -12,8 +12,8 @@
         {% else %}
 	            <a href="{{ path('assurances_sous-categorie', {'slug' : sousCategories.slug })}}">
                 <h4 class="categorie-name-card">{{ sousCategories.name }}</h4>
-		        </a>
-		            <p class="information">{{ sousCategories.description }}</p>
+		        <p class="information">{{ sousCategories.description }}</p>
+                </a>
         {% endif %}
         </div>
 	

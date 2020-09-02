@@ -7769,6 +7769,9 @@ background: #DFC2F2;
   color: red;
   text-align: center;
 }
+.information {
+  font-size: 14px;
+}
 .info {
     background: rgba(27, 26, 26, 0.9);
     font-family: 'Farsan', cursive;
@@ -7777,7 +7780,7 @@ background: #DFC2F2;
     position: absolute;
     line-height: 1.9;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     cursor: no-drop;
     color: #FFF;
     height: 100%;
@@ -22934,5 +22937,19 @@ body #page-container .et_pb_section
 }
 
 .logoSite {
-  width: 250px;
+  max-width: 400px;
+  min-width: auto;
 }
+
+.container-first {
+  margin-top: 30px;
+}
+.siteBrand {
+  color: white;
+  font-size: 45px;
+}
+.slogan {
+  color: white;
+  margin : 25px;
+}
+

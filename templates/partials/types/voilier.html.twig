@@ -85,11 +85,6 @@
 								<div class="et_pb_top_inside_divider"></div>
 								<div class="et_pb_row et_pb_row_6">
 									<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
-										<div class="et_pb_module et_pb_text et_pb_text_10 et_pb_bg_layout_light  et_pb_text_align_left">
-											<div class="et_pb_text_inner">
-												<h2>Votre assurance <br>Voilier</h2>
-											</div>
-										</div>
 										<div class="sg-offertable sg-offertable-nbcol-3 sg-offertable-priced">
 											<div class="sg-offertable-mobileswitcher">
 												<i class="fa fa-chevron-left sg-offertable-mobileswitcher_prev sg-offertable-mobileswitcher_button disabled"></i>
@@ -472,7 +467,7 @@
 													<tr class="tableline-sep">
 														<th>
 															<div class="tableline_title">
-																Protection Juridique
+																Protection Juridique<br><small><a href="{{ path('assurances_type', {slug: 'protection-juridique-nautique'})}}">(voir notre tableau des garanties protection juridique nautique)</a><small>
 															</div>
 														</th>
 														<td class="sg-offertable-ms-current">
@@ -538,7 +533,7 @@
                                                     <tr class="tableline-sep">
 														<th>
 															<div class="tableline_title">
-																Assistance
+																Assistance <br><small><a href="{{ path('assurances_type', {slug: 'assistance'})}}">(voir notre tableau des garanties d'assistance)</a><small>
 															</div>
 														</th>
 														<td class="sg-offertable-ms-current">
@@ -749,7 +744,7 @@
 															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2abc71d4e3f" data-parent=".sg-offertable">
 																<div class="tableline_title_text">
 																	<p>
-																		Voir notre assurance <a href="">remorque Bateau et Jet</a> pour plus d'informations sur les diverses garanties et franchises.
+																		Voir notre assurance <a href="{{ path('assurances_type', {slug: 'remorque'})}}">remorque Bateau et Jet</a> pour plus d'informations sur les diverses garanties et franchises.
 																	</p>
 																</div>
 															</div>
