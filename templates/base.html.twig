@@ -68,7 +68,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#particuliers">Assurances particuliers</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professionnels">Assurances professionnels</a></li>
                         {% if app.user is null %}
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#inscription-connexion">Inscription/Connexion</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#inscription-connexion">Inscription / Connexion</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                         {% if app.user is not null %}
@@ -147,7 +147,7 @@
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3"></i>
                         <p>Par téléphone</p>
-                        <div>+33 6 46 42 66 08</div>
+                        <div class="phone">+33 6 46 42 66 08</div>
                     </div>
                     <div class="col-lg-3 mr-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-envelope fa-3x mb-3"></i>
@@ -172,7 +172,7 @@
         <footer class="bg-light py-5">
         {{ include('partials/modal-login.html.twig') }}
             <div class="container-footer">
-            <div class="row">
+            <div class="row mx-0">
                 <div class="footer-link-principal col-lg-3 col-md-6 text-center">
                     <ul>
                     {% set route =  app.request.attributes.get('_route') %}

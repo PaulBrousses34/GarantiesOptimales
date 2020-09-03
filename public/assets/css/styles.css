@@ -2957,8 +2957,9 @@ input[type=button].btn-block {
   border-top-right-radius: calc(0.3rem - 1px);
 }
 .modal-header .close {
-  padding: 1rem 1rem;
-  margin: -1rem -1rem -1rem auto;
+  /* padding: 1rem 1rem;
+  margin: -1rem -1rem -1rem auto; */
+  background-color: #799c00;
 }
 
 .modal-title {
@@ -2970,6 +2971,7 @@ input[type=button].btn-block {
   position: relative;
   flex: 1 1 auto;
   padding: 1rem;
+  text-align: center;
 }
 
 .modal-footer {
@@ -7083,6 +7085,13 @@ a.text-dark:hover, a.text-dark:focus {
   color: #231f20!important;
 }
 
+@media (min-width: 576px) {
+  h2.text-black{
+    font-size-adjust: auto;
+  }
+  
+}
+
 .text-white-50 {
   color: rgba(255, 255, 255, 0.5) !important;
 }
@@ -7490,10 +7499,14 @@ font-size: 14px;
   border-radius: 15px;
   margin-bottom: 30px;
   background: linear-gradient(#dbccb9, white);
-  margin-left: 150px;
-  margin-right: 150px;
+/*   margin-left: 150px;
+  margin-right: 150px; */
   margin-top: 50px;
   width: 1200px;
+}
+.form-btn-connexion{
+  background-color: #cc6400;
+  border: 2px solid #b75a00;
 }
 .title-register {
   text-transform: uppercase;
@@ -7548,11 +7561,11 @@ text-transform: uppercase;
   margin-top: 40px;
 }
 
-/* .container-main {
+.container-main {
   margin-top: 100px;
   margin-bottom: 100px;
   margin: 2em;
-} */
+}
 
 .container-error {
   margin-top: 200px;
@@ -7632,8 +7645,12 @@ text-transform: uppercase;
   margin-left: 15px;
 }
 .fil-ariane, .fil-ariane a{
-  color: grey;
+  color: #231f20;
   font-size: 0.8rem;
+}
+
+.card-sous-categorie div.row, .page-section div.row{
+  margin: 0;
 }
 
 .container-form {
@@ -7868,6 +7885,10 @@ table {
 .fa-search-dollar,
 .fa-comments {
   color : 2e4a85;
+}
+
+div.phone{
+  color: #799c00;
 }
 
 .form-control-file{
