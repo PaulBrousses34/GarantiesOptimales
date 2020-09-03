@@ -50,14 +50,40 @@
         });
         </script>
     </head>
-      
+      <header class="masthead">
+        <div class="container h-40">
+            {% for message in app.flashes('success') %}
+            <div class="flash-notice-success my-3">
+                <div class="alert alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{message}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            {% for flashError in app.flashes('reset_password_error') %}
+                <div class="flash-notice-failed my-3">
+                <div class="alert alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{ flashError }}</p>
+                </div>
+                </div>
+            {% endfor %}
+            <div class="container-first">
+                    <img class="logoSite" src="{{ asset('assets/images/logo3.png')}}">
+                <div class="container-brand">
+                    <h1 class="siteBrand">Garanties-Optimales</h1>
+                    <p class="slogan">Des garanties optimales à prix minimal</p>
+                    <p class="slogan">Pour professionnels et particuliers</p>
+                </div>
+        </div>
+        </header>
     
     <body id="page-top">
     {% block nav %}
     {% set route =  app.request.attributes.get('_route') %}
         {% if route == 'home' %}
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
-            <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
                 <a class="navbar-brand js-scroll-trigger" class="societyName" href="#page-top">{{ societyName }}</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -101,34 +127,7 @@
         </nav>
         {% endif %}
     {% endblock %}
-    <div class="container-fluid">
-    <header class="masthead">
-        <div class="container h-40">
-            {% for message in app.flashes('success') %}
-            <div class="flash-notice-success my-3">
-                <div class="alert alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p class="mb-0">{{message}}</p>
-                </div>
-            </div>
-            {% endfor %}
-            {% for flashError in app.flashes('reset_password_error') %}
-                <div class="flash-notice-failed my-3">
-                <div class="alert alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p class="mb-0">{{ flashError }}</p>
-                </div>
-                </div>
-            {% endfor %}
-            <div class="container-first row justify-content-center">
-                <img class="logoSite col-sm-12 col-lg-6" src="{{ asset('assets/images/logo3.png')}}">
-                <div class="container-brand  col-sm-12 col-lg-6">
-                    <h1 class="siteBrand">Garanties-Optimales</h1>
-                    <p class="slogan">Des garanties optimales à prix minimal</p>
-                    <p class="slogan">Pour professionnels et particuliers</p>
-                </div>
-        </div>
-        </header>
+
     {% block body %}
     {% endblock %}
  
@@ -145,23 +144,23 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-phone fa-3x mb-3"></i>
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
                         <p>Par téléphone</p>
                         <div>+33 6 46 42 66 08</div>
                     </div>
                     <div class="col-lg-3 mr-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-envelope fa-3x mb-3"></i>
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
                         <p>Par email</p>
                         <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
                         <a class="d-block" href="mailto:contact@yourwebsite.com">contact@liguori-assurances.com</a>
                     </div>
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-align-justify fa-3x mb-3"></i>
+                        <i class="fas fa-align-justify fa-3x mb-3 text-muted"></i>
                          <p>Via notre formulaire de contact</p>
                         <a class="d-block" href="{{ path('contact_form')}}">En cliquant ici</a>
                     </div>
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-phone fa-3x mb-3"></i>
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
                         <a class="d-block" href="" data-toggle="modal" data-target="#callModale">Demander à être rappellé</a>
                         {{ include('partials/modal-call.html.twig') }}
                     </div>
@@ -229,7 +228,6 @@
         </div><br>
             <div class="container"><div class="small text-center text-muted">Copyright © 2020 - {{ societyName }}</div></div>
         </footer>
-        </div>
         {% endblock %}
         <!-- Bootstrap core JS-->
         {% block javascripts %} 
