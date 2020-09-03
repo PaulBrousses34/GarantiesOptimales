@@ -2219,7 +2219,7 @@ input[type=button].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background-color: light;
+  background-color: #658200;
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
@@ -7656,6 +7656,10 @@ text-transform: uppercase;
   text-align: center;
 }
 
+.sitemap-particuliers ul h6, .sitemap-professionnels ul h6{
+  font-weight: bold;
+}
+
 li {
   list-style-type: none;
 }
@@ -7780,8 +7784,9 @@ background: #DFC2F2;
 
 .linkdevis {
   font-size: 12px;
-  color: red;
+  color: #cc6400;
   text-align: center;
+  font-weight: bold;
 }
 .information {
   font-size: 14px;
