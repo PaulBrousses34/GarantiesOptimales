@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<main class="container-main">
+<main class="container-fluid">
     {% for message in app.flashes('success') %}
       <div class="flash-notice-success my-3">
           <div class="alert alert-dismissible">
@@ -19,7 +19,7 @@
       </div>
 
 
-    <div class="row px-3 justify-content-center">
+    <div class="row justify-content-center w-100 mx-0">
       {{ include('home/_form.html.twig') }}
     </div>
 
