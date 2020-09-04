@@ -7761,7 +7761,7 @@ background: #DFC2F2;
 	right: 0%; 
 	top: 0%;
 	transform: translate(25px, -15px);
-	font-family: 'Farsan', cursive;
+	font-family: 'Merriweather Sans', cursive;
 	display: inline-block;
 	background: #FFA69E;
 	border-radius: 5px;
@@ -7784,7 +7784,7 @@ background: #DFC2F2;
 
 /* The most important information about the product */
 #container .product-details > p {
-	font-family: 'Farsan', cursive;
+	font-family: 'Merriweather Sans', cursive;
 	text-align: center;
 	font-size: 10px;
 	color: #7d7d7d;
@@ -7833,7 +7833,7 @@ background: #DFC2F2;
 }
 .info {
     background: rgba(27, 26, 26, 0.9);
-    font-family: 'Farsan', cursive;
+    font-family: 'Merriweather Sans', cursive;
     transition: all 0.3s ease-out;
     transform: translateX(-120%);
     position: absolute;
@@ -10404,7 +10404,7 @@ li::before {
   top: -2px;
   color: #fff;
   font-weight: 700;
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   width: 25px;
   height: 25px;
   border-radius: 25px;
@@ -11177,7 +11177,7 @@ cubic-bezier(.48, .13, .54, .93) 0.2s;
 }
 .sg-single-offer .sg-single-offer__title {
   margin-top: 0;
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 24px;
   line-height: 1.4em;
   font-weight: 500;
@@ -11558,7 +11558,7 @@ thead th.sg-has-titlegrey:first-child {
 }
 .sg-offertable table.sg-offertable-table thead th:first-child
 .sg-title-green {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 33px;
   color: #8db500;
   font-weight: 400;
@@ -11987,7 +11987,7 @@ th:first-child {
 .sg-timeline-item
 .sg-timeline-item_date {
   font-size: 18px;
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
   color: #74B531;
@@ -12169,7 +12169,7 @@ th:first-child {
 .sg-tooltip-content-text
 .sg-tooltip-content-title {
   font-size: 20px;
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -20842,7 +20842,7 @@ li.current-menu-item>a {
   padding: 0;
 }
 }h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
 }
 body, input, textarea, select {
   font-family: 'Open Sans', Helvetica, Arial, Lucida, sans-serif;
@@ -20900,7 +20900,7 @@ body, input, textarea, select {
 5px!important;
 }
 .inputLogCourtier {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   text-transform: uppercase;
   color: #ffffff!important;
   letter-spacing: 3px;
@@ -20926,7 +20926,7 @@ body, input, textarea, select {
   border-radius: 0;
   letter-spacing: 5px;
   font-size: 16px;
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif!important;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif!important;
   font-weight: 500!important;
   text-transform: uppercase!important;
   background-color: rgba(0, 0, 0, 0);
@@ -20939,7 +20939,7 @@ body, input, textarea, select {
 }
 .checkBoxLog {
   color: #fff;
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif!important;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif!important;
 }
 @media
 (max-width:479px) {
@@ -20949,7 +20949,7 @@ body, input, textarea, select {
   padding-left: 0px!important;
 }
 }.inputLogCourtierPagePart {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   text-transform: uppercase;
   color: #333!important;
   letter-spacing: 3px;
@@ -20984,7 +20984,7 @@ body, input, textarea, select {
   border-radius: 0;
   letter-spacing: 5px;
   font-size: 16px;
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif!important;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif!important;
   font-weight: 500!important;
   text-transform: uppercase!important;
   background-color: rgba(0, 0, 0, 0);
@@ -21001,7 +21001,7 @@ white!important;
 }
 .checkBoxLogPagePart {
   color: #333;
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif!important;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif!important;
 }
 .pum-theme-27608, .pum-theme-default-theme {
   background-color: rgba(0, 0, 0, .6)!important;
@@ -21083,7 +21083,7 @@ a:hover {
   line-height: 0;
 }
 .et_pb_text_15 h2 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 55px;
   color: #2e4a85!important;
   line-height: 1.2em;
@@ -21166,7 +21166,7 @@ body #page-container .et_pb_section .et_pb_button_2:before, body #page-container
 }
 .et_pb_blog_0 .et_pb_post
 .entry-title a {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif!important;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif!important;
   color: #000000!important;
 }
 .et_pb_blog_0 .et_pb_post .entry-title {
@@ -21187,7 +21187,7 @@ p {
 }
 .et_pb_blog_0 .pagination
 a {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   text-transform: uppercase;
   font-size: 16px;
   color: #8db500!important;
@@ -21255,7 +21255,7 @@ body #page-container .et_pb_section .et_pb_button_3:before, body #page-container
 300ms ease 0ms;
 }
 .et_pb_text_14 h2 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 55px;
   color: #ffffff!important;
   line-height: 1.2em;
@@ -21659,7 +21659,7 @@ ul {
 }
 .et_pb_text_6
 h3 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   text-transform: uppercase;
   font-size: 32px;
   color: #8db500!important;
@@ -21756,7 +21756,7 @@ div.et_pb_section.et_pb_section_9 {
 }
 .et_pb_text_9
 h2 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   color: #2e4a85!important;
   line-height: 1.2em;
 }
@@ -21768,14 +21768,14 @@ h2 {
   margin-bottom: 0px!important;
 }
 .et_pb_text_10 h2 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 45px;
   color: #2e4a85!important;
   line-height: 1.2em;
 }
 .et_pb_text_10
 h3 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 33px;
   color: #8db500!important;
 }
@@ -21793,7 +21793,7 @@ h3 {
 }
 .et_pb_text_5
 h2 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 45px;
   color: #2e4a85!important;
   line-height: 1.2em;
@@ -21828,7 +21828,7 @@ p {
   line-height: 1.4em;
 }
 .et_pb_text_0 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 45px;
   line-height: 1.4em;
 }
@@ -21840,7 +21840,7 @@ p {
 }
 .et_pb_text_1
 h2 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 45px;
   color: #2e4a85!important;
   line-height: 1.2em;
@@ -21894,7 +21894,7 @@ p {
   line-height: 0em;
 }
 .et_pb_text_3 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 18px;
@@ -21902,7 +21902,7 @@ p {
 }
 .et_pb_text_3
 h1 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 45px;
@@ -21910,7 +21910,7 @@ h1 {
 }
 .et_pb_text_3
 h3 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 16px;
@@ -22122,7 +22122,7 @@ h5.et_pb_module_header, .et_pb_blurb_0.et_pb_blurb h5.et_pb_module_header a, .et
 }
 .et_pb_text_13
 h2 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   color: #2e4a85!important;
   line-height: 1.2em;
   text-align: center;
@@ -22140,7 +22140,7 @@ h2 {
 }
 .et_pb_text_12
 h3 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 33px;
   color: #8db500!important;
 }
@@ -22149,7 +22149,7 @@ h3 {
 }
 .et_pb_text_12
 h2 {
-  font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
   font-size: 45px;
   color: #2e4a85!important;
   line-height: 1.2em;
