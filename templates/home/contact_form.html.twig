@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<main class="container-fluid">
+<main class="container">
     {% for message in app.flashes('success') %}
       <div class="flash-notice-success my-3">
           <div class="alert alert-dismissible">
@@ -11,7 +11,7 @@
           </div>
       </div>
     {% endfor %}
-          <div class="px-3 mt-2 justify-content-left fil-ariane ">
+          <div class="mt-2 fil-ariane ">
         <p>
           <a href="{{ path('home')}}">Accueil</a> -
           <a href="{{ path('contact_form')}}">Formulaire de Contact</a>

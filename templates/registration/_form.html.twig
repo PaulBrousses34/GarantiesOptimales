@@ -49,9 +49,11 @@
     
     <div class="user-form-label">{{form_label (registrationForm.password.first)}} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
     <div>{{form_help (registrationForm.password) }}</div>
+    <div>
     <div>{{form_widget (registrationForm.password.first) }}</div>
     <div class="row mx-0 mt-1 px-4 justify-content-end">
       <button type="button" class="btnEye" id="eye"><i class="fas fa-eye"></i></button>
+    </div>
     </div>
 
     <div class="user-form-label">{{form_label (registrationForm.password.second) }} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
