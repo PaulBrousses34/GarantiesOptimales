@@ -13,61 +13,63 @@
 <input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
 {% set route = app.request.attributes.get('_route')%}
     {% if route == 'user_edit' %}
-    <div class="row px-3 pt-3 main-title justify-content-center">
+    <div class="main-title">
       <h2 class="title-register">Modifier mon profil</h2>
     </div>
 
     {% else %}
-    <div class="row px-3 pt-3 mx-0 main-title justify-content-center">
+    <div class="main-title">
       <h2 class="title-register">Inscription</h2>
     </div>
     {% endif %}
 
 
     <div class="user-form-label">{{form_label (registrationForm.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
-    <div>{{form_help (registrationForm.lastname) }}</div>
+    <div class="help">{{form_help (registrationForm.lastname) }}</div>
     <div>{{form_widget (registrationForm.lastname) }}</div>
 
     <div class="user-form-label">{{form_label (registrationForm.firstname) }} <span class="form-asterisk-mandatory">*</span></div>
-    <div>{{form_help (registrationForm.firstname) }}</div>
+    <div class="help">{{form_help (registrationForm.firstname) }}</div>
     <div>{{form_widget (registrationForm.firstname) }}</div>
 
     <div class="user-form-label">{{form_label (registrationForm.email) }} <span class="form-asterisk-mandatory">*</span></div>
     <div>{{form_widget (registrationForm.email) }}</div>
 
     <div class="user-form-label">{{form_label (registrationForm.adresse) }}</div>
-    <div>{{form_help (registrationForm.adresse) }}</div>
+    <div class="help">{{form_help (registrationForm.adresse) }}</div>
     <div>{{form_widget (registrationForm.adresse, {'attr': {'id': 'adresse'}}) }}</div>
 
     <div class="user-form-label">{{form_label (registrationForm.codePostal) }}</div>
-    <div>{{form_help (registrationForm.codePostal) }}</div>
+    <div class="help">{{form_help (registrationForm.codePostal) }}</div>
     <div>{{form_widget (registrationForm.codePostal, {'attr': {'id': 'codePostal'}}) }}</div>
 
     <div class="user-form-label">{{form_label (registrationForm.ville) }}</div>
-    <div>{{form_help (registrationForm.ville) }}</div>
+    <div class="help">{{form_help (registrationForm.ville) }}</div>
     <div>{{form_widget (registrationForm.ville, {'attr': {'id': 'ville'}}) }}</div>
     
     <div class="user-form-label">{{form_label (registrationForm.password.first)}} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
-    <div>{{form_help (registrationForm.password) }}</div>
-    <div>
-    <div>{{form_widget (registrationForm.password.first) }}</div>
-    <div class="row mx-0 mt-1 px-4 justify-content-end">
-      <button type="button" class="btnEye" id="eye"><i class="fas fa-eye"></i></button>
-    </div>
+    <div class="row mx-auto help">{{form_help (registrationForm.password) }}</div>
+    <div class="row row-cols-2 password mx-auto">
+      <div class="col-11 p-0">{{form_widget (registrationForm.password.first) }}</div>
+      <div class="col-1 p-0">
+        <button type="button" class="btnEye" id="eye"><i class="fas fa-eye"></i></button>
+      </div>
     </div>
 
     <div class="user-form-label">{{form_label (registrationForm.password.second) }} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
-    <div>{{form_widget (registrationForm.password.second) }}</div>
-    <div class="row mx-0 mt-1 px-4 justify-content-end">
-      <button type="button" class="btnEye" id="eyeConfirm"><i class="fas fa-eye"></i></button>
+    <div class="row row-cols-2 password mx-auto">
+      <div class="col-11 p-0">{{form_widget (registrationForm.password.second) }}</div>
+      <div class="col-1 p-0">
+        <button type="button" class="btnEye" id="eyeConfirm"><i class="fas fa-eye"></i></button>
+      </div>
     </div>
 
     <div class="user-form-label">{{form_label (registrationForm.newsletter) }}</div>
-    <div>{{form_widget (registrationForm.newsletter) }}</div>
-    <div>{{form_help (registrationForm.newsletter) }}</div>
+    <div class="help">{{form_widget (registrationForm.newsletter) }}</div>
+    <div class="help">{{form_help (registrationForm.newsletter) }}</div>
 
 
-    <div class="mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
+    <div class="help text-right mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
  
  {% if registrationForm.agreeTerms is defined %}
     <div class="modal fade" id="cguModal" tabindex="-1" role="dialog" aria-labelledby="cguModalTitle" aria-hidden="true">
@@ -93,8 +95,8 @@
     <div class="user-form-label">{{form_label (registrationForm.agreeTerms) }} </div>
 
 
-    <div>{{form_widget (registrationForm.agreeTerms) }}</div>
-    <div class="container-cgu">
+    <div class="help">{{form_widget (registrationForm.agreeTerms) }}</div>
+    <div class="container-cgu help">
     <a class="link-cgu" data-toggle="modal" data-target="#cguModal">Voir les mentions legales</a>  
     </div>
     <div class="container-captcha">
@@ -103,12 +105,14 @@
   {% endif %}
     <br>
     
-    <div class="submit-button-container">
+    <div class="py-1 submit-button-container">
       <button type="submit"
       class="btn btn-outline-success">{{ button_label|default('S\'inscrire') }}</button>
     </div>
     {% if app.request.attributes.get('_route') == 'user_edit' %}
-    <button type="button" data-toggle="modal" data-target="#confirmModal" class="confirmModalLink btn btn-outline-danger">Supprimer mon profil</button>
+    <div class="py-1 submit-button-container">
+      <button type="button" data-toggle="modal" data-target="#confirmModal" class="confirmModalLink btn btn-outline-danger">Supprimer mon profil</button>
+    </div>
     {% endif %}
 {{ form_end(registrationForm)  }}
 

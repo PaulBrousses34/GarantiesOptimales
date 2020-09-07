@@ -49,11 +49,11 @@
 
     <div class="contact-form-label">{{form_label (formSinistre.constat) }} <span class="form-asterisk-mandatory">*</span></div>
     {#<div>{{formSinistre_help (formSinistre.constat) }}</div>#}
-    <div>{{form_widget (formSinistre.constat) }}</div>
+    <div class="text-center w-100 mx-auto">{{form_widget (formSinistre.constat) }}</div>
     
     <div class="contact-form-label">{{form_label (formSinistre.other) }}</div>
     {#<div>{{formSinistre_help (formSinistre.other) }}</div>#}
-    <div>{{form_widget (formSinistre.other) }}</div>
+    <div class="text-center w-100 mx-auto">{{form_widget (formSinistre.other) }}</div>
     
     <div class="contact-form-label">{{form_label (formSinistre.type) }}</div>
     {#<div>{{formSinistre_help (formSinistre.type) }}</div>#}
@@ -63,7 +63,7 @@
     {#<div>{{formSinistre_help (formSinistre.message) }}</div>#}
     <div>{{form_widget (formSinistre.message) }}</div>
 
-    <div class="mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
+    <div class="help text-right mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
     <div class="submit-button-container">
         <button type="submit" class="btn btn-outline-success">{{ button_label|default('Envoyer') }}</button>
     </div>
