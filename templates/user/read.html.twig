@@ -13,14 +13,14 @@
     </div>
 {% endfor %}
 
-      <div class="px-3 mt-2 fil-ariane">
+      <div class="mt-2 fil-ariane">
         <p>
           <a href="{{ path('home')}}">Accueil</a> -
           <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a>
         </p>
       </div>
       
-<div class="row px-3 justify-content-center">
+<div class="row justify-content-center">
   <div id="form-user">
         {% if is_granted('ROLE_ADMIN') %}
           <div class="row justify-content-between pt-3 px-3 ml-md-2 mr-md-1 main-title">

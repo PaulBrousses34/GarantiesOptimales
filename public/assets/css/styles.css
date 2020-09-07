@@ -7528,6 +7528,7 @@ header.masthead h1 {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 10px;
 }
 
 #form div{
@@ -7586,12 +7587,6 @@ text-transform: uppercase;
   margin-right: -15px;
   margin-left: -15px;
   margin-top: 40px;
-}
-
-.container-main {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin: 2em;
 }
 
 .container-error {
