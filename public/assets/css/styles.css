@@ -7210,7 +7210,11 @@ h3 {
   .badge {
     border: 1px solid #000;
   }
-
+.table-responsive{
+  display: block;
+  width: 100%;
+  overflow-x: auto!important;
+}
   .table {
     border-collapse: collapse !important;
   }
@@ -7979,7 +7983,7 @@ font-size: 19px;
   margin-left: 15px;
   margin-right: 15px;
   margin-top: 50px;
-  width: 1200px;
+  width: 100%;
   overflow-x: auto;
 }
 
