@@ -206,7 +206,13 @@
                         {% if category.id == 1 %}
                             <h6>{{category.name}}</h6>
                     {% for sousCategorie in category.sousCategories %}
+                     {% if sousCategorie.name == 'Chien Chat' or sousCategorie.name =='Habitation' or  sousCategorie.name == 'Protection Juridique' or sousCategorie.name == "Mutuelle Santé" %}
+                        {% for type in sousCategorie.types %}
+                        <li><a href="{{ path('assurances_type', {'slug': type.slug})}}">{{ sousCategorie.name }}</a></li>
+                        {% endfor %}
+                        {% else %}
                             <li><a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
+                    {% endif %}
                     {% endfor %}
                         {% endif %}
                     {% endfor %}
@@ -238,8 +244,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('assets/js/scripts.js')}}"></script>
-      <script src="{{ asset('assets/js/scriptnv.js')}}"></script>
-        <script src="{{ asset('assets/js/jquery.js')}}"></script>
         <script>
                 $('.custom-file-input').on('change', function(event) {
                     var inputFile = event.currentTarget;
