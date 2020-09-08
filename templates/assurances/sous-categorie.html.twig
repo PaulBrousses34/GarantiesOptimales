@@ -5,7 +5,6 @@
 
 {% block body %}
 
-<main class="container-main">
 <section class="card-sous-categorie">
 
 
@@ -33,7 +32,9 @@
 	</div>
 </div>
 
-          <div class="row px-3 mt-2 fil-ariane">
+</section>
+<main class="container">
+          <div class="mt-2 fil-ariane">
         <p>
           <a href="{{ path('home')}}">Accueil</a> -
 		  <a href={{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}>{{sousCategorie.categorie.name}}</a>  - 
@@ -44,7 +45,6 @@
 
 {{ include('partials/cards.sousCategories.html.twig') }}
 
-</section>
 </main>
 
 {% endblock %}

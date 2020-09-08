@@ -4,8 +4,8 @@
 
 {% block body %}
 {% if app.user.id == document.utilisateur.id %}
-<main class="container-main">
-      <div class="row px-3 mt-2 fil-ariane">
+<main class="container">
+      <div class="mt-2 fil-ariane">
         <p>
           <a href="{{ path('home')}}">Accueil</a> -
           <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a> -
@@ -14,8 +14,9 @@
       </div>
 <div class="row px-3 justify-content-center">
 
-<div id="form" class="form-doc"> 
-    <table class="table">
+<div id="form" class="px-2 form-doc"> 
+    <div class="table-responsive">
+    <table class="table w-100">
         <tbody>
             <tr>
                 <th>Fichier</th>
@@ -31,6 +32,7 @@
             </tr>
         </tbody>
     </table>
+    </div>
 
  
     <object type="application/pdf" width="100%" height="50%">

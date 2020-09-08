@@ -3,7 +3,7 @@
 {% block title %}Inscription | {{ societyName }}{% endblock %}
 
 {% block body %}
-<main class="container-main">
+<main class="container">
             {% for message in app.flashes('success') %}
             <div class="flash-notice-success my-3">
                 <div class="alert alert-dismissible">
@@ -14,7 +14,7 @@
             {% endfor %}
 {% set route = app.request.attributes.get('_route')%}
     {% if route == 'app_register' %}
-    <div class="row px-3 mt-2 fil-ariane">
+    <div class="mt-2 fil-ariane">
         <p>
           <a href="{{ path('home')}}">Accueil</a> -
           <a href="{{ path('app_register')}}">Inscription</a>

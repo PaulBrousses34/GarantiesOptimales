@@ -10,7 +10,7 @@
 
 {{ form_start(form, { 'attr': {'id': 'form' }}) }} 
 
-    <div class="row px-3 pt-3 main-title justify-content-center">
+    <div class="row px-3 pt-3 main-title justify-content-center mx-0">
       <h2 class= "title-register">Nous contacter</h2>
     </div>
 
@@ -18,7 +18,7 @@
     <input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
 
     <div class="contact-form-label">{{form_label (form.email) }} <span class="form-asterisk-mandatory">*</span></div>
-    <div>{{form_help (form.email) }}</div>
+    <div class="help">{{form_help (form.email) }}</div>
 
     {% if app.user.email is defined %}
     <div>{{form_widget (form.email, { 'attr': {'value': app.user.email }})}}</div>
@@ -27,7 +27,7 @@
     {% endif %}
 
     <div class="contact-form-label">{{form_label (form.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
-    <div>{{form_help (form.lastname) }}</div>
+    <div class="help">{{form_help (form.lastname) }}</div>
     {% if app.user.lastname is defined %}
     <div>{{form_widget (form.lastname, { 'attr': {'value': app.user.lastname }}) }}</div>
     {% else %}
@@ -35,7 +35,7 @@
     {% endif %}
 
     <div class="contact-form-label">{{form_label (form.firstname) }} <span class="form-asterisk-mandatory">*</span></div>
-    <div>{{form_help (form.firstname) }}</div>
+    <div class="help">{{form_help (form.firstname) }}</div>
     {% if app.user.firstname is defined %}
     <div>{{form_widget (form.firstname, { 'attr': {'value': app.user.firstname }}) }}</div>
     {% else %}
@@ -44,21 +44,21 @@
 
 
     <div class="contact-form-label">{{form_label (form.subject) }} <span class="form-asterisk-mandatory">*</span></div>
-    <div>{{form_help (form.subject) }}</div>
+    <div class="help">{{form_help (form.subject) }}</div>
     <div>{{form_widget (form.subject) }}</div>
 
 
     <div class="contact-form-label">{{form_label (form.message) }} <span class="form-asterisk-mandatory">*</span></div>
-    <div>{{form_help (form.message) }}</div>
+    <div class="help">{{form_help (form.message) }}</div>
     <div>{{form_widget (form.message) }}</div>
 
     <div class="contact-form-label">{{form_label (form.file) }}</div>
-    <div>{{form_help (form.file) }}</div>
-    <div>{{form_widget (form.file) }}</div>
+    <div class="help">{{form_help (form.file) }}</div>
+    <div class="w-100 mx-auto text-center">{{form_widget (form.file) }}</div>
    
 
     <div class="contact-form-label">{{form_label (form.type) }}</div>
-    <div>{{form_help (form.type) }}</div>
+    <div class="help">{{form_help (form.type) }}</div>
     <div>{{form_widget (form.type) }}</div>
     <br>
 
@@ -67,7 +67,7 @@
     </div>
 
 
-    <div class="mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
+    <div class="help text-right mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
     <div class="submit-button-container">
         <button type="submit" class="btn btn-outline-success">{{ button_label|default('Envoyer') }}</button>
     </div>

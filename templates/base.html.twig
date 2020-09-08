@@ -14,6 +14,9 @@
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Open+Sans&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <!-- Third party plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css">
@@ -50,40 +53,14 @@
         });
         </script>
     </head>
-      <header class="masthead">
-        <div class="container h-40">
-            {% for message in app.flashes('success') %}
-            <div class="flash-notice-success my-3">
-                <div class="alert alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p class="mb-0">{{message}}</p>
-                </div>
-            </div>
-            {% endfor %}
-            {% for flashError in app.flashes('reset_password_error') %}
-                <div class="flash-notice-failed my-3">
-                <div class="alert alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p class="mb-0">{{ flashError }}</p>
-                </div>
-                </div>
-            {% endfor %}
-            <div class="container-first">
-                    <img class="logoSite" src="{{ asset('assets/images/logo3.png')}}">
-                <div class="container-brand">
-                    <h1 class="siteBrand">Garanties-Optimales</h1>
-                    <p class="slogan">Des garanties optimales à prix minimal</p>
-                    <p class="slogan">Pour professionnels et particuliers</p>
-                </div>
-        </div>
-        </header>
+      
     
     <body id="page-top">
     {% block nav %}
     {% set route =  app.request.attributes.get('_route') %}
         {% if route == 'home' %}
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
+            <div class="row justify-content-center">
                 <a class="navbar-brand js-scroll-trigger" class="societyName" href="#page-top">{{ societyName }}</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -94,7 +71,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#particuliers">Assurances particuliers</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professionnels">Assurances professionnels</a></li>
                         {% if app.user is null %}
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#inscription-connexion">Inscription/Connexion</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#inscription-connexion">Inscription / Connexion</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                         {% if app.user is not null %}
@@ -105,8 +82,8 @@
             </div>
         </nav>
         {% else %}
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
+            <div class="row justify-content-center">
                 <a class="navbar-brand js-scroll-trigger" class="societyName" href="{{ path('home')}}">{{ societyName }}</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -127,7 +104,34 @@
         </nav>
         {% endif %}
     {% endblock %}
-
+    <div class="container-fluid">
+    <header class="masthead">
+        <div class="container h-40">
+            {% for message in app.flashes('success') %}
+            <div class="flash-notice-success my-3">
+                <div class="alert alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{message}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            {% for flashError in app.flashes('reset_password_error') %}
+                <div class="flash-notice-failed my-3">
+                <div class="alert alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{ flashError }}</p>
+                </div>
+                </div>
+            {% endfor %}
+            <div class="container-first row justify-content-center">
+                <img class="logoSite col-sm-12 col-lg-6" src="{{ asset('assets/images/logo.png')}}" alt="Garanties Optimales">
+                <div class="container-brand  col-sm-12 col-lg-6">
+                    {# <h1 class="siteBrand">Garanties-Optimales</h1> #}
+                    <p class="slogan">Des garanties optimales à prix minimal</p>
+                    <p class="slogan">Pour professionnels et particuliers</p>
+                </div>
+        </div>
+        </header>
     {% block body %}
     {% endblock %}
  
@@ -144,23 +148,23 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <i class="fas fa-phone fa-3x mb-3"></i>
                         <p>Par téléphone</p>
-                        <div>04 67 74 24 74</div>
+                        <div class="phone">>04 67 74 24 74</div>
                     </div>
                     <div class="col-lg-3 mr-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <i class="fas fa-envelope fa-3x mb-3"></i>
                         <p>Par email</p>
                         <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
                         <a class="d-block" href="mailto:contact@yourwebsite.com">contact@liguori-assurances.com</a>
                     </div>
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-align-justify fa-3x mb-3 text-muted"></i>
+                        <i class="fas fa-align-justify fa-3x mb-3"></i>
                          <p>Via notre formulaire de contact</p>
                         <a class="d-block" href="{{ path('contact_form')}}">En cliquant ici</a>
                     </div>
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <i class="fas fa-phone fa-3x mb-3"></i>
                         <a class="d-block" href="" data-toggle="modal" data-target="#callModale">Demander à être rappellé</a>
                         {{ include('partials/modal-call.html.twig') }}
                     </div>
@@ -171,7 +175,7 @@
         <footer class="bg-light py-5">
         {{ include('partials/modal-login.html.twig') }}
             <div class="container-footer">
-            <div class="row">
+            <div class="row mx-0">
                 <div class="footer-link-principal col-lg-3 col-md-6 text-center">
                     <p style="color:white;">N°ORIAS : 10057313<br>SIRET 524 175 478 00014 – Code NAF 6622Z<br>EURL Liguori Assurances<br>11 rue Honore Euzet 34200 Sète<br></p>
                     </ul>
@@ -224,6 +228,7 @@
         </div><br>
             <div class="container"><div class="small text-center text-muted">Copyright © 2020 - {{ societyName }}</div></div>
         </footer>
+        </div>
         {% endblock %}
         <!-- Bootstrap core JS-->
         {% block javascripts %} 
