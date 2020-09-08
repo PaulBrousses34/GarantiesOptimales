@@ -12,10 +12,15 @@ class NewsletterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('Title')
-            ->add('Image')
-            ->add('Content')
-            ->add('updatedAt')
+            ->add('Title', null, [
+                'label' => 'Titre'
+            ])
+            ->add('Image', null, [
+                'label' => 'Photo'
+            ])
+            ->add('Content', null, [
+                'label' => 'Contenu'
+            ])
         ;
     }
 

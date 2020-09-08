@@ -150,7 +150,7 @@
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3"></i>
                         <p>Par téléphone</p>
-                        <div class="phone">+33 6 46 42 66 08</div>
+                        <div class="phone">>04 67 74 24 74</div>
                     </div>
                     <div class="col-lg-3 mr-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-envelope fa-3x mb-3"></i>
@@ -177,15 +177,14 @@
             <div class="container-footer">
             <div class="row mx-0">
                 <div class="footer-link-principal col-lg-3 col-md-6 text-center">
+                    <p style="color:white;">N°ORIAS : 10057313<br>SIRET 524 175 478 00014 – Code NAF 6622Z<br>EURL Liguori Assurances<br>11 rue Honore Euzet 34200 Sète<br></p>
+                    </ul>
+                </div>
+                <div class="footer-link-about col-lg-3 col-md-6 text-center">
                     <ul>
-                    {% set route =  app.request.attributes.get('_route') %}
-                    {% if route == 'home' %}
-                        <li><a href="#about">A propos</a></li>
-                        <li><a href="#actualites">Actualités</a></li>
-                    {% else %}
-                        <li><a href="{{ path('home')}}">A propos</a></li>
-                        <li><a href="{{ path('home')}}">Actualités</a></li>
-                    {% endif %}
+                    <li><a href="{{ path('newsletter_index')}}">Actualités</a></li>
+                        <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
+                        <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
                         {% if app.user is null %}
                         <li><a href="{{ path('app_register')}}">Inscription</a></li>
                         <li><a href="" data-toggle="modal" data-target="#connexionModale">Connexion</a></li>
@@ -195,22 +194,19 @@
                         {% endif %}
                     </ul>
                 </div>
-                <div class="footer-link-about col-lg-3 col-md-6 text-center">
-                    <ul>
-                        <li><a href="{{ path('newsletter_index')}}">Newsletter</a></li>
-                        <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
-                        <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
-                        <li><a href="" data-toggle="modal" data-target="#tarteaucitron">Gestion des cookies</a></li>
-                        <li><a href="{{ path('avis')}}">Avis Clients</a></li>
-                    </ul>
-                </div>
                 <div class="sitemap-particuliers col-lg-3 col-md-6 text-center">
                     <ul>
                     {% for category in allCategory %}
                         {% if category.id == 1 %}
                             <h6>{{category.name}}</h6>
                     {% for sousCategorie in category.sousCategories %}
+                     {% if sousCategorie.name == 'Chien Chat' or sousCategorie.name =='Habitation' or  sousCategorie.name == 'Protection Juridique' or sousCategorie.name == "Mutuelle Santé" %}
+                        {% for type in sousCategorie.types %}
+                        <li><a href="{{ path('assurances_type', {'slug': type.slug})}}">{{ sousCategorie.name }}</a></li>
+                        {% endfor %}
+                        {% else %}
                             <li><a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
+                    {% endif %}
                     {% endfor %}
                         {% endif %}
                     {% endfor %}
@@ -243,8 +239,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('assets/js/scripts.js')}}"></script>
-      {#} <script src="{{ asset('assets/js/scriptnv.js')}}"></script>
-        <script src="{{ asset('assets/js/jquery.js')}}"></script>#}
         <script>
                 $('.custom-file-input').on('change', function(event) {
                     var inputFile = event.currentTarget;

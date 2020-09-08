@@ -2,7 +2,7 @@
     {% for sousCategories in categorie.sousCategories %}
     <div id="container">	
 	    <div class="product-details">
-         {% if sousCategories.name == 'Chien Chat' or sousCategories.name =='Habitation' or  sousCategories.name == 'Protection Juridique' %}
+         {% if sousCategories.name == 'Chien Chat' or sousCategories.name =='Habitation' or  sousCategories.name == 'Protection Juridique' or sousCategories.name == "Santé" %}
          {% for type in sousCategories.types %}
          	    <a href="{{ path('assurances_type',{'slug' : type.slug })}}">
                 <h4 class="categorie-name-card">{{ sousCategories.name }}</h4>
@@ -30,13 +30,14 @@
         </div>
     </div>
         {% else %}
-             <a href="{{ path('assurances_sous-categorie', {'slug' : sousCategories.slug })}}">
+                    {% for type in sousCategories.types %}
+             <a href="{{ path('assurances_type',  {'slug' : type.slug })}}">
                     <img class="card-img-top" src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
             </a>
-
-             <a href="{{ path('assurances_sous-categorie', {'slug' : sousCategories.slug })}}">
+            {% endfor %}
+             {#<a href="{{ path('assurances_sous-categorie', {'slug' : sousCategories.slug })}}">
                     <img class="card-img-top" src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
-            </a>
+            </a>#}
                 </div>
     </div>
 
