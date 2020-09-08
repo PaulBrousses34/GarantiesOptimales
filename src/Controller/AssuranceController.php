@@ -65,7 +65,6 @@ class AssuranceController extends AbstractController
     }
 
     /**
-
      * @Route("/demande-devis", name="devis_add", methods={"GET","POST"})
      */
    public function askDevis(Request $request, MailerInterface $mailer)
@@ -99,11 +98,29 @@ class AssuranceController extends AbstractController
                 ]);
         }
 
-        return $this->render('assurances/professionnels/formulaire-devis.html.twig', [
+        return $this->render('assurances/formulaire-devis.html.twig', [
             
             'proForm' => $form->createView(),
             
         ]);
     }
+
+
+
+    /**
+     * @Route("/devis", name="devis_iframe")
+     */
+   public function iframeDevis(Request $request)
+   {
+
+
+    return $this->render('iframe/devis.html.twig', [
+            
+
+        
+    ]);
+
+
+   }
 
 }
