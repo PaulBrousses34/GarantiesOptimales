@@ -10,7 +10,7 @@
     <img class="img-top" src="{{asset('assets/images/photos/' ~ newsletter.image) }}" alt="photo lien {{ newsletter.title }}">
     <div class="card-body">
     <h5 class="card-title-news">{{ newsletter.title }}</h5>
-    <p class="card-text">{{ newsletter.content}} </p>
+    <p class="card-text">{{ newsletter.content|raw }} </p>
     <small>{{ newsletter.createdAt | date("m/d/Y H:m", "Europe/Paris") }}</small>
     </div>
 </div>                      

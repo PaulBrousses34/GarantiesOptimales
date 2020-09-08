@@ -29,7 +29,7 @@ class Newsletter
     private $Image;
 
     /**
-     * @ORM\Column(type="string", length=10000)
+     * @ORM\Column(type="string", length=150000)
      */
     private $Content;
 
