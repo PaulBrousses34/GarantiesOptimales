@@ -20,7 +20,7 @@
         <div class="product-image">
         {% if sousCategories.name == "2 roues & Quad" or sousCategories.name == "Plaisance" or sousCategories.name == "Santé" or sousCategories.name == "Automobile" or sousCategories.name == "Bâtiment" or sousCategories.name == "Autres activités" %}
                 <img src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
-            <div class="info">
+            <div class="row info align-content-center">
             {% for type in sousCategories.types %}
                 <ul>
                     <a href="{{ path('assurances_type',  {'slug' : type.slug })}}"><li class="card-li"><strong>{{ type.name }}</strong></li></a>
