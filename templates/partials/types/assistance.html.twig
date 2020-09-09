@@ -1,3 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Option Assistance | {{ societyName }}{% endblock %}
+
+{% block body %}
+
+
+      
+<main class="container-fluid">
+
+
+
 <div id="page-container" style="padding-top: 55px; overflow-y: hidden; margin-top: -160px;" class="et-animated-content">
 	<div id="et-main-area">
 		<div id="main-content">
@@ -16,14 +28,20 @@
 								</div>
 							</div>
 							<div class="container">
-							     	<div class="mt-2 fil-ariane">
-										<p>
-										<a href="{{ path('home')}}">Accueil</a> -
-										<a href="{{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}">{{sousCategorie.categorie.name}}</a> - 
-										<a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a> - 
-										<a href="{{ path('assurances_type', {'slug': type.slug})}}">{{type.name}}</a>
-										</p>
-									</div>
+							<div class="mt-2 fil-ariane">
+								<p>
+								<a href="{{ path('home')}}">Accueil</a> -
+								<a href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">Assurances Particuliers</a> - 
+								<a href="{{ path('assurances_sous-categorie', {'slug': 'plaisance'})}}">Plaisance</a> - 
+								<a href="{{ path('assurances_assistance_nautique')}}">Assistance nautique</a>
+								</p>
+							</div>
+							<div>
+							<div class="submit-button-container-devis">
+                            <a class="d-block" href="" data-toggle="modal" data-target="#callModale">
+                            <button class="btn btn-outline-success">Demander à être rappellé</button>
+                            </a></div>
+							</div><br>
 							<div class="et_pb_section et_pb_section_5 et_section_regular">
 								<div class="et_pb_row et_pb_row_5">
 									<div class="et_pb_column et_pb_column_1_2 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
@@ -57,18 +75,7 @@
                                                     - Des garanties d'assistance à terre aux personnes : rapatriement médical et de l’équipage, visite d’un proche, accompagnement des enfants et soutien psychologique… <br>
                                                     - Des garanties d’assistance à terre au bateau : transfert pour réparation, manutention, remorquage et rapatriment du bateau, envoi de pièces détachées, frais de port et gardiennage. <br>
                                                     - Un service premium incluant l’assistance et le dépannage à terre, à quai (0 mille) et en mer 7j/7 et 24h/24.
-									</p>
-                                   <div><div class="submit-button-container-devis">
-                                                    <a class="d-block" href="" data-toggle="modal" data-target="#callModale">
-                                                    <button class="btn btn-outline-success">Demander à être rappellé</button>
-                                                    </a></div>
-                                                    <div class="submit-button-container-devis">
-                                                    <a href=""> <button class="btn btn-outline-success">Obtenir un devis en 2mn</button></a></div>
-											        </div>
-                                                    <div class="submit-button-container-devis">
-                                                    <a href="#formules"> <button class="btn btn-outline-success">Voir les formules</button></a></div>
-											        </div>
-									</div><br>
+									</p><br>
 								</div>
 							</div>
 							<div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular section_has_divider et_pb_top_divider">
@@ -698,3 +705,6 @@
 		<span class="et_pb_scroll_top et-pb-icon et-hidden" style="display: inline;"></span>
 	</div>
 </div>
+
+</main>
+{% endblock %}

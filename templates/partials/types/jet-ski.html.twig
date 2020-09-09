@@ -52,20 +52,20 @@
 									<div class="et_pb_column et_pb_column_1_2 et_pb_column_6 sg-les-plus-priceblock  et_pb_css_mix_blend_mode_passthrough et-last-child">
 										<div class="et_pb_module et_pb_text et_pb_text_7 sg-checked-list et_pb_bg_layout_light  et_pb_text_align_left">
 											<div class="et_pb_text_inner">
+											<h3 style="text-align: left;">
+													Les
+													<span style="color: #283e4d;"><i class="fa fa-plus-circle fa- "></i></span>
+													<span style="display:none;">plus</span>
+													&nbsp;
+													<br>
+													{{societyName}}
+												</h3>
 												<p>
 													Chez  {{societyName}}, il est possible d'assurer un jet en ligne et en moins de 5 minutes. Obtenez un tarif en quelques clics en complétant notre formulaire. A l'issue, vous obtiendrez directement un tarif adapté à votre bien et votre usage. En ligne, vous pourrez souscrire, payer et signer votre contrat d'assurance jet pour naviguer immédiatement et en toute sécurité.
                                                     Votre attestation d'assurance vous est immédiatement envoyée par email. 
 												</p><br><br>
-                                                    <div><div class="submit-button-container-devis">
-                                                    <a class="d-block" href="" data-toggle="modal" data-target="#callModale">
-                                                    <button class="btn btn-outline-success">Demander à être rappellé</button>
-                                                    </a></div>
-                                                    <div class="submit-button-container-devis">
-                                                    <a href=""> <button class="btn btn-outline-success">Obtenir un devis en 2mn</button></a></div>
-											        </div>
-                                                    <div class="submit-button-container-devis">
-                                                    <a href="#formules"> <button class="btn btn-outline-success">Voir les formules</button></a></div>
-											        </div>
+
+
 										</div>
 									</div>
 								</div>
@@ -616,7 +616,7 @@
                                                 <tr class="tableline-sep">
 													<th>
 														<div class="tableline_title">
-															Assistance
+															Assistance <br><small><a href="{{ path('assurances_assistance_nautique')}}">(voir notre tableau des garanties d'assistance)</a><small>
 														</div>
 													</th>
 													<td class="sg-offertable-ms-current">
@@ -686,7 +686,7 @@
                                                 <tr class="tableline-sep">
 													<th>
 														<div class="tableline_title">
-															Protection Juridique
+															Protection Juridique<br><small><a href="{{ path('assurances_protection_juridique_nautique')}}">(voir notre tableau des garanties protection juridique nautique)</a><small>
 														</div>
 													</th>
 													<td class="sg-offertable-ms-current">
@@ -784,7 +784,7 @@
 													<th>
 														<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bcaffe383d" aria-expanded="false" aria-controls="linecollapse_5f2bcaffe383d">
 															<i class="fa fa-chevron-down tableline_title_icon"></i>
-															Ski-nautique
+															Ski-nautique<br><small><a href="{{ path('assurances_sports_nautique')}}">(voir notre tableau des garanties sports nautiques)</a><small>
 														</div>
                                                         <div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bcaffe383d" data-parent=".sg-offertable">
 															<div class="tableline_title_text">
@@ -818,7 +818,7 @@
                                                  <tr class="tableline-notsep tableline-withtext">
 													<th>
 														<div class="tableline_title tableline_title-withtxt">
-															Remorque<br><small><a href="{{ path('assurances_type', {slug: 'remorque'})}}">(voir notre tableau des garanties)</a><small>
+															Remorque<br><small><a href="{{ path('assurances_remorque_nautique')}}">(voir notre tableau des garanties)</a><small>
 														</div>
 													</th>
 													<td class="sg-offertable-ms-current">

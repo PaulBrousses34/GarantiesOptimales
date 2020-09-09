@@ -1,3 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Option Sports Nautiques | {{ societyName }}{% endblock %}
+
+{% block body %}
+
+
+      
+<main class="container-fluid">
+
+
 <div id="page-container" class="et-animated-content" style="padding-top: 55px; overflow-y: hidden; margin-top: -160px;">
 	<div id="et-main-area">
 		<div id="main-content">
@@ -19,17 +30,26 @@
 							<div class="mt-2 fil-ariane">
 								<p>
 								<a href="{{ path('home')}}">Accueil</a> -
-								<a href="{{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}">{{sousCategorie.categorie.name}}</a> - 
-								<a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a> - 
-								<a href="{{ path('assurances_type', {'slug': type.slug})}}">{{type.name}}</a>
+								<a href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">Assurances Particuliers</a> - 
+								<a href="{{ path('assurances_sous-categorie', {'slug': 'plaisance'})}}">Plaisance</a> - 
+								<a href="{{ path('assurances_sports_nautique')}}">Sports nautiques</a>
 								</p>
 							</div>
+							<div>
+							<div class="submit-button-container-devis">
+                            <a class="d-block" href="" data-toggle="modal" data-target="#callModale">
+                            <button class="btn btn-outline-success">Demander à être rappellé</button>
+                            </a></div>
+							</div><br>
                             <div class="et_pb_section et_pb_section_5 et_section_regular">
                                 <div class="et_pb_row et_pb_row_5">
                                     <div class="et_pb_column et_pb_column_1_2 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
 										<div class="et_pb_module et_pb_text et_pb_text_31 et_pb_bg_layout_light  et_pb_text_align_left">
 											<div class="et_pb_text_inner">
                                             <img src="{{ asset('assets/images/photos/jetski.jpg') }}">
+																							<p>
+                                                Vous faites partie des 17 000 000 personnes à pratiquer une activité nautique ? Comme 50% d’entre eux, vous pratiquez même plusieurs activités nautiques en loisir, en club ou en compétition amateur ? 									</p>
+												<p>
 											</div>
 										</div>
 									</div>
@@ -42,10 +62,7 @@
 										</div>
 									</div>
 										<div class="et_pb_module et_pb_text et_pb_text_33 sg-checked-list et_pb_bg_layout_light  et_pb_text_align_left">
-											<div class="et_pb_text_inner">
-												<p>
-                                                Vous faites partie des 17 000 000 personnes à pratiquer une activité nautique ? Comme 50% d’entre eux, vous pratiquez même plusieurs activités nautiques en loisir, en club ou en compétition amateur ? 									</p>
-												<p>
+											<div class="et_pb_text_inner"><p>
                                                 Aviron, canoé-kayak, paddle, plongée, bodyboard, surf, natation, char à voile, wake-board, ski-nautique, voile légère...<br>
                                                 Découvrez l’assurance multisports nautiques valable pour les sports nautiques et tous vos autres sports, en France et à l’étranger, en cas d’accident (annulation et interruption de voyage, assistance rapatriement, bris de matériel, individuelle accident…) 
 												</p>
@@ -403,3 +420,5 @@
 		<span class="et_pb_scroll_top et-pb-icon et-hidden" style="display: inline;"></span>
 	</div>
 </div>
+</main>
+{% endblock %}
