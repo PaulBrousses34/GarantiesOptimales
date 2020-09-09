@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Newsletters | {{ societyName }}{% endblock %}
+
+{% block body %}
+
+<main class="container">
+{{ form_start(form, {'attr': {'id': 'form'}}) }}
+
+    <div class="pt-3 main-title justify-content-center">
+      <h2 class= "title-register">Ajouter une newsletter</h2>
+    </div>
+    {{ form_widget(form) }}
+    <button class="btn btn-outline-success">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(form) }}
+
+
+
+</main>
+{% endblock %}

@@ -1,0 +1,227 @@
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+
+    
+                {% if app.user is not null  %}
+        <section class="page-section" id="profil">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-black mt-0">Mon espace personnel</h2>
+                        <hr class="divider light my-4" />
+                        <p class="text-black-50 mb-4">Bonjour {{app.user.firstname}} !</p>
+                        <a href="{{ path('user_read', {'lastname' : app.user.lastname})}}" class="btn btn-outline-success">Accéder à mon espace personnel</a><br><br>
+                        <a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}" class="btn btn-outline-primary">Déclarer un sinistre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+                {% endif %}
+        <section class="page-section" id="presentation">
+        <div class="container-presentation row">
+            
+            <img class="logo-pres" src="{{ asset('assets/images/logo1.png')}}">
+        
+            <div class="content-presentation">
+
+                    <div class="col-lg-12 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-3x fa-comments"></i>
+                            <h3 class="h4 mb-2">24 heures sur 24<br> 7 jours sur 7</h3>
+                            <p class="text-muted mb-0">Nous sommes disponible et répondons à vos questions à n'importe quel moment</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="far fa-3x fa-folder-open"></i>
+                            <h3 class="h4 mb-2">Retrouvez facilement vos documents</h3>
+                            <p class="text-muted mb-0">Vous pouvez retrouver facilement vos documents dans votre espace personnel</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 text-center">
+                        <div class="mt-5">
+                            <i class="fas fa-3x fa-people-arrows"></i>
+                            <h3 class="h4 mb-2">Un conseiller proche de vous</h3>
+                            <p class="text-muted mb-0">Avec {{societyName}}, une seule et unique personne se charge de votre dossier.</p>
+                        </div>
+                    </div>
+               
+
+                </div>
+        </div>
+        </section>
+        
+        <!-- Actualités-->
+      <!--MOBILE-->
+      <!--Carousel Wrapper-->
+    <section class="page-section" id="actualites">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+                    <h2 class="text-black mt-0">Les dernières actualités et promotions!</h2>
+                    <hr class="divider my-4" />
+                              <!--MOBILE-->
+                              <!--Carousel Wrapper-->
+            <div id="carousel-newsletters-mobile" class="carousel slide carousel-multi-item  d-md-none" data-ride="carousel">
+                              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                              <!--First slide-->
+                <div class="carousel-item active">
+                  <div class="row justify-content-center newsletter">
+                    {% for newsletter in newsletters|slice(0,1) %}
+                      {{ include('partials/card.newsletter.html.twig') }}
+                    {% endfor %}
+                  </div>
+                </div>
+                            <!--/.First slide-->
+                            <!--Other slides-->
+                    {% for newsletter in newsletters|slice(1) %}
+                    <div class="carousel-item">
+                      <div class="row justify-content-center newsletter">
+                        {{ include('partials/card.newsletter.html.twig') }}
+                      </div>
+                    </div>
+                    {% endfor %}
+                            <!--/.Other slides-->
+              </div>
+                            <!--/.Slides-->
+                            <!--Controls-->
+                <div class="controls-top row justify-content-center">
+                  <a class="btn-floating" href="#carousel-newsletters-mobile" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                  <a class="btn-floating" href="#carousel-newsletters-mobile" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                </div>
+                          <!--/.Controls-->
+                        <!--/.Carousel Wrapper-->
+          </div>
+      <!--/.MOBILE-->
+
+      <!--MEDIUM SCREEN-->
+      <!--Carousel Wrapper-->
+      <div id="carousel-newsletters-medium" class="carousel slide carousel-multi-item d-none d-md-block d-lg-none" data-ride="carousel">
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <!--First slide-->
+          <div class="carousel-item active">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(0,2) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.First slide-->
+          <!--Second slide-->
+          <div class="carousel-item">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(2,2) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.Second slide-->
+          <!--Second slide-->
+          <div class="carousel-item">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(4,2) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.Second slide-->
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <div class="controls-top row justify-content-center">
+          <a class="btn-floating" href="#carousel-newsletters-medium" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-floating" href="#carousel-newsletters-medium" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <!--/.Controls-->
+      <!--/.Carousel Wrapper-->
+      </div>
+      <!--/.MEDIUM SCREEN-->
+
+      <!--LARGE SCREEN-->
+      <!--Carousel Wrapper-->
+      <div id="carousel-newsletters-large" class="carousel slide carousel-multi-item d-none d-lg-block" data-ride="carousel">
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <!--First slide-->
+          <div class="carousel-item active">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(0,3) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.First slide-->
+          <!--Second slide-->
+          <div class="carousel-item">
+            <div class="row justify-content-center newsletter">
+            {% for newsletter in newsletters|slice(3,3) %}
+              {{ include('partials/card.newsletter.html.twig') }}
+            {% endfor %}
+            </div>
+          </div>
+          <!--/.Second slide-->
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <div class="controls-top row justify-content-center">
+          <a class="btn-floating" href="#carousel-newsletters-large" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-floating" href="#carousel-newsletters-large" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <!--/.Controls-->
+      <!--/.Carousel Wrapper-->
+      </div>
+      <!--/.LARGE SCREEN-->
+      </div>
+                      
+      </div>
+    </div>
+  </section>
+        <!-- Categories -->
+
+
+            <section class="page-section" id="particuliers"><a href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">
+                <h2 class="text-center mt-0">Nos assurances pour particuliers</h2></a>
+                <hr class="divider my-4" />
+                {% for categorie in category %}
+                {% if categorie.name == "Assurances Particuliers" %}
+                {{ include('partials/cards.categorie.html.twig') }}
+                {% endif %}
+                {% endfor %}
+            </section>
+
+
+
+            <section class="page-section" id="professionnels"><a href="{{ path('assurances_categorie', {'slug': 'professionnels'})}}">
+                <h2 class="text-center mt-0">Nos assurances pour professionnels</h2></a>
+                <hr class="divider my-4" />
+                {% for categorie in category %}
+                {% if categorie.name == "Assurances Professionnels" %}
+                {{ include('partials/cards.categorie.html.twig') }}
+                {% endif %}
+                {% endfor %}
+            </section>
+
+
+        {% if app.user is null %}
+        <section class="page-section" id="inscription-connexion">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-black mt-0">Inscription / Connexion</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-black-50 mb-4">Inscrivez-vous pour obtenir plus facilement tout les documents dont vous avez besoin et également pour déclarer un sinistre directement en ligne. <br> Vous n'avez pas besoin d'etre inscrit pour souscrire à une assurance.</p>
+                        <a href="{{ path('app_register')}}" class="btn btn-outline-primary">Inscription</a><br><br>
+                        <button type="button" data-toggle="modal" data-target="#connexionModale" class="btn btn-outline-info">Connexion</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{ include('partials/modal-login.html.twig') }}
+
+        {% endif %}
+{% endblock %}

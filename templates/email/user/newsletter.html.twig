@@ -1,0 +1,22 @@
+{% extends 'email/base.html.twig' %}
+
+{% block body %}
+
+<main>
+    <p>Bonjour {{ firstname }},</p><br>
+
+    <p>{{ subject }}</p>
+
+    <p>{{ content }}</p><br>
+
+
+    <p>Cordialement,</p>
+
+    <p><strong>L'équipe Meilleures-garanties.com</strong></p>
+
+    <p><small>Pour vous désabonner de notre newsletter cliquer <a href="{{ path('user_edit', {'lastname' : app.user.lastname})}}"> ici </a></small></p>
+</main>
+
+
+
+{% endblock %}

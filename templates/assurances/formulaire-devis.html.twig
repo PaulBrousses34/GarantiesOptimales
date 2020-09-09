@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demande de devis | {{ societyName }}{% endblock %}
+{% block body %}
+
+
+
+<main class="container">
+
+    <div class="justify-content-center">
+
+{{ form_start(proForm, {'attr': {'id': 'form'}}) }}
+
+
+<input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
+
+    <div class="user-form-label">{{form_label (proForm.formeJuridique) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.formeJuridique) }}</div>
+
+    <div class="user-form-label">{{form_label (proForm.societe) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.societe) }}</div>
+
+       <div class="user-form-label">{{form_label (proForm.siren) }} </div>
+    <div>{{form_widget (proForm.siren) }}</div>
+
+       <div class="user-form-label">{{form_label (proForm.nom) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.nom) }}</div>
+
+           <div class="user-form-label">{{form_label (proForm.adresse) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.adresse) }}</div>
+
+
+    <div class="user-form-label">{{form_label (proForm.complementAdresse) }}</span></div>
+    <div>{{form_widget (proForm.complementAdresse) }}</div>
+
+       <div class="user-form-label">{{form_label (proForm.codePostal) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.codePostal) }}</div>
+
+           <div class="user-form-label">{{form_label (proForm.ville) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.ville) }}</div>
+
+           <div class="user-form-label">{{form_label (proForm.telephone) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.telephone) }}</div>
+
+
+           <div class="user-form-label">{{form_label (proForm.dateCreation) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.dateCreation) }}</div>
+
+           <div class="user-form-label">{{form_label (proForm.CA) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (proForm.CA) }}</div>
+
+           <div class="user-form-label">{{form_label (proForm.APE) }}</div>
+    <div>{{form_widget (proForm.APE) }}</div>
+
+
+           <div class="user-form-label">{{form_label (proForm.message) }}</div>
+    <div>{{form_widget (proForm.message) }}</div>
+
+        <div class="container-captcha">
+     <div class="g-recaptcha" data-sitekey="6LfxjrMZAAAAANwcUdUVYBH2MwYGSUoHfUMKPU7e"></div>
+    </div>
+
+
+
+    <div class="help text-right mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div><br>
+
+          <div class="submit-button-container">
+      <button type="submit"
+      class="btn btn-outline-success">{{ button_label|default('Envoyer') }}</button>
+    </div>
+  </div>
+{{ form_end(proForm)  }}
+
+
+    </div>
+</main>
+{% endblock %}

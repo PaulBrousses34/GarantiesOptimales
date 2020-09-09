@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(to right, grey, white);
+    color: black;
+    text-align: justify;
+}
+
+main {
+    max-width: 600px;
+    height: 100%;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>{% block title %}Accueil | {{ societyName }}{% endblock %}</title>
+        <!-- Favicon-->
+         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Open+Sans&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script type="text/javascript" src="{{ asset('assets/js/tarteaucitron/tarteaucitron.js') }}"></script>
+
+        <script type="text/javascript">
+        tarteaucitron.init({
+    	  "privacyUrl": "/mentions-legales", /* Privacy policy url */
+
+    	  "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+    	  "cookieName": "tarteaucitron", /* Cookie name */
+    
+    	  "orientation": "middle", /* Banner position (top - bottom) */
+    	  "showAlertSmall": true, /* Show the small banner on bottom right */
+    	  "cookieslist": true, /* Show the cookie list */
+
+    	  "adblocker": false, /* Show a Warning if an adblocker is detected */
+    	  "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+    	  "highPrivacy": true, /* Disable auto consent */
+    	  "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+    	  "removeCredit": false, /* Remove credit link */
+    	  "moreInfoLink": true, /* Show more info link */
+    	  "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
+
+    	  //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+                          
+          "readmoreLink": "/mentions-legales", /* Change the default readmore link */
+
+          "mandatory": true, /* Show a message about mandatory cookies */
+        });
+        </script>
+    </head>
+      
+    
+    <body id="page-top">
+    {% block nav %}
+    {% set route =  app.request.attributes.get('_route') %}
+        {% if route == 'home' %}
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
+            <div class="row justify-content-center">
+                <a class="navbar-brand js-scroll-trigger" class="societyName" href="#page-top">{{ societyName }}</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        {% if app.user is not null %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#profil">Mon espace personnel</a></li>
+                        {% endif %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#particuliers">Assurances particuliers</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#professionnels">Assurances professionnels</a></li>
+                        {% if app.user is null %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#inscription-connexion">Inscription / Connexion</a></li>
+                        {% endif %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        {% if app.user is not null %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('app_logout')}}">Déconnexion</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% else %}
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
+            <div class="row justify-content-center">
+                <a class="navbar-brand js-scroll-trigger" class="societyName" href="{{ path('home')}}">{{ societyName }}</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('home')}}">Accueil</a></li>
+                        {% if app.user is not null %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('user_read', {'lastname' : app.user.lastname})}}">Mon espace personnel</a></li>
+                        {% endif %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">Assurances particuliers</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('assurances_categorie', {'slug': 'professionnels'})}}">Assurances professionnels</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        {% if app.user is not null %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('app_logout')}}">Déconnexion</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% endif %}
+    {% endblock %}
+    <div class="container-fluid">
+    <header class="masthead">
+        <div class="container h-40">
+            {% for message in app.flashes('success') %}
+            <div class="flash-notice-success my-3">
+                <div class="alert alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{message}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            {% for flashError in app.flashes('reset_password_error') %}
+                <div class="flash-notice-failed my-3">
+                <div class="alert alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{ flashError }}</p>
+                </div>
+                </div>
+            {% endfor %}
+            <div class="container-first row justify-content-center">
+                <img class="logoSite col-sm-12 col-lg-6" src="{{ asset('assets/images/logo.png')}}" alt="Garanties Optimales">
+                <div class="container-brand  col-sm-12 col-lg-6">
+                    {# <h1 class="siteBrand">Garanties-Optimales</h1> #}
+                    <p class="slogan">L'assurance des particuliers et des professionnels</p>
+                    <p class="slogan">Des garanties optimales à prix minimal</p>
+                </div>
+        </div>
+        </header>
+    {% block body %}
+    {% endblock %}
+ 
+    {% block footer %}
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Contactez nous</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-dark mb-5">Pour toutes questions ou pour être aidé dans vos démarches</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3"></i>
+                        <p>Par téléphone</p>
+                        <div class="phone">04 67 74 24 74</div>
+                    </div>
+                    <div class="col-lg-3 mr-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-envelope fa-3x mb-3"></i>
+                        <p>Par email</p>
+                        <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                        <a class="d-block" href="mailto:contact@yourwebsite.com">contact@liguori-assurances.com</a>
+                    </div>
+                    <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-align-justify fa-3x mb-3"></i>
+                         <p>Via notre formulaire de contact</p>
+                        <a class="d-block" href="{{ path('contact_form')}}">En cliquant ici</a>
+                    </div>
+                    <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3"></i>
+                        <a class="d-block" href="" data-toggle="modal" data-target="#callModale">Demander à être rappellé</a>
+                        {{ include('partials/modal-call.html.twig') }}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+        {{ include('partials/modal-login.html.twig') }}
+            <div class="container-footer">
+            <div class="row mx-0">
+                <div class="footer-link-principal col-lg-3 col-md-6 text-center">
+                    <p style="color:white;">N°ORIAS : 10057313<br>SIRET 524 175 478 00014 – Code NAF 6622Z<br>EURL Liguori Assurances<br>11 rue Honore Euzet 34200 Sète<br></p>
+                    </ul>
+                </div>
+                <div class="footer-link-about col-lg-3 col-md-6 text-center">
+                    <ul>
+                    <li><a href="{{ path('newsletter_index')}}">Actualités</a></li>
+                        <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
+                        <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
+                        {% if app.user is null %}
+                        <li><a href="{{ path('app_register')}}">Inscription</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#connexionModale">Connexion</a></li>
+                        {% else %}
+                        <li><a href="{{ path('user_read', {'lastname' : app.user.lastname})}}">Mon espace personnel</a></li>
+                        <li><a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}">Déclarer un sinistre</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="sitemap-particuliers col-lg-3 col-md-6 text-center">
+                    <ul>
+                    {% for category in allCategory %}
+                        {% if category.id == 1 %}
+                            <h6>{{category.name}}</h6>
+                    {% for sousCategorie in category.sousCategories %}
+                     {% if sousCategorie.name == 'Chien Chat' or sousCategorie.name =='Habitation' or  sousCategorie.name == 'Protection Juridique' or sousCategorie.name == "Mutuelle Santé" %}
+                        {% for type in sousCategorie.types %}
+                        <li><a href="{{ path('assurances_type', {'slug': type.slug})}}">{{ sousCategorie.name }}</a></li>
+                        {% endfor %}
+                        {% else %}
+                            <li><a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </div>
+                <div class="sitemap-professionnels col-lg-3 col-md-6 text-center">
+                    <ul>
+                    {% for category in allCategory %}
+                        {% if category.id == 2 %}
+                            <h6>{{category.name}}</h6>
+                    {% for sousCategorie in category.sousCategories %}
+                            <li><a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
+                    {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div><br>
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - {{ societyName }}</div></div>
+        </footer>
+        </div>
+        {% endblock %}
+        <!-- Bootstrap core JS-->
+        {% block javascripts %} 
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ asset('assets/js/scripts.js')}}"></script>
+        <script>
+                $('.custom-file-input').on('change', function(event) {
+                    var inputFile = event.currentTarget;
+                    $(inputFile).parent()
+                        .find('.custom-file-label')
+                        .html(inputFile.files[0].name);
+                });
+        </script>
+        {% endblock %}
+    </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,9 @@
+
+    <div class="newsletter-class" style="width: 18rem;">
+        <img class="card-img-top" src="{{asset('assets/images/photos/' ~ newsletter.image) }}" alt="photo lien {{ newsletter.title }}">
+    <div class="card-body">
+        <a href="{{ path('newsletter_show', {'id' : newsletter.id} )}}"><h5 class="card-title">{{ newsletter.title }}</h5></a>
+        <p class="card-text">{{ newsletter.content|striptags|u.truncate(120, '...')}}</p><br>
+        <a href="{{ path('newsletter_show', {'id' : newsletter.id} )}}" class="btn btn-success">Lire la suite</a>
+    </div>
+    </div>

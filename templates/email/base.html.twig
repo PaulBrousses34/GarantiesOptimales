@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+  {% apply inline_css(source('@css/email.css')) %}
+<html lang="fr">
+    <body>
+        <header class="sticky-top">
+            <img src="{{ email.image('@images/Banniere.png') }}" href="{{ path('home')}}" height="80px" alt="logo" loading="lazy" class="d-none d-sm-block">
+        </header>
+
+        {% block body %}
+        
+        
+        {% endblock %}
+
+    </body>
+</html>
+    {% endapply %}

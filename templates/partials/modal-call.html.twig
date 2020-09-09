@@ -1,0 +1,28 @@
+    <div class="modal fade" id="callModale" tabindex="-1" role="dialog" aria-labelledby="callModaleTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="connexionModaleTitle">Formulaire de rappel</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×
+                </button>
+              </div>
+                <div class="modal-body">
+            <form method="post" action="{{ path('home')}}">
+                    <label  for="meeting-time">Choisir une date et une heure:</label>
+                    <input class="call-form-label mx-auto d-block" type="datetime-local" id="meeting-time"
+                    name="meeting-time" placeholder="22-09 16:30" required><br><br>
+                    <label  for="motif">Motif de votre demande :</label>
+                    <input class="call-form-label" type="text" id="motif"
+                    name="motif" required><br>
+                    <label for="meeting-number">Votre numero : </label><br>
+                    <input class="call-form-label" type="phone" id="meeting-number"
+                    name="meeting-number" placeholder="06.00.00.00.00" required>
+                    <div class="submit-button-container pt-3">
+                    <button class="btn btn-lg form-btn-connexion btn-outline-primary" type="submit">Soumettre</button>
+                </div> 
+            </form>
+            </div>
+       </div>
+      </div>
+    </div>

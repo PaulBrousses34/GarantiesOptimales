@@ -1,0 +1,861 @@
+<div id="page-container" style="padding-top: 55px; overflow-y: hidden; margin-top: -160px;" class="et-animated-content">
+	<div id="et-main-area">
+		<div id="main-content">
+				<div class="entry-content">
+					<div id="et-boc" class="et-boc">
+						<div class="et_builder_inner_content et_pb_gutters3">
+							<div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
+								<div class="et_pb_row et_pb_row_3 et_pb_row_fullwidth">
+									<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="et_pb_module et_pb_text et_pb_text_3 et_pb_bg_layout_dark  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<h1>Votre assurance Jet-Ski</h1>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="container">
+							<div class="mt-2 fil-ariane">
+								<p>
+								<a href="{{ path('home')}}">Accueil</a> -
+								<a href="{{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}">{{sousCategorie.categorie.name}}</a> - 
+								<a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a> - 
+								<a href="{{ path('assurances_type', {'slug': type.slug})}}">{{type.name}}</a>
+								</p>
+							</div>
+						<div><div class="submit-button-container-devis">
+						<a class="d-block" href="" data-toggle="modal" data-target="#callModale">
+						<button class="btn btn-outline-success">Demander à être rappellé</button>
+						</a></div>
+						<div class="submit-button-container-devis">
+						<a href="{{ path('assurances_devis_plaisance')}}"> <button class="btn btn-outline-success">Faire un devis en quelques clics</button></a></div>
+							<div class="et_pb_section et_pb_section_5 et_section_regular">
+								<div class="et_pb_row et_pb_row_5">
+									<div class="et_pb_column et_pb_column_1_2 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
+										<div class="et_pb_module et_pb_text et_pb_text_4 et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<h2>Des garanties d’assurance complètes à des tarifs mini</h2>
+											</div>
+										</div>
+										<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<p>
+                                                    - Inclus dans tous les contrats jet-ski : la garantie responsabilité civile (elle permet de vous couvrir contre des dommages que vous pourriez causer aux autres), les frais de retirement.<br>
+                                                    - Inclus dans le contrat multirisque : dommages au jet-ski, frais divers.<br>
+                                                    - En option : assistance à terre, protection juridique, sécurité nautique, sports de glisse.
+												</p><br>
+                                                <img src="{{ asset('assets/images/photos/jetski.jpg') }}">
+											</div>
+										</div>
+									</div>
+									<div class="et_pb_column et_pb_column_1_2 et_pb_column_6 sg-les-plus-priceblock  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="et_pb_module et_pb_text et_pb_text_7 sg-checked-list et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<p>
+													Chez  {{societyName}}, il est possible d'assurer un jet en ligne et en moins de 5 minutes. Obtenez un tarif en quelques clics en complétant notre formulaire. A l'issue, vous obtiendrez directement un tarif adapté à votre bien et votre usage. En ligne, vous pourrez souscrire, payer et signer votre contrat d'assurance jet pour naviguer immédiatement et en toute sécurité.
+                                                    Votre attestation d'assurance vous est immédiatement envoyée par email. 
+												</p><br><br>
+                                                    <div><div class="submit-button-container-devis">
+                                                    <a class="d-block" href="" data-toggle="modal" data-target="#callModale">
+                                                    <button class="btn btn-outline-success">Demander à être rappellé</button>
+                                                    </a></div>
+                                                    <div class="submit-button-container-devis">
+                                                    <a href=""> <button class="btn btn-outline-success">Obtenir un devis en 2mn</button></a></div>
+											        </div>
+                                                    <div class="submit-button-container-devis">
+                                                    <a href="#formules"> <button class="btn btn-outline-success">Voir les formules</button></a></div>
+											        </div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id ="formules" class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular section_has_divider et_pb_top_divider">
+								<div class="et_pb_top_inside_divider"></div>
+								<div class="et_pb_row et_pb_row_6">
+									<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="sg-offertable sg-offertable-nbcol-4 sg-offertable-priced">
+										<div class="sg-offertable-mobileswitcher">
+											<i class="fa fa-chevron-left sg-offertable-mobileswitcher_prev sg-offertable-mobileswitcher_button disabled"></i>
+											<div class="sg-offertable-mobileswitcher_item sg-offertable-ms-current">
+												<div class="tablecol_priceblock">
+													<div class="tablecol_priceblock_gradient">
+															<b style="font-size:18px;">Montant garanti</b>
+													</div>
+												</div>
+												<div class="tablecol_logocont">
+													<div class="tablecol_desc">
+													</div>
+												</div>
+											</div>
+											<div class="sg-offertable-mobileswitcher_item">
+												<div class="tablecol_priceblock">
+													<div class="tablecol_priceblock_gradient">
+															<b style="font-size:18px;">Franchise</b>
+													</div>
+												</div>
+												<div class="tablecol_logocont">
+													<div class="tablecol_desc">
+													</div>
+												</div>
+											</div>
+											<div class="sg-offertable-mobileswitcher_item">
+												<div class="tablecol_priceblock">
+													<div class="tablecol_priceblock_gradient">
+															<b style="font-size:18px;">RC</b>
+
+													</div>
+												</div>
+												<div class="tablecol_logocont">
+													<div class="tablecol_desc">
+													</div>
+												</div>
+											</div>
+											<div class="sg-offertable-mobileswitcher_item">
+												<div class="tablecol_priceblock">
+													<div class="tablecol_priceblock_gradient">
+														<b style="font-size:18px;">MultiRisque</b>
+
+													</div>
+												</div>
+												<div class="tablecol_logocont">
+													<div class="tablecol_desc">
+													</div>
+												</div>
+											</div>
+											<i class="fa fa-chevron-right sg-offertable-mobileswitcher_button sg-offertable-mobileswitcher_next"></i>
+										</div>
+										<table class="sg-offertable-table">
+											<thead>
+												<tr>
+													<th class="sg-has-titlegreen sg-has-titlegrey ">
+														<div class="sg-title-green">
+														</div>
+														<div class="sg-subtitle-grey">
+															Responsabilité civile
+														</div>
+													</th>
+													<th class="sg-offertable-ms-current">
+														<div class="tablecol_priceblock">
+															<div class="tablecol_priceblock_gradient">
+																<b style="font-size:18px;">Montant garanti</b>
+															</div>
+														</div>
+														<div class="tablecol_logocont">
+															<div class="tablecol_desc">
+															</div>
+														</div>
+													</th>
+													<th>
+														<div class="tablecol_priceblock">
+															<div class="tablecol_priceblock_gradient">
+                                                                <b style="font-size:18px;">Franchise</b>
+															</div>
+														</div>
+														<div class="tablecol_logocont">
+															<div class="tablecol_desc">
+															</div>
+														</div>
+													</th>
+													<th>
+														<div class="tablecol_priceblock">
+															<div class="tablecol_priceblock_gradient">
+                                                                <b style="font-size:18px;">RC</b>
+															</div>
+														</div>
+														<div class="tablecol_logocont">
+															<div class="tablecol_desc">
+															</div>
+														</div>
+													</th>
+													<th>
+														<div class="tablecol_priceblock">
+															<div class="tablecol_priceblock_gradient">
+                                                                <b style="font-size:18px;">MultiRisque</b>
+															</div>
+														</div>
+														<div class="tablecol_logocont">
+															<div class="tablecol_desc">
+															</div>
+														</div>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Tous les dommages aux tiers
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val" style="font-size:12px;">
+															4 000 000 €
+                                                            dont dommages
+                                                            autres que corporels :
+                                                            1 000 000 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															75 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Défense et recours
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+															5 000 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															Néant
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+                                                <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bcaffe037d" aria-expanded="false" aria-controls="linecollapse_5f2bcaffe037d">
+															<i class="fa fa-chevron-down tableline_title_icon"></i>
+															+ d'informations
+														</div>
+														<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bcaffe037d" data-parent=".sg-offertable">
+															<div class="tableline_title_text">
+																<p>
+																	L’assureur garantit les conséquences pécuniaires de la responsabilité civile qui peut vous incomber pour les dommages corporels, matériels et immatériels consécutifs causés aux tiers, y compris les personnes transportées à titre gratuit, du fait du jet assuré ou de sa manœuvre.
+																</p>
+															</div>
+														</div>
+													</th>
+												</tr>
+												<tr class="tableline-sep">
+													<th>
+														<div class="tableline_title">
+															Dommages au Jet-Ski
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+															
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															
+														</div>
+													</td>
+												</tr>
+												
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Vol total
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+															Valeur assurée
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val" style="font-size:12px;">
+															30 % de la valeur économique au jour du sinistre
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-times"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Perte totale, dommage partiel,<br> vol partiel, vandalisme
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+															Valeur assurée
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															150 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-times"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Incluant le vol partiel des équipements de bord
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+															Plafond de 500 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															150 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-times"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Incluant la garantie des effets personnels
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+															Plafond de 500 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															150 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-times"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bcaffe257e" aria-expanded="false" aria-controls="linecollapse_5f2bcaffe257e">
+															<i class="fa fa-chevron-down tableline_title_icon"></i>
+															+ d'informations
+														</div>
+														<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bcaffe257e" data-parent=".sg-offertable">
+															<div class="tableline_title_text">
+																<p>
+																	Les accidents, catastrophe naturelle, les évènements climatiques, … ainsi que équipements de bord et effets personnels sont couverts.
+																</p>
+															</div>
+														</div>
+													</th>
+													
+												</tr>
+												
+												<tr class="tableline-sep">
+													<th>
+														<div class="tableline_title">
+															Frais divers
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+												
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+														
+														</div>
+													</td>
+												</tr>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Frais d'assistance et de sauvetage
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+															Frais réels justifiés
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															Néant
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-times"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Frais de retirement
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val" style="font-size:12px;">
+															25 % de la valeur assurée. Dans la limite de 5 000 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															Néant
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+												<tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Frais de renflouement, frais de destruction de l’épave, mesures conservatoires, manutention et transport
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+                                                        <div class="tableline_val" style="font-size:12px;">
+															25 % de la valeur assurée. Dans la limite de 5 000 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															Néant
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-times"></i>
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															<i class="fa fa-check tableline_val_checked"></i>
+														</div>
+													</td>
+												</tr>
+                                                <tr class="tableline-sep">
+													<th>
+														<div class="tableline_title">
+															Sécurité Nautique
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+												
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+														
+														</div>
+													</td>
+												</tr>
+                                                <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Décès /<br> invalidité
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+                                                        <div class="tableline_val" style="font-size:12px;">
+															15 000 € / personne<br>
+                                                            75 000 € / événement 
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															Néant
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+												</tr>
+                                                <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Frais de recherche en mer
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+                                                        <div class="tableline_val" style="font-size:12px;">
+															15 000 €
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															Néant
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+												</tr>
+                                                <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bcaffe2c09" aria-expanded="false" aria-controls="linecollapse_5f2bcaffe2c09">
+															<i class="fa fa-chevron-down tableline_title_icon"></i>
+															+ d'informations
+														</div>
+														<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bcaffe2c09" data-parent=".sg-offertable">
+															<div class="tableline_title_text">
+																<p>
+																Toutes les personnes embarquées à titre gratuit sont automatiquement assurées.
+																</p>
+															</div>
+														</div>
+													</th>
+												
+												</tr>
+                                                <tr class="tableline-sep">
+													<th>
+														<div class="tableline_title">
+															Assistance
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+												
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+														
+														</div>
+													</td>
+												</tr>
+                                                 <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Standard
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+                                                        <div class="tableline_val" style="font-size:12px;">
+															Voir le tableau des garanties
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val" style="font-size:12px;">
+															Voir le tableau des garanties
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+												</tr>
+                                                <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bcaffe328d" aria-expanded="false" aria-controls="linecollapse_5f2bcaffe328d">
+															<i class="fa fa-chevron-down tableline_title_icon"></i>
+															+ d'informations
+														</div>
+														<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bcaffe328d" data-parent=".sg-offertable">
+															<div class="tableline_title_text">
+																<p>
+																	Service d’assistance à terre aux personnes et au jet.
+																</p>
+															</div>
+														</div>
+													</th>
+													
+												</tr>
+                                                <tr class="tableline-sep">
+													<th>
+														<div class="tableline_title">
+															Protection Juridique
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+												
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+														
+														</div>
+													</td>
+												</tr>
+                                                  <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Standard
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+                                                        <div class="tableline_val" style="font-size:12px;">
+															Voir le tableau des garanties
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val" style="font-size:12px;">
+															Voir le tableau des garanties
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+												</tr>
+                                                <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bcaffe353d" aria-expanded="false" aria-controls="linecollapse_5f2bcaffe353d">
+															<i class="fa fa-chevron-down tableline_title_icon"></i>
+															+ d'informations
+														</div>
+														<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bcaffe353d" data-parent=".sg-offertable">
+															<div class="tableline_title_text">
+																<p>
+																	Assistance, conseils et expertise pour préserver vos intérêts en cas de litige
+																</p>
+															</div>
+														</div>
+													</th>
+													
+												</tr>
+                                                <tr class="tableline-sep">
+													<th>
+														<div class="tableline_title">
+															Options d'usage
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+														<div class="tableline_val">
+												
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+													
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+														
+														</div>
+													</td>
+												</tr>
+                                                  <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bcaffe383d" aria-expanded="false" aria-controls="linecollapse_5f2bcaffe383d">
+															<i class="fa fa-chevron-down tableline_title_icon"></i>
+															Ski-nautique
+														</div>
+                                                        <div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bcaffe383d" data-parent=".sg-offertable">
+															<div class="tableline_title_text">
+																<p>
+																	Couverture des activités nautiques tractées : ski-nautique, barefoot, wake-board, bouée, boudin, ski-bus.
+																</p>
+															</div>
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+                                                        <div class="tableline_val" style="font-size:12px;">
+															
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val" style="font-size:12px;">
+															
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+												</tr>
+                                                 <tr class="tableline-notsep tableline-withtext">
+													<th>
+														<div class="tableline_title tableline_title-withtxt">
+															Remorque<br><small><a href="{{ path('assurances_type', {slug: 'remorque'})}}">(voir notre tableau des garanties)</a><small>
+														</div>
+													</th>
+													<td class="sg-offertable-ms-current">
+                                                        <div class="tableline_val" style="font-size:12px;">
+															
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val" style="font-size:12px;">
+															
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+													<td>
+														<div class="tableline_val">
+															En option
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</div>
+							</div>
+
+
+				
+						</div>
+						<span class="et_pb_scroll_top et-pb-icon et-hidden" style="display: inline;"></span>
+					</div>
+				</div>
+
+
+

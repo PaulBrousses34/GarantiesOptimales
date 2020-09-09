@@ -1,0 +1,139 @@
+
+  {% for flashError in app.flashes('error') %}
+    <div class="flash-notice-failed my-3">
+      <div class="alert alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p class="mb-0">{{ flashError }}</p>
+      </div>
+    </div>
+  {% endfor %}
+
+{{ form_start(registrationForm, {'attr': {'id': 'form'}}) }}
+
+<input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
+{% set route = app.request.attributes.get('_route')%}
+    {% if route == 'user_edit' %}
+    <div class="main-title">
+      <h2 class="title-register">Modifier mon profil</h2>
+    </div>
+
+    {% else %}
+    <div class="main-title">
+      <h2 class="title-register">Inscription</h2>
+    </div>
+    {% endif %}
+
+
+    <div class="user-form-label">{{form_label (registrationForm.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="help">{{form_help (registrationForm.lastname) }}</div>
+    <div>{{form_widget (registrationForm.lastname) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.firstname) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="help">{{form_help (registrationForm.firstname) }}</div>
+    <div>{{form_widget (registrationForm.firstname) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.email) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div>{{form_widget (registrationForm.email) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.adresse) }}</div>
+    <div class="help">{{form_help (registrationForm.adresse) }}</div>
+    <div>{{form_widget (registrationForm.adresse, {'attr': {'id': 'adresse'}}) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.codePostal) }}</div>
+    <div class="help">{{form_help (registrationForm.codePostal) }}</div>
+    <div>{{form_widget (registrationForm.codePostal, {'attr': {'id': 'codePostal'}}) }}</div>
+
+    <div class="user-form-label">{{form_label (registrationForm.ville) }}</div>
+    <div class="help">{{form_help (registrationForm.ville) }}</div>
+    <div>{{form_widget (registrationForm.ville, {'attr': {'id': 'ville'}}) }}</div>
+    
+    <div class="user-form-label">{{form_label (registrationForm.password.first)}} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
+    <div class="row mx-auto help">{{form_help (registrationForm.password) }}</div>
+    <div class="row row-cols-2 password mx-auto">
+      <div class="col-11 p-0">{{form_widget (registrationForm.password.first) }}</div>
+      <div class="col-1 p-0">
+        <button type="button" class="btnEye" id="eye"><i class="fas fa-eye"></i></button>
+      </div>
+    </div>
+
+    <div class="user-form-label">{{form_label (registrationForm.password.second) }} {{ app.request.attributes.get('_route') == 'app_register' ? '<span class="form-asterisk-mandatory">*</span>' }}</div>
+    <div class="row row-cols-2 password mx-auto">
+      <div class="col-11 p-0">{{form_widget (registrationForm.password.second) }}</div>
+      <div class="col-1 p-0">
+        <button type="button" class="btnEye" id="eyeConfirm"><i class="fas fa-eye"></i></button>
+      </div>
+    </div>
+
+    <div class="user-form-label">{{form_label (registrationForm.newsletter) }}</div>
+    <div class="help">{{form_widget (registrationForm.newsletter) }}</div>
+    <div class="help">{{form_help (registrationForm.newsletter) }}</div>
+
+
+    <div class="help text-right mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
+ 
+ {% if registrationForm.agreeTerms is defined %}
+    <div class="modal fade" id="cguModal" tabindex="-1" role="dialog" aria-labelledby="cguModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cguModalTitle">Conditions générales d'utilisation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="btn-close-modal" aria-hidden="true">×
+            </button>
+          </div>
+          <div class="modal-body">
+
+            {{ include('partials/cgu.html.twig') }}
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <div class="user-form-label">{{form_label (registrationForm.agreeTerms) }} </div>
+
+
+    <div class="help">{{form_widget (registrationForm.agreeTerms) }}</div>
+    <div class="container-cgu help">
+    <a class="link-cgu" data-toggle="modal" data-target="#cguModal">Voir les mentions legales</a>  
+    </div>
+    <div class="container-captcha">
+     <div class="g-recaptcha" data-sitekey="6LfxjrMZAAAAANwcUdUVYBH2MwYGSUoHfUMKPU7e"></div>
+    </div>
+  {% endif %}
+    <br>
+    
+    <div class="py-1 submit-button-container">
+      <button type="submit"
+      class="btn btn-outline-success">{{ button_label|default('S\'inscrire') }}</button>
+    </div>
+    {% if app.request.attributes.get('_route') == 'user_edit' %}
+    <div class="py-1 submit-button-container">
+      <button type="button" data-toggle="modal" data-target="#confirmModal" class="confirmModalLink btn btn-outline-danger">Supprimer mon profil</button>
+    </div>
+    {% endif %}
+{{ form_end(registrationForm)  }}
+
+
+<script>
+  document.getElementById("eye").addEventListener("click", function(e){
+  var pwd = document.getElementById("registration_form_password_first");
+  if(pwd.getAttribute("type")=="password"){
+  pwd.setAttribute("type","text");
+  } else {
+  pwd.setAttribute("type","password");
+  }
+  });
+  </script>
+  <script>
+  document.getElementById("eyeConfirm").addEventListener("click", function(e){
+  var pwd = document.getElementById("registration_form_password_second");
+  if(pwd.getAttribute("type")=="password"){
+  pwd.setAttribute("type","text");
+  } else {
+  pwd.setAttribute("type","password");
+  }
+  });
+</script>
