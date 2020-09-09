@@ -1,3 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Option Protection Juridique Nautique | {{ societyName }}{% endblock %}
+
+{% block body %}
+
+
+      
+<main class="container-fluid">
+
+
 <div id="page-container" style="padding-top: 55px; overflow-y: hidden; margin-top: -160px;" class="et-animated-content">
 	<div id="et-main-area">
 		<div id="main-content">
@@ -19,9 +30,9 @@
 							<div class="mt-2 fil-ariane">
 								<p>
 								<a href="{{ path('home')}}">Accueil</a> -
-								<a href="{{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}">{{sousCategorie.categorie.name}}</a> - 
-								<a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a> - 
-								<a href="{{ path('assurances_type', {'slug': type.slug})}}">{{type.name}}</a>
+								<a href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">Assurances Particuliers</a> - 
+								<a href="{{ path('assurances_sous-categorie', {'slug': 'plaisance'})}}">Plaisance</a> - 
+								<a href="{{ path('assurances_protection_juridique_nautique')}}">Protection Juridique Nautique</a>
 								</p>
 							</div>
 							<div class="et_pb_section et_pb_section_5 et_section_regular">
@@ -501,3 +512,7 @@
 		<span class="et_pb_scroll_top et-pb-icon et-hidden" style="display: inline;"></span>
 	</div>
 </div>
+
+
+</main>
+{% endblock %}

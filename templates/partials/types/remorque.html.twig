@@ -1,3 +1,15 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Option Remorque | {{ societyName }}{% endblock %}
+
+{% block body %}
+
+
+      
+<main class="container-fluid">
+
+
 <div id="page-container" style="padding-top: 55px; overflow-y: hidden; margin-top: -160px;" class="et-animated-content">
 	<div id="et-main-area">
 		<div id="main-content">
@@ -19,9 +31,9 @@
 							<div class="mt-2 fil-ariane">
 								<p>
 								<a href="{{ path('home')}}">Accueil</a> -
-								<a href="{{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}">{{sousCategorie.categorie.name}}</a> - 
-								<a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a> - 
-								<a href="{{ path('assurances_type', {'slug': type.slug})}}">{{type.name}}</a>
+								<a href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">Assurances Particuliers</a> - 
+								<a href="{{ path('assurances_sous-categorie', {'slug': 'plaisance'})}}">Plaisance</a> - 
+								<a href="{{ path('assurances_remorque_nautique')}}">Remorque</a>
 								</p>
 							</div>
 							<div class="et_pb_section et_pb_section_5 et_section_regular">
@@ -66,15 +78,11 @@
                                                     </a></div>
                                                     <div class="submit-button-container-devis">
                                                     <a href=""> <button class="btn btn-outline-success">Obtenir un devis en 2mn</button></a></div>
-											        </div>
-                                                    <div class="submit-button-container-devis">
-                                                    <a href="#formules"> <button class="btn btn-outline-success">Voir les formules</button></a></div>
-											        </div>
+											        </div><br>
 									</div><br>
 								</div>
 							</div>
 							<div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular section_has_divider et_pb_top_divider">
-								<div class="et_pb_top_inside_divider"></div>
 								<div class="et_pb_row et_pb_row_6">
 									<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
 										<div class="sg-offertable sg-offertable-nbcol-2 sg-offertable-priced">
@@ -367,3 +375,7 @@
 		<span class="et_pb_scroll_top et-pb-icon et-hidden" style="display: inline;"></span>
 	</div>
 </div>
+
+
+</main>
+{% endblock %}

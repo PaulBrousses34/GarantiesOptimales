@@ -108,19 +108,150 @@ class AssuranceController extends AbstractController
 
 
     /**
-     * @Route("/devis", name="devis_iframe")
+     * @Route("/devis/plaisance", name="devis_plaisance")
      */
-   public function iframeDevis(Request $request)
+   public function iframePlaisance()
    {
 
-
-    return $this->render('iframe/devis.html.twig', [
+    return $this->render('iframe/plaisance.html.twig', [
             
-
-        
     ]);
 
 
    }
+
+       /**
+     * @Route("/plaisance/protection-juridique", name="protection_juridique_nautique")
+     */
+    public function pjNautique()
+    {
+        
+       
+     return $this->render('partials/types/protection-juridique-nautique.html.twig', [
+
+     ]);
+ 
+ 
+    }
+
+    /**
+     * @Route("/plaisance/remorque", name="remorque_nautique")
+     */
+    public function remorqueNautique()
+    {
+ 
+     return $this->render('partials/types/remorque.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
+    /**
+     * @Route("/plaisance/assistance", name="assistance_nautique")
+     */
+    public function assistanceNautique()
+    {
+ 
+     return $this->render('partials/types/assistance.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
+
+    /**
+     * @Route("/plaisance/sports-nautiques", name="sports_nautique")
+     */
+    public function sportsNautique()
+    {
+ 
+     return $this->render('partials/types/sports-nautiques.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
+
+    /**
+     * @Route("/devis/auto", name="devis_auto")
+     */
+   public function iframeAuto()
+   {
+
+    return $this->render('iframe/auto.html.twig', [
+            
+    ]);
+
+
+   }
+
+   /**
+     * @Route("/devis/cyclo", name="devis_cyclo")
+     */
+    public function iframeCyclo()
+    {
+ 
+     return $this->render('iframe/cyclo.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
+       /**
+     * @Route("/devis/chien-chat", name="devis_chien-chat")
+     */
+    public function iframeChienChat()
+    {
+ 
+     return $this->render('iframe/chien-chat.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
+    /**
+     * @Route("/devis/habitation", name="devis_habitation")
+     */
+    public function iframeHabitation()
+    {
+ 
+     return $this->render('iframe/habitation.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
+
+    /**
+     * @Route("/devis/auto-temporaire", name="devis_auto-temporaire")
+     */
+    public function iframeTemporaire()
+    {
+ 
+     return $this->render('iframe/temporaire.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
+    /**
+     * @Route("/devis/camping-car", name="devis_camping-car")
+     */
+    public function iframeCampingCar()
+    {
+ 
+     return $this->render('iframe/camping-car.html.twig', [
+             
+     ]);
+ 
+ 
+    }
 
 }
