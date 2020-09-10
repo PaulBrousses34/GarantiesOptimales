@@ -124,12 +124,13 @@
                 </div>
             {% endfor %}
             <div class="container-first row justify-content-center">
-                <img class="logoSite col-sm-12 col-lg-6" src="{{ asset('assets/images/logo.png')}}" alt="Garanties Optimales">
+                <img class="logoSite col-sm-12 col-lg-6 " src="{{ asset('assets/images/logo.png')}}" alt="Logo Garanties Optimales">
                 <div class="container-brand  col-sm-12 col-lg-6">
                     {# <h1 class="siteBrand">Garanties-Optimales</h1> #}
                     <p class="slogan">L'assurance des particuliers et des professionnels</p>
                     <p class="slogan">Des garanties optimales à prix minimal</p>
                 </div>
+            </div>
         </div>
         </header>
     {% block body %}
@@ -185,6 +186,7 @@
                     <li><a href="{{ path('newsletter_index')}}">Actualités</a></li>
                         <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
                         <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#tarteaucitron">Gestion des cookies</a></li>
                         {% if app.user is null %}
                         <li><a href="{{ path('app_register')}}">Inscription</a></li>
                         <li><a href="" data-toggle="modal" data-target="#connexionModale">Connexion</a></li>

@@ -112,13 +112,23 @@ class AssuranceController extends AbstractController
      */
    public function iframePlaisance()
    {
+       return $this->render('iframe/plaisance.html.twig', [
+            
+    ]);
+   }
+        /**
+     * @Route("/devis/sante", name="devis_sante")
+     */
+   public function iframeSante()
+   {
 
-    return $this->render('iframe/plaisance.html.twig', [
+    return $this->render('iframe/sante.html.twig', [
             
     ]);
 
 
    }
+   
 
        /**
      * @Route("/plaisance/protection-juridique", name="protection_juridique_nautique")
