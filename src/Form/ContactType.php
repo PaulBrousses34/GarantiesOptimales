@@ -105,6 +105,7 @@ class ContactType extends AbstractType
                 'mapped' => false,
             ])
             ->add('type', ChoiceType::class, [
+                'required' =>false,
                 'label' => 'Type de document',
                 'placeholder' => 'Choisissez le type de document',
                 'choices' => [

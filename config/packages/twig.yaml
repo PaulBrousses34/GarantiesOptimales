@@ -6,3 +6,4 @@ twig:
         '%kernel.project_dir%/public/assets/css': css
     globals:
         societyName: Garanties-Optimales
+        statusSociety : SARL MGL Courtage

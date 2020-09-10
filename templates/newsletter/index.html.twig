@@ -5,6 +5,12 @@
 {% block body %}
 
 <main class="container">
+	<div class="mt-2 fil-ariane">
+		<p>
+		<a href="{{ path('home')}}">Accueil</a> -
+		<a href="{{ path('newsletter_index')}}">Newsletters</a> 
+		</p>
+	</div>
         <div class="row justify-content-center">
 
                 {% for newsletter in newsletters %}
