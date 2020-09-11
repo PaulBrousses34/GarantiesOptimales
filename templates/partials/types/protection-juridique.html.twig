@@ -16,13 +16,14 @@
 							</div>	
 						</div>
 						<div class="container">
-						<div class="mt-2 fil-ariane">
+							<div class="mt-2 fil-ariane">
 								<p>
 								<a href="{{ path('home')}}">Accueil</a> -
 								<a href="{{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}">{{sousCategorie.categorie.name}}</a> - 
 								<a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a> - 
 								<a href="{{ path('assurances_type', {'slug': type.slug})}}">{{type.name}}</a>
 								</p>
+							</div>
 						</div>
 						<div><div class="submit-button-container-devis">
 						<a class="d-block" href="" data-toggle="modal" data-target="#callModale">

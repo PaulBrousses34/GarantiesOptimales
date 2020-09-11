@@ -7760,8 +7760,11 @@ background: #DFC2F2;
   width: 625px;
   font-size: 8px;
 }
-
-
+@media (min-width: 989px) {
+  #container {
+    width: 45%;
+  }
+}
 
 /* 	Product details  */
 .product-details {
