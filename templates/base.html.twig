@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>{% block title %}Accueil | {{ societyName }}{% endblock %}</title>
+        <title>{% block title %}L'assurance des Professionnels et Particuliers | {{ societyName }}{% endblock %}</title>
         <!-- Favicon-->
          <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />
         <!-- Font Awesome icons (free version)-->
@@ -124,12 +124,13 @@
                 </div>
             {% endfor %}
             <div class="container-first row justify-content-center">
-                <img class="logoSite col-sm-12 col-lg-6" src="{{ asset('assets/images/logo.png')}}" alt="Garanties Optimales">
+                <img class="logoSite col-sm-12 col-lg-6 " src="{{ asset('assets/images/logo.png')}}" alt="Logo Garanties Optimales">
                 <div class="container-brand  col-sm-12 col-lg-6">
                     {# <h1 class="siteBrand">Garanties-Optimales</h1> #}
                     <p class="slogan">L'assurance des particuliers et des professionnels</p>
                     <p class="slogan">Des garanties optimales à prix minimal</p>
                 </div>
+            </div>
         </div>
         </header>
     {% block body %}
@@ -177,14 +178,14 @@
             <div class="container-footer">
             <div class="row mx-0">
                 <div class="footer-link-principal col-lg-3 col-md-6 text-center">
-                    <p style="color:white;">N°ORIAS : 10057313<br>SIRET 524 175 478 00014 – Code NAF 6622Z<br>EURL Liguori Assurances<br>11 rue Honore Euzet 34200 Sète<br></p>
-                    </ul>
+                    <p style="color:white;">N°ORIAS : 10057313<br>SIRET 524 175 478 00014<br>Code NAF 6622Z<br>{{statusSociety}}<br>11 rue Honore Euzet<br> 34200 Sète</p>
                 </div>
                 <div class="footer-link-about col-lg-3 col-md-6 text-center">
                     <ul>
                     <li><a href="{{ path('newsletter_index')}}">Actualités</a></li>
                         <li><a href="{{ path('about-us')}}">Qui sommes-nous?</a></li>
                         <li><a href="{{ path('legal_mentions')}}">Mentions legales</a></li>
+                        <li><a href="" data-toggle="modal" data-target="#tarteaucitron">Gestion des cookies</a></li>
                         {% if app.user is null %}
                         <li><a href="{{ path('app_register')}}">Inscription</a></li>
                         <li><a href="" data-toggle="modal" data-target="#connexionModale">Connexion</a></li>

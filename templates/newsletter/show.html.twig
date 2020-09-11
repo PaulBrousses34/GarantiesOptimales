@@ -5,6 +5,13 @@
 {% block body %}
 
 <main class="container">
+	<div class="mt-2 fil-ariane">
+		<p>
+		<a href="{{ path('home')}}">Accueil</a> -
+		<a href="{{ path('newsletter_index')}}">Newsletters</a> -
+        <a href="{{ path('newsletter_show', {'id' : newsletter.id} )}}">{{newsletter.title}}</a>  
+		</p>
+	</div>
 <div class="row px-3 justify-content-center">
 <div id="container-news">            
     <img class="img-top" src="{{asset('assets/images/photos/' ~ newsletter.image) }}" alt="photo lien {{ newsletter.title }}">

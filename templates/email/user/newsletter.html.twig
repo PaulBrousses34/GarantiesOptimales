@@ -3,16 +3,17 @@
 {% block body %}
 
 <main>
-    <p>Bonjour {{ firstname }},</p><br>
+    <p>Bonjour {{ firstname }},<br><br>
+    Voici notre dernier article :</p><br>
 
-    <p>{{ subject }}</p>
+    <h1>{{ subject }}</h1>
 
-    <p>{{ content }}</p><br>
+    <p>{{ content|raw }}</p><br>
 
 
     <p>Cordialement,</p>
 
-    <p><strong>L'équipe Meilleures-garanties.com</strong></p>
+    <p><strong> L'équipe Garanties Optimales</strong></p>
 
     <p><small>Pour vous désabonner de notre newsletter cliquer <a href="{{ path('user_edit', {'lastname' : app.user.lastname})}}"> ici </a></small></p>
 </main>

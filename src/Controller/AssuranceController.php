@@ -74,15 +74,44 @@ class AssuranceController extends AbstractController
         $form = $this->createForm(ProfessionnelType::class);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
             
+            $formeJuridique = $form->get('formeJuridique')->getData();
+            $societe = $form->get('societe')->getData();
+            $siren = $form->get('siren')->getData();
+            $nom = $form->get('nom')->getData();
+            $adresse = $form->get('adresse')->getData();
+            $complementAdresse = $form->get('complementAdresse')->getData();
+            $codePostal = $form->get('codePostal')->getData();
+            $ville = $form->get('ville')->getData();
+            $telephone = $form->get('telephone')->getData();
+            $dateCreation = $form->get('dateCreation')->getData();
+            $ca = $form->get('CA')->getData();
+            $ape = $form->get('APE')->getData();
+            $message = $form->get('message')->getData();
+            $adresseMail = $form->get('adresseMail')->getData();
 
             $email = (new TemplatedEmail())
-            ->from()
-            ->to()
-            ->subject('')
+            ->from($adresseMail)
+            ->to('devis@garanties-optimales.com')
+            ->subject('Demande de devis')
             ->htmlTemplate('email/devis/add.html.twig')
             ->context([
+                'formeJuridique' => $formeJuridique,
+                'societe' => $societe,
+                'siren' => $siren,
+                'nom' => $nom,
+                'adresse' => $adresse,
+                'complementAdresse' => $complementAdresse,
+                'codePostal' => $codePostal,
+                'ville' => $ville,
+                'telephone' => $telephone,
+                'dateCreation' => $dateCreation,
+                'ca' => $ca,
+                'ape' => $ape,
+                'adresseMail' => $adresseMail,
+                'message' => $message,
                 
             ]);
     
@@ -90,7 +119,7 @@ class AssuranceController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Votre demande de devis a été effectué avec succés'
+                'Votre demande de devis a été effectué avec succés nous vous répondrons sous 24h'
             );
 
             return $this->redirectToRoute('home', [
@@ -112,13 +141,23 @@ class AssuranceController extends AbstractController
      */
    public function iframePlaisance()
    {
+       return $this->render('iframe/plaisance.html.twig', [
+            
+    ]);
+   }
+        /**
+     * @Route("/devis/sante", name="devis_sante")
+     */
+   public function iframeSante()
+   {
 
-    return $this->render('iframe/plaisance.html.twig', [
+    return $this->render('iframe/sante.html.twig', [
             
     ]);
 
 
    }
+   
 
        /**
      * @Route("/plaisance/protection-juridique", name="protection_juridique_nautique")
@@ -248,6 +287,19 @@ class AssuranceController extends AbstractController
     {
  
      return $this->render('iframe/camping-car.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
+    /**
+     * @Route("/devis/moto", name="devis_moto")
+     */
+    public function iframeMoto()
+    {
+ 
+     return $this->render('iframe/moto.html.twig', [
              
      ]);
  

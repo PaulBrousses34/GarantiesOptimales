@@ -30,8 +30,8 @@ class HomeController extends AbstractController
 
             $emailToSend = (new TemplatedEmail())
 
-            ->from('paul.brousses@gmail.com')
-            ->to('paul.brousses@gmail.com')
+            ->from('contact@garanties-optimales.com')
+            ->to('contact@garanties-optimales.com')
             ->subject('Demande de rappel')
             ->htmlTemplate('email/contact/rappel.html.twig')
             ->context([
@@ -82,6 +82,8 @@ class HomeController extends AbstractController
                     $subject = $form->get('subject')->getData();
                     $message = $form->get('message')->getData();
                     $type = $form->get('type')->getData();
+                    $nom = $form->get('lastname')->getData();
+                    $prenom = $form->get('firstname')->getData();
 
                     $fileName = $fileUploader->saveFile($form['file'], 'assets/images/attachment');
             
@@ -91,7 +93,7 @@ class HomeController extends AbstractController
                         $emailToSend = (new TemplatedEmail())
 
             ->from($email)
-            ->to('paul.brousses@gmail.com')
+            ->to('contact@garanties-optimales.com')
             ->subject('Formulaire de contact')
             ->htmlTemplate('email/contact/send.html.twig')
             ->attach($file)
@@ -100,6 +102,8 @@ class HomeController extends AbstractController
                 'subject' => $subject,
                 'message' => $message,
                 'type' => $type,
+                'nom' => $nom,
+                'prenom' => $prenom
             ]);
                 
                         $mailer->send($emailToSend);
@@ -107,20 +111,22 @@ class HomeController extends AbstractController
                         $emailToSend = (new TemplatedEmail())
 
                 ->from($email)
-                ->to('paul.brousses@gmail.com')
+                ->to('contact@garanties-optimales.com')
                 ->subject('Formulaire de contact')
                 ->htmlTemplate('email/contact/send.html.twig')
                 ->context([
                     'mail' => $email,
                     'subject' => $subject,
                     'message' => $message,
+                    'nom' => $nom,
+                    'prenom' => $prenom
                 ]);
                     
                         $mailer->send($emailToSend);
                     }
                     $mailConfirm = (new TemplatedEmail())
 
-            ->from('paul.brousses@gmail.com')
+            ->from('contact@garanties-optimales.com')
             ->to($email)
             ->subject('Confirmation de votre demande de contact')
             ->htmlTemplate('email/contact/confirmation.html.twig')
@@ -133,7 +139,7 @@ class HomeController extends AbstractController
 
                     $this->addFlash(
                         'success',
-                        'Votre message a bien été envoyé une confirmation par mail vous a été envoyé. Nous répondrons à votre demande dans les plus brefs délais'
+                        'Votre message a bien été envoyé, une confirmation par mail vous a été envoyé. Nous répondrons à votre demande dans les plus brefs délais'
                     );
 
                     return $this->redirectToRoute('home');

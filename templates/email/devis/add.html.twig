@@ -1,0 +1,37 @@
+{% extends 'email/base.html.twig' %}
+
+{% block body %}
+
+<main>
+
+<p>Demande de devis</p>
+<p>Adresse Email : <em>{{ adresseMail }}
+<p>Forme Juridique : <em>{{ formeJuridique }}</em></p>
+<p>Societe : <em>{{ societe }}</em></p>
+{% if siren is defined %}
+<p>Siren : <em>{{ siren }}</em></p>
+{% endif %}
+<p>Nom : <em>{{ nom }}</em></p>
+<p>Adresse : <em>{{ adresse }}</em></p>
+{% if complementAdresse is defined %}
+<p>complementAdresse : <em>{{ complementAdresse }}</em></p>
+{% endif %}
+<p>Code Postal : <em>{{ codePostal }}</em></p>
+<p>Ville : {{ ville }}</p>
+<p>Telephone : <em>{{ telephone }}</em></p>
+<p>Date de Creation : {{ dateCreation }}</p>
+<p>CA : <em>{{ ca }}</em></p>
+{% if ape is defined %}
+<p>Code APE : {{ ape }}</p>
+{% endif %}
+
+{% if message is defined %}
+<p> Contenu du message : </p>
+<p><em>{{ message|nl2br }}</em></p>
+{% endif %}
+
+
+</main>
+
+
+{% endblock %}

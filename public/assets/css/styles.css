@@ -23043,6 +23043,7 @@ body #page-container .et_pb_section
 
 .container-first {
   display: flex;
+  justify-content : space-around;
 }
 
 .logoSite {
@@ -23062,6 +23063,10 @@ body #page-container .et_pb_section
   color: white;
   margin : 25px;
   text-align: center;
+  font-family: 'Playball', cursive;
+  font-weight: bolder;
+  font-size: 35px; 
+  line-height: 40px;
 }
 
 .content-presentation{
@@ -23111,4 +23116,27 @@ body #page-container .et_pb_section
 
 #tarteaucitronServices{
   height: auto!important;
+}
+
+
+.SantéFormules {
+  font-size: 16px;
+  font-weight: bolder;
+  color: #8db500;
+}
+
+.f1{
+  color: #80FF33;
+}
+.f2{
+  color: #33FF61;
+}
+.f3{
+  color: #33FFFF;
+}
+.f4{
+  color: #339FFF;
+}
+.f5{
+  color: #3346FF;
 }

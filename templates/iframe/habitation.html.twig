@@ -13,13 +13,21 @@
 												<h1>Votre devis Habitation</h1>
 											</div>
 										</div>
-
 							</div>
+							<div class="container">
+									<div class="mt-2 fil-ariane">
+										<p>
+										<a href="{{ path('home')}}"> Accueil</a> -
+										<a href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}"> Assurances Particuliers </a> - 
+										<a href="{{ path('assurances_type', {'slug': 'habitation'})}}">Habitation</a> - 
+										<a href="{{ path('assurances_devis_habitation')}}">Votre devis Habitation</a>
+										</p>
+									</div>
 
 <br><br><br>
 
 <iframe frameborder="0" height="900px" scrolling="yes" src="http://www.gestion-assurances.com/site_partenaire.aspx?code=OPE7790&amp;dst=12" width="100%"></iframe> 
 
-
+</div>
 </main>
 {% endblock %}

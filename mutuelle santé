@@ -1,0 +1,2654 @@
+<div id="page-container" class="et-animated-content" style="padding-top: 55px; overflow-y: hidden; margin-top: -160px;">
+	<div id="et-main-area">
+		<div id="main-content">
+				<div class="entry-content">
+					<div id="et-boc" class="et-boc">
+						<div class="et_builder_inner_content et_pb_gutters3">
+							<div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
+								<div class="et_pb_row et_pb_row_3 et_pb_row_fullwidth">
+									<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="et_pb_module et_pb_text et_pb_text_3 et_pb_bg_layout_dark  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<h1>Mutuelle Santé</h1>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="container">
+							<div class="mt-2 fil-ariane">
+        						<p>
+								<a href="{{ path('home')}}">Accueil</a> -
+								<a href="{{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}">{{sousCategorie.categorie.name}}</a> - 
+								<a href="{{ path('assurances_type', {'slug': type.slug})}}">{{type.name}}</a>
+								</p>
+							</div>
+							<div class="et_pb_section et_pb_section_5 et_section_regular">
+								<div class="et_pb_row et_pb_row_5">
+									<div class="et_pb_column et_pb_column_1_2 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
+										<div class="et_pb_module et_pb_text et_pb_text_4 et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<h2>La complémentaire santé qui couvre toutes vos attentes et bien plus encore</h2>
+											</div>
+										</div>
+										<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<h4>
+													Des soins de qualité pour tous en Dentaire, Optique et Aides Auditives !
+												</h4>
+												<p>L’offre 100% Santé, accessible à tous les assurés, comprend des paniers de soins qui seront progressivement pris en
+												charge à 100% par la Sécurité sociale et les complémentaires Santé (reste à charge zéro pour les assurés), tout en
+												garantissant des soins de qualité pour les 3 postes-clés que sont le Dentaire, l’Optique et les Aides Auditives.
+												</p>
+												<h4>Vous restez libres de choisir !</h4>
+												<p>En parallèle de ces paniers de soins précis en Dentaire, Optique et Aides Auditives, vous aurez toujours la liberté
+												de choisir des équipements qui n’entrent pas dans la composition initiale (panier libre). Vous serez alors remboursés
+												comme aujourd’hui, à hauteur du niveau souscrit, dans la limite de vos garanties.
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="et_pb_column et_pb_column_1_2 et_pb_column_6 sg-les-plus-priceblock  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="et_pb_module et_pb_text et_pb_text_6 et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<h3 style="text-align: left;">
+													Les 
+													<span style="color: #283e4d;"><i class="fa fa-plus-circle fa- "></i></span>
+													<span style="display:none;">plus</span>
+													&nbsp;{{societyName}}
+												</h3>
+											</div>
+										</div>
+										<div class="et_pb_module et_pb_text et_pb_text_7 sg-checked-list et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<ul>
+													<li>7 NIVEAUX DE GARANTIES, qui couvrent tous vos soins hospitalisation, soins courants, médecine douce, optique, dentaire et aides auditives.</li>
+													<li>3 RENFORTS AU CHOIX : Confort, Tranquilité, Sérénité. </li>
+													<li>UNE SURCOMPLÉMENTAIRE</li>
+													<li>DES GARANTIES D’ASSISTANCE PERFORMANTES : Incluses dès l’adhésion à votre contrat, en cas d’hospitalisation de plus de 24H</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular section_has_divider et_pb_top_divider">
+								<div class="et_pb_row et_pb_row_6">
+									<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="sg-offertable sg-offertable-nbcol-5">
+											<div class="sg-offertable-mobileswitcher">
+												<i class="fa fa-chevron-left sg-offertable-mobileswitcher_prev sg-offertable-mobileswitcher_button"></i>
+												<div class="sg-offertable-mobileswitcher_item sg-offertable-ms-current">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">100</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">125</span>
+														</div>
+													</div>
+												</div>
+                                                <div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">150</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">200</span>
+														</div>
+													</div>
+												</div>
+                                                <div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">250</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">300</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">400</span>
+														</div>
+													</div>
+												</div>
+												<i  class="fa fa-chevron-right sg-offertable-mobileswitcher_button sg-offertable-mobileswitcher_next"></i>
+											</div>
+											<table class="sg-offertable-table">
+												<thead>
+													<tr>
+														<th class="sg-has-titlegreen sg-has-titlegrey ">
+															<div class="sg-title-green">
+																Les garanties
+															</div>
+															<div class="sg-subtitle-grey">
+																Hospistalisation
+															</div>
+														</th>
+														<th class="sg-offertable-ms-current">
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">100</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">125</span>
+																</div>
+															</div>
+														</th>
+                                                        <th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">150</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">200</span>
+																</div>
+															</div>
+														</th>
+                                                        <th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">250</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">300</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">400</span>
+																</div>
+															</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd860e4da9" aria-expanded="false" aria-controls="linecollapse_5f2bd860e4da9">
+																<i class="fa fa-chevron-down tableline_title_icon"></i>
+																<b>Honoraires</b> des médecins ayant adhéré au Dispositif de Pratique Tarifaire Maîtrisé (DPTAM)
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd860e4da9" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                                        Un dispositif de Pratique Tarifaire Maîtrisée est un contrat proposé par la Sécurité sociale aux médecins leur proposant de limiter
+                                                                        leurs dépassements d’honoraires en contrepartie d’un certain nombre d’avantages. Le Contrat d’Accès aux Soins (CAS) et l’Option
+                                                                        Pratique Tarifaire Maîtrisée (OPTAM) sont deux dispositifs de pratique tarifaire maîtrisée.
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%<sup>(1)</sup>
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%<sup>(1)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(1)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%<sup>(1)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%<sup>(1)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%<sup>(1)</sup>
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Honoraires</b> des médecins n'ayant pas adhéré au Dispositif de Pratique Tarifaire Maîtrisé (DPTAM)
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																105%<sup>(1)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																130%<sup>(1)</sup>
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																180%<sup>(1)</sup>
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																200%<sup>(1)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(1)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(1)</sup>
+															</div>
+														</td>
+													</tr>
+												
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Frais de séjour</b> en établissement conventionné
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Frais de séjour</b> en établissement non conventionné
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Forfait journalier hospitalier</b> 
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Chambre particulière</b> (y compris ambulatoire) non remboursée par la Sécurité sociale
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																30€/jour limitée à 45 jours par an et par bénéficiaire en séjours spécialisés
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																40€/jour limitée à 45 jours par an et par bénéficiaire en séjours spécialisés
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																50€/jour limitée à 60 jours par an et par bénéficiaire en séjours spécialisés
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																60€/jour limitée à 60 jours par an et par bénéficiaire en séjours spécialisés
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																70€/jour limitée à 60 jours par an et par bénéficiaire en séjours spécialisés
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																80€/jour limitée à 60 jours par an et par bénéficiaire en séjours spécialisés
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																90€/jour limitée à 60 jours par an et par bénéficiaire en séjours spécialisés
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Lit accompagnant,</b> enfant ou adulte, non remboursé par la Sécurité sociale (dans la limite de 15 jours par an et par bénéficiaire)
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																10€/jour
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																15€/jour
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																15€/jour
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																20€/jour
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																20€/jour
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																25€/jour
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																25€/jour
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Hospitalisation à domicile</b> (HAD)
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Transports prescrits pour l’hospitalisation ou la médecine de ville
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-sep">
+														<th>
+															<div class="tableline_title">
+																Soins Courants
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Honoraires médicaux :</b> Consultations, actes (radio, petite chirurgie) et visites de généralistes et spécialistes ayant adhéré au Dispositif de Pratique Tarifaire Maîtrisé (DPTAM)
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%<sup>(2)</sup>
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%<sup>(2)</sup>
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Honoraires médicaux : Consultations, actes (radio, petite chirurgie) et visites de généralistes et spécialistes n'ayant pas adhéré au DPTAM</b>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																105%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																130%<sup>(2)</sup>
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																180%<sup>(2)</sup>
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																200%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(2)</sup>
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Analyse et examens de laboratoire : biologie, analyse médicale</b>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+                                                        <th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd860e4yu9" aria-expanded="false" aria-controls="linecollapse_5f2bd860e4yu9">
+																<i class="fa fa-chevron-down tableline_title_icon"></i>
+																Honoraires paramédicaux 
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd860e4yu9" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                                      Auxiliaires médicaux (infirmier et infirmière, sage-femme, kinésithérapeute, orthophoniste, orthoptiste)
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Médicaments</b> remboursés par le régime obligatoire
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+                                                        <th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd860e4y59" aria-expanded="false" aria-controls="linecollapse_5f2bd860e4y59">
+																<i class="fa fa-chevron-down tableline_title_icon"></i>
+																Matériel médical 
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd860e4y59" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                                      Appareillages ou prothèses (hors lunettes et aides auditives) tels que définis sur la liste des produits et prestations remboursables de la Sécurité sociale
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Bonus Fidélité à partir de la 3ème année</b>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+                                                        <th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd860e4y49" aria-expanded="false" aria-controls="linecollapse_5f2bd860e4y49">
+																<i class="fa fa-chevron-down tableline_title_icon"></i>
+																Médecine douce<br>Médicaments et vaccins prescrits non remboursés
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd860e4y49" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                                      Ostéopathe, chiropracteur, acupuncteur, pédicure-podologue, étiopathe, homéopathe, diététicien-nutritionniste, sophrologue, naturopathe. Non remboursée par la Sécurité sociale
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																125€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																150€/an
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																175€/an
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																200€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																225€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250€/an
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Bonus Fidélité à partir de la 3ème année</b>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd860e5u49" aria-expanded="false" aria-controls="linecollapse_5f2bd860e5u49">
+																<i class="fa fa-chevron-down tableline_title_icon"></i>
+																Sevrage tabagique 
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd860e5u49" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                                      Tous les médicaments et produits à base de nicotine prescrits par un médecin, dans un but de sevrage tabagique (avec Autorisation de Mise sur le Marché ou norme Afnor) et non remboursés par la Sécurité sociale
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																50€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																70€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																90€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																110€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																130€/an
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150€/an
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																170€/an
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-sep">
+														<th>
+															<div class="tableline_title">
+																Soins à l'étranger
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Soins à l'étranger</b>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-sep">
+														<th>
+															<div class="tableline_title">
+																Optique
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																<b>Équipement 100% Santé</b> <sup>(3)</sup><br>Lunettes 100% santé verres et montures de classe A, telles que définies par la règlementation
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+                                                        <th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd860e4449" aria-expanded="false" aria-controls="linecollapse_5f2bd860e4449">
+																<i class="fa fa-chevron-down tableline_title_icon"></i>
+																Équipement à tarifs libres</b><sup>(3)</sup>
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd860e4449" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                                Forfait lunettes à 2 verres simples classe B <sup>(4)</sup><br>Forfait lunettes avec au moins un verre complexe ou très complexe de classe B (4)<br>Les forfaits en euros intègrent les remboursements du régime obligatoire
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																105%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																130%<sup>(2)</sup>
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																180%<sup>(2)</sup>
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																200%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(2)</sup>
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(2)</sup>
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Bonus Fidélité chez partenaires ITELIS à partir de la 3ème année
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+15€ par an pendant 5 ans (soit un bonus maximal acquis de 75€)
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+                                                    <th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd860e7849" aria-expanded="false" aria-controls="linecollapse_5f2bd860e7849">
+																<i class="fa fa-chevron-down tableline_title_icon"></i>
+															Équipement panaché <sup>(3)</sup>
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd860e7849" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                                Dans le cas d’un panachage entre équipements 100% santé et équipements à tarifs libres (par exemple monture 100% santé + 1 verre tarif libre + 1 verre tarif 100% santé),
+                                                                les équipements 100% santé sont remboursés à hauteur des frais réels dans la limite des prix définis par la règlementation. Le remboursement des équipements à tarifs libres
+                                                                est diminué de celui accordé pour les équipements 100% santé. Si la monture est à tarifs libres, son remboursement ne peut excéder 100 €.
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Lentilles
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																30€
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																50€
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																75€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																125€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																150€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																175€
+															</div>
+														</td>
+													</tr>
+                                                     <tr class="tableline-sep">
+														<th>
+															<div class="tableline_title">
+																Dentaire
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Soins : consultations et soins, inlay-onlay, chirurgie, parodontologie remboursée
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-notsep tableline-withtext">
+                                                        <th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd450e7849" aria-expanded="false" aria-controls="linecollapse_5f2bd450e7849">
+															<i class="fa fa-chevron-down tableline_title_icon"></i>
+															Soins et prothèses 100% Santé
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd450e7849" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                               Ces prothèses incluent certaines couronnes céramo-métalliques sur
+                                                                incisives, canines et premières prémolaires, certaines couronnes
+                                                                métalliques sur les autres dents (se reporter à la Notice d’information
+                                                                pour trouver les références précises à la réglementation)
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															    Frais réels dans la limite des prix définis par la règlementation	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-notsep tableline-withtext">
+                                                        <th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2bd45042849" aria-expanded="false" aria-controls="linecollapse_5f2bd45042849">
+															<i class="fa fa-chevron-down tableline_title_icon"></i>
+															Autres prothèses (prothèses à tarifs limités et prothèses à tarifs libres)<br>
+                                                            Limite annuelle <sup>(6)</sup>:<br>
+                                                            1ère et 2ème année<br>
+                                                            3éme année
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2bd45042849" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+                                                               Elles incluent certaines couronnes céramo-métalliques sur 2ème prémolaires et molaires, certains bridges, certains appareils amovibles, les
+                                                                implants et d’autres prothèses définis comme ayant des tarifs limités
+                                                                ou libres par la règlementation
+                                                                    </p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															    200%<br><br><br>1200€<br>1800€	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%<br><br><br>1500€<br>2000€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%<br><br><br>1800€<br>2300€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%<br><br><br>2000€<br>2500€
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Orthodontie
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Bonus Fidélité à partir de la 3ème année
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																+30€ tous les ans pendant 5 ans (soit un bonus maximal acquis de 150€)
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+30€ tous les ans pendant 5 ans (soit un bonus maximal acquis de 150€)
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+30€ tous les ans pendant 5 ans (soit un bonus maximal acquis de 150€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+30€ tous les ans pendant 5 ans (soit un bonus maximal acquis de 150€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+30€ tous les ans pendant 5 ans (soit un bonus maximal acquis de 150€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+30€ tous les ans pendant 5 ans (soit un bonus maximal acquis de 150€)
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+30€ tous les ans pendant 5 ans (soit un bonus maximal acquis de 150€)
+															</div>
+														</td>
+													</tr>
+                                                    <tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Prothèses dentaires, orthodontie, parodontologie et implantologie non remboursées
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																Non pris en charge
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Non pris en charge
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																100€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																125€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																150€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																175€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200€/an
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-sep">
+														<th>
+															<div class="tableline_title">
+																Aides auditives<br><sup>Jusqu'au 31/12/2020</sup>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Aides auditives, prestations initiales et de suivi
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Réparation et piles pour appareil auditif
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-sep">
+														<th>
+															<div class="tableline_title">
+																Aides auditives<br><sup>A partir du 01/01/2021</sup>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Équipement 100% Santé<br>Aides auditives 100% Santé (classe I) (7)
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																Frais réels dans la limite des prix définis par la règlementation
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Aides auditives à tarifs libres (classe II) (7)<br>Les forfaits en euros intègrent les remboursements du régime obligatoire<br>Adulte (>20 ans)<br>Enfant
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																<br><br><br>400€<br>1400€
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																<br><br><br>500€<br>1700€
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																<br><br><br>600€<br>1700€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																<br><br><br>800€<br>1700€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																<br><br><br>1000€<br>1700€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																<br><br><br>1200€<br>1700€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																<br><br><br>1600€<br>1400€
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Réparation et piles pour appareil auditif
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																100%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																125%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																150%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																250%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400%
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-sep">
+														<th>
+															<div class="tableline_title">
+																Exonération et/ou remboursement de cotisation
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																	
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+															
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Réparation et piles pour appareil auditif
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																garantie
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																garantie
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																garantie
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																garantie
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																garantie
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																garantie
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																garantie
+															</div>
+														</td>
+													</tr>
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								
+								<div class="et_pb_row et_pb_row_7">
+									<div class="et_pb_column et_pb_column_4_4 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="et_pb_module et_pb_text et_pb_text_10 et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<h3>L'assistance pour les 7 formules</h3>
+											</div>
+										</div>
+										<div class="et_pb_module et_pb_text et_pb_text_11 sg-checked-list et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<ul>
+													<li>Aide-ménagère suite à une hospitalisation de plus de 24H : Une fois par an dans la limite de 30 heures</li>
+													<li>Garde-enfants ou petits-enfants pendant une hospitalisation de plus de 24H : Une fois par an dans la limite de 40 heures</li>
+													<li>Garde de personne dépendante pendant une hospitalisation de plus de 24H : Une fois par an dans la limite de 20 heures</li>
+													<li>Garde des enfants malades pendant une immobilisation de plus de 8 jours : Une fois par an dans la limite de 40 heures</li>
+													<li>Soutien pédagogique suite à une immobilisation au domicile : Une fois par an dans la limite de 10 heures par semaine pendant 2 mois</li>
+													<li>Livraison de repas suite à une hospitalisation de plus de 24H ou pendant son immobilisation : Par évènement dans la limite d’un repas par jour pendant 7 jours</li>
+													<li>Rapatriement médical en cas d’atteinte corporelle grave : En cas de déplacement à plus de 30 km du domicile</li>
+													<li>Dans le cadre du rapatriement médical de l’Assuré, prise en charge du retour au domicile des autres assurés</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<span class="et_pb_scroll_top et-pb-icon et-hidden" style="display: inline;"></span>
+	</div>
+</div>
+
+							<div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular section_has_divider et_pb_top_divider">
+								<div class="et_pb_top_inside_divider"></div>
+								<div class="et_pb_row et_pb_row_6">
+									<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="sg-offertable sg-offertable-nbcol-3 sg-offertable-priced">
+											<div class="sg-offertable-mobileswitcher">
+												<i class="fa fa-chevron-left sg-offertable-mobileswitcher_prev sg-offertable-mobileswitcher_button disabled"></i>
+												<div class="sg-offertable-mobileswitcher_item sg-offertable-ms-current">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">Confort</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">Tranquilité</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">Sérénité</span>
+														</div>
+													</div>
+												</div>
+												
+												<i class="fa fa-chevron-right sg-offertable-mobileswitcher_button sg-offertable-mobileswitcher_next"></i>
+											</div>
+											<table class="sg-offertable-table">
+												<thead>
+													<tr>
+														<th class="sg-has-titlegreen sg-has-titlegrey ">
+															<div class="sg-title-green">
+																Les renforts
+															</div>
+															
+														</th>
+														<th class="sg-offertable-ms-current">
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">Confort</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">Tranquilité</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">Sérénité</span>
+																</div>
+															</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt" data-toggle="collapse" data-target="#linecollapse_5f2abc71cd344" aria-expanded="false" aria-controls="linecollapse_5f2abc71cd344">
+																<i class="fa fa-chevron-down tableline_title_icon"></i>
+																Complément chambre particulière (y compris en ambulatoire)
+															</div>
+															<div class="tableline_title_text_wrapper collapse" id="linecollapse_5f2abc71cd344" data-parent=".sg-offertable">
+																<div class="tableline_title_text">
+																	<p>
+																	Les limitations de durée en séjour spécialisé restent celles des niveaux
+																	de garantie	
+																	</p>
+																</div>
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																+ 10€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+ 20€
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+ 30€
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Confort hospitalier (Wifi, TV, téléphone, frais de transport des visiteurs)
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																10€/jour limité à 15 jours
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																10€/jour limité à 20 jours
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																10€/jour limité à 30 jours
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Opération de la myopie, de l’hypermétropie et de la presbytie par laser non remboursée par la Sécurité sociale / implants intra oculaires, traitement de la DMLA par compléments en Oméga 3
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																200€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																300€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																400€/an
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Prothèses dentaires, orthodontie, parodontologie et implantologie non remboursées
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																+200€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+300€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+400€/an
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Médecine douce, médicaments et vaccins prescrits non remboursés
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																-
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+100€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+200€/an
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Forfait naissance et cure thermale
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																-
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200€/an
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Forfait naissance et cure thermale
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																-
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																100€/an
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200€/an
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Activités physiques adaptées sur prescription du médecin traitant
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																-
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																-
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200€/an
+															</div>
+														</td>
+													</tr>
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+																Analyses biologiques et radiologie non remboursées / dépistage de
+																l’ostéoporose, du cancer du côlon et du cancer du col de l’utérus /
+																bilan nutritionnel
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																-
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																-
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200€/an
+															</div>
+														</td>
+													</tr>
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular section_has_divider et_pb_top_divider">
+								<div class="et_pb_row et_pb_row_6">
+									<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="sg-offertable sg-offertable-nbcol-5">
+											<div class="sg-offertable-mobileswitcher">
+												<i class="fa fa-chevron-left sg-offertable-mobileswitcher_prev sg-offertable-mobileswitcher_button"></i>
+												<div class="sg-offertable-mobileswitcher_item sg-offertable-ms-current">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">S 125</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">S 150</span>
+														</div>
+													</div>
+												</div>
+                                                <div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">S 200</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">S 250</span>
+														</div>
+													</div>
+												</div>
+                                                <div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">S 300</span>
+														</div>
+													</div>
+												</div>
+												<div class="sg-offertable-mobileswitcher_item">
+													<div class="tablecol_priceblock">
+														<div class="tablecol_priceblock_gradient">
+															<span class="tablecol_priceblock_price">S 400</span>
+														</div>
+													</div>
+												</div>
+												<i  class="fa fa-chevron-right sg-offertable-mobileswitcher_button sg-offertable-mobileswitcher_next"></i>
+											</div>
+											<table class="sg-offertable-table">
+												<thead>
+													<tr>
+														<th class="sg-has-titlegreen sg-has-titlegrey ">
+															<div class="sg-title-green">
+																Surcomplémentaire
+															</div>
+														</th>
+														<th class="sg-offertable-ms-current">
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">S 125</span>
+																</div>
+															</div>
+														</th>
+                                                        <th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">S 150</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">S 200</span>
+																</div>
+															</div>
+														</th>
+                                                        <th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">S 250</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">S 300</span>
+																</div>
+															</div>
+														</th>
+														<th>
+															<div class="tablecol_priceblock">
+																<div class="tablecol_priceblock_gradient">
+																	<span class="tablecol_priceblock_price">S 400</span>
+																</div>
+															</div>
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+													<tr class="tableline-notsep tableline-withtext">
+														<th>
+															<div class="tableline_title tableline_title-withtxt">
+															Alignement des remboursements des consultations et honoraires des médecins et
+															chirurgiens n’ayant pas adhéré à un dispositif de pratique tarifaire maitrisée (DPTAM)
+															aux remboursements des médecins y ayant adhéré
+															</div>
+														</th>
+														<td class="sg-offertable-ms-current">
+															<div class="tableline_val">
+																+20%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+20%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+20%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+50%
+															</div>
+														</td>
+                                                        <td>
+															<div class="tableline_val">
+																+100%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																+200%
+															</div>
+														</td>
+														<td>
+															<div class="tableline_val">
+																200%<sup>(1)</sup>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="et_pb_section et_pb_section_12 et_section_regular">
+								<div class="et_pb_row et_pb_row_17">
+									<div class="et_pb_column et_pb_column_4_4 et_pb_column_25  et_pb_css_mix_blend_mode_passthrough et-last-child">
+										<div class="et_pb_module et_pb_text et_pb_text_17 et_pb_bg_layout_light  et_pb_text_align_left">
+											<div class="et_pb_text_inner">
+												<br>
+												<br>
+												<p>
+													<em>(1) Les 3 premiers mois d’assurance le taux de remboursement est limité à 100%, sauf en cas d’accident, dans ce cas le taux entier est appliqué (en cas de reprise à la concurrence c’est le taux de l’ancien contrat qui est appliqué dans les limites prévues au tableau des prestations). Cela s’applique à la souscription du contrat et lors de l’ajout d’un bénéficiaire à l’exception des nouveaux-nés.<br></em>
+													<em>(2) Consultation psychiatrie et neuropsychiatrie limitée à 8 par an et par bénéficiaire. Au-delà seul le ticket modérateur est pris en charge.</em>
+													<br>
+													<em>(3) La prise en charge des lunettes est limitée à une paire tous les 2 ans (sauf pour les enfants de moins de 16 ans ou en cas d’évolution de la vue, elle est alors limitée à une paire par an). La modification de correction doit être justifiée par la fourniture d’une nouvelle prescription médicale ou d’un justificatif de l’opticien. Le point de départ pour le renouvellement est la date du 1er équipement. Pour les assurés presbytes ne voulant pas ou ne pouvant pas avoir des verres progressifs, il est possible de faire réaliser un équipement pour la vision de loin et un équipement pour la vision de près tous les 2 ans.<br></em>
+													<em>(4) Le forfait lunettes inclut le remboursement de la monture et des verres. Le remboursement de la monture ne peut pas excéder 100 €, même si le forfait dépasse ce montant.<br></em>
+													<em>(5) Les lentilles prescrites sont prises en charge même si non remboursées par la Sécurité sociale. Le ticket modérateur des lentilles remboursées par la Sécurité sociale est pris en charge même si le forfait annuel est épuisé.</em>
+													<br>
+													<em>(6) Seul le ticket modérateur est pris en charge au-delà de cette limite.</em><br>
+													<em>(7) La prise en charge des aides auditives est limitée à un équipement par oreille tous les 4 ans et à 1 700 € par oreille.</em><br>
+													<em>(8) Se reporter aux conditions des garanties Assistance.</em><br>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+<script>
+function() {
+  var container = $(this).closest('.sg-offertable');
+  var current_index = $(this).closest('.sg-offertable-mobileswitcher').find('.sg-offertable-ms-current').index();
+  var max_index = $(this).closest('.sg-offertable-mobileswitcher').find('.sg-offertable-mobileswitcher_item').length;
+  if ($(window).width() > 575) {
+    max_index = max_index - 1
+  }
+  if ($(window).width() > 767) {
+    max_index = max_index - 1
+  }
+  if ($(window).width() > 1023) {
+    max_index = max_index - 1
+  }
+  if ($(this).hasClass('sg-offertable-mobileswitcher_prev')) {
+    var next_index = current_index - 1
+  } else if ($(this).hasClass('sg-offertable-mobileswitcher_next')) {
+    var next_index = current_index + 1
+  }
+  if (!($(this).hasClass('sg-offertable-mobileswitcher_prev') && current_index === 1) && !($(this).hasClass('sg-offertable-mobileswitcher_next') && current_index === max_index)) {
+    container.find('tr td').removeClass('sg-offertable-ms-current');
+    container.find('thead th').removeClass('sg-offertable-ms-current');
+    container.find('thead th:nth-of-type(' + (next_index + 1) + ')').addClass('sg-offertable-ms-current');
+    container.find('tr td:nth-of-type(' + next_index + ')').addClass('sg-offertable-ms-current');
+    container.find('.sg-offertable-mobileswitcher .sg-offertable-mobileswitcher_item').removeClass('sg-offertable-ms-current');
+    container.find('.sg-offertable-mobileswitcher .sg-offertable-mobileswitcher_item:nth-of-type(' + next_index + ')').addClass('sg-offertable-ms-current')
+  }
+  sg_set_table_button_disabled(container)
+}
+</script>

@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ProfessionnelType extends AbstractType
 {
@@ -88,6 +90,18 @@ class ProfessionnelType extends AbstractType
                'label' => 'Information(s) complémentaire(s)',
                'help' => 'Si vous souhaitez ajouter un message/une information à votre demande de devis',
            ])
+
+           ->add('adresseMail', null,[
+            'label'=>'Email',
+            'constraints'=> [
+                 new NotBlank([
+                 'message'=>'Ce champ ne doit pas être vide',
+            ]),
+                 new Email([
+                 'message'=>'L\'email n\'est pas valide'
+            ]),
+            ]
+        ])
         ;
     }
 
