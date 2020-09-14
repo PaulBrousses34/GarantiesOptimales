@@ -7,3 +7,4 @@ twig:
     globals:
         societyName: Garanties-Optimales
         statusSociety : SARL MGL Courtage
+        emailSociety : mglcourtage7@gmail.com

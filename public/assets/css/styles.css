@@ -7612,6 +7612,8 @@ text-transform: uppercase;
   margin-right: -15px;
   margin-left: -15px;
   margin-top: 40px;
+  color: white;
+  font-weight: bolder;
 }
 
 .flash-notice-failed {

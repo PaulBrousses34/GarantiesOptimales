@@ -32,12 +32,10 @@
         {% else %}
                     {% for type in sousCategories.types %}
              <a href="{{ path('assurances_type',  {'slug' : type.slug })}}">
-                    <img class="card-img-top" src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
+                    <img class="card-img-top" src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="image lien {{ sousCategories.name }}">
             </a>
             {% endfor %}
-             {#<a href="{{ path('assurances_sous-categorie', {'slug' : sousCategories.slug })}}">
-                    <img class="card-img-top" src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
-            </a>#}
+
                 </div>
     </div>
 
