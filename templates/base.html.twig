@@ -3,8 +3,41 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        {% set route =  app.request.attributes.get('_route') %}
+        {% set slug = app.request.attributes.get('slug') %}
+        {% if route == 'home' %}
+        <meta name="description" content="Découvrez nos assurances pour particuliers : Auto, 2 roues, Habitation, Santé, Animaux;  et professionnels : Decennale, MultiRisque, ... Obtenez un devis gratuitement avec un prix competitif et un choix parmi une multitude de formules">
+        {% elseif route == 'assurances_categorie' and slug == 'particuliers'%}
+        <meta name="description" content="Découvrez nos assurances pour particuliers : Auto, 2 roues, Habitation, Santé, Animaux, Plaisance, Protection Juridique.. Obtenez un devis gratuitement parmi une large gamme de formule adapté à vos besoins et votre budget..">
+        {% elseif route == 'assurances_categorie' and slug == 'professionnels'%}
+        <meta name="description" content="Découvrez nos assurances pour professionnels : Decennale, MultiRisque, ... Obtenez un devis gratuitement parmi une large gamme de formule adapté à vos besoins et votre budget.. Pour tout types d'activités.">
+        {% elseif route == 'assurances_sous-categorie' and slug == 'automobile'%}
+        <meta name="description" content="Découvrez nos assurances auto pour tout types de conducteur et de véhicules. Votre devis gratuitement en 2 minutes. Une large gamme de formule avec des prix ultra-compétitifs. FRAIS DE DOSSIER OFFERTS">  
+        {% elseif route == 'assurances_type' and slug == 'habitation'%}
+        <meta name="description" content="Propriétaire ou Locataire, choisissez parmi notre vaste gamme d'assurance Habitation et profitez de nos tarifs compétitifs. Votre devis gratuitement en 2 minutes. FRAIS DE DOSSIER OFFERTS"> 
+        {% elseif route == 'assurances_sous-categorie' and slug == 'moto'%}
+        <meta name="description" content="Une moto, un scooter ou un quad à assurer? Obtenez votre devis gratuitement en 2 minutes et choisissez parmi nos formules à prix ultra-compétitifs. Un rapport prix/garanties imbattable. FRAIS DE DOSSIER OFFERTS">                    
+        {% elseif route == 'assurances_sous-categorie' and slug == 'plaisance'%}
+        <meta name="description" content="Découvrez nos solutions pour vos bateaux de tout types, jet-ski, ... Faites votre devis en 2 minutes et choisissez parmi notre large gamme de formules et d'options... FRAIS DE DOSSIER OFFERTS">                    
+        {% elseif route == 'assurances_type' and slug == 'mutuelle-sante'%}
+        <meta name="description" content="Découvrez l'offre assurance santé Garanties Optimales modulable avec des renforts de garanties pour personnaliser votre protection selon vos besoins et votre budget. Devis gratuit en 2 minutes. FRAIS DE DOSSIER OFFERTS">
+        {% elseif route == 'assurances_type' and slug == 'chien-chat'%}
+        <meta name="description" content="Nos formules assurance chiens/chats prennent en charge tout les frais santé de votre animal comme une complémentaire santé. Obtenez gratuitement un devis en 2 minutes ...FRAIS DE DOSSIER OFFERTS"> 
+        {% elseif route == 'assurances_type' and slug == 'protection-juridique-particulier'%}
+        <meta name="description" content="La protection juridique Garanties Optimales c'est l'assurance de la tranquilité au quotidien. Nos formules sont adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERTS">                           
+        {% elseif route == 'assurances_sous-categorie' and slug == 'batiment' %}
+        <meta name="description" content="Vous êtes professionnels du bâtiment ou vous assurez des travaux dans votre propre maison? Nous avons l'assurance qu'il vous faut. Une assurance sur mesure aves Garanties Optimales. Obtenez votre devis gratuitement en moins de 24 heures ! ">
+        {% elseif route == 'assurances_sous-categorie' and slug == 'commerce' %}
+        <meta name="description" content="Vous recherchez une assurance pour votre activité professionnelle ? Nous avons ce qu'il vous faut. Une assurance sur mesure aves Garanties Optimales. Obtenez votre devis gratuitement en moins de 24 heures ! ">
+        {% elseif route == 'assurances_type' and slug == 'moto' or slug == 'scooter' %}
+        <meta name="description" content="Des offres sur mesures, des prix ultra-compétitifs et une large gamme de garanties pour votre Moto, Scooter et Quad c'est chez Garanties Optimales. Obtenez votre devis gratuitement en 2 minutes. FRAIS DE DOSSIER OFFERTS">  
+        {% elseif route == 'assurances_type' and slug == 'Voilier' or slug == 'a-moteur' %}
+        <meta name="description" content="Découvrez nos solutions pour votre bateau (à moteur ou voilier)... Faites votre devis gratuitement en 2 minutes et choisissez parmi notre large gamme de formules et d'options... FRAIS DE DOSSIER OFFERTS">
+        {% elseif route == 'assurances_type' and slug == 'yacht' %}
+        <meta name="description" content="Découvrez nos solutions pour votre bateau de prestige... Obtenez votre devis en moins de 24 heures et choisissez parmi notre large gamme de formules et d'options...">                                           
+        {% endif %}
+
+        <meta name="author" content="Garanties Optimales" />
         <title>{% block title %}L'assurance des Particuliers et Professionnels | {{ societyName }}{% endblock %}</title>
         <!-- Favicon-->
          <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />

@@ -18,7 +18,7 @@
         </div>
 	
         <div class="product-image">
-        {% if sousCategories.name == "2 roues & Quad" or sousCategories.name == "Plaisance" or sousCategories.name == "Santé" or sousCategories.name == "Automobile" or sousCategories.name == "Bâtiment" or sousCategories.name == "Autres activités" %}
+        {% if sousCategories.name == "2 roues & Quad" or sousCategories.name == "Plaisance" or sousCategories.name == "Automobile" or sousCategories.name == "Bâtiment" or sousCategories.name == "Autres activités" %}
                 <img src="{{asset('assets/images/photos/' ~ sousCategories.image) }}" alt="photo lien {{ sousCategories.name }}">
             <div class="row info align-content-center">
             {% for type in sousCategories.types %}
