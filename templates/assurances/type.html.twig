@@ -8,8 +8,8 @@
 <main class="container-fluid">
 
 {% set template = app.request.attributes.get('slug')%}
-
+<section class="card-sous-categorie">
 {{ include('partials/types/' ~ template ~ '.html.twig') }}
-
+</section>
 </main>
 {% endblock %}
