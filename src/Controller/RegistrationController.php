@@ -34,7 +34,7 @@ class RegistrationController extends AbstractController
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
-        $secretKey = '6LfxjrMZAAAAACZFfvRRIlg16JTUBF0-XbW7iM8i';
+        $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
         $responseKey = $request->request->get('g-recaptcha-response');
         $userIP = $_SERVER['REMOTE_ADDR'];
 

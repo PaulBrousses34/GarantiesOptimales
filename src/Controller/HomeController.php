@@ -69,7 +69,7 @@ class HomeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
 
-            $secretKey = '6Lf0kLIZAAAAAKiKKLwlbIs5Tg4e1We1qjQqEa13';
+            $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
             $responseKey = $request->request->get('g-recaptcha-response');
             //$userIP = $_SERVER['REMOTE_ADDR'];
 
