@@ -23144,7 +23144,7 @@ body #page-container .et_pb_section
 }
 
 
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
   .et_pb_row_3.et_pb_row,
   .et_pb_text_3, 
   .et_pb_row_3
@@ -23152,5 +23152,10 @@ body #page-container .et_pb_section
       margin-top: 70px;
       margin-bottom: 10px;
   }
+}*/
+@media (max-width: 767px) {
+.et_pb_section.et_pb_section_2.et_pb_with_background.et_section_regular{
+  margin-top: 70px;
+  margin-bottom: 10px;
 }
-
+}
