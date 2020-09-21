@@ -268,7 +268,7 @@
                         {% if category.id == 1 %}
                             <h6>{{category.name}}</h6>
                     {% for sousCategorie in category.sousCategories %}
-                     {% if sousCategorie.name == 'Chien Chat' or sousCategorie.name =='Habitation' or  sousCategorie.name == 'Protection Juridique' or sousCategorie.name == "Mutuelle Santé" %}
+                     {% if sousCategorie.name == 'Chien Chat' or sousCategorie.name =='Habitation' or  sousCategorie.name == 'Protection Juridique' or sousCategorie.slug == "sante" %}
                         {% for type in sousCategorie.types %}
                         <li><a href="{{ path('assurances_type', {'slug': type.slug})}}">{{ sousCategorie.name }}</a></li>
                         {% endfor %}
