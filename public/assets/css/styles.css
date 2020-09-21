@@ -21919,7 +21919,7 @@ h2 {
   padding-right: 0;
   padding-bottom: 90px;
   padding-left: 0;
-  background-color: #2e4a85!important;
+  background-color: lightslategrey!important;
 }
 .et_pb_row_3.et_pb_row {
   padding-top: 27px!important;
@@ -22024,7 +22024,7 @@ h1.et_pb_module_header a, .et_pb_blurb_2.et_pb_blurb h2.et_pb_module_header, .et
 a, .et_pb_blurb_2.et_pb_blurb h5.et_pb_module_header, .et_pb_blurb_2.et_pb_blurb h5.et_pb_module_header a, .et_pb_blurb_2.et_pb_blurb h6.et_pb_module_header, .et_pb_blurb_2.et_pb_blurb h6.et_pb_module_header a {
   font-weight: 700;
   font-size: 17px;
-  color: #2e4a85!important;
+  color: lightslategrey !important;
   line-height: 1.2em;
   text-align: center;
 }
