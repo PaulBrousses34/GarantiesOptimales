@@ -266,7 +266,7 @@
                     <ul>
                     {% for category in allCategory %}
                         {% if category.id == 1 %}
-                            <h6>{{category.name}}</h6>
+                          <a href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}"><h6>{{category.name}}</h6></a>
                     {% for sousCategorie in category.sousCategories %}
                      {% if sousCategorie.name == 'Chien Chat' or sousCategorie.name =='Habitation' or  sousCategorie.name == 'Protection Juridique' or sousCategorie.slug == "sante" %}
                         {% for type in sousCategorie.types %}
@@ -284,7 +284,7 @@
                     <ul>
                     {% for category in allCategory %}
                         {% if category.id == 2 %}
-                            <h6>{{category.name}}</h6>
+                            <a href="{{ path('assurances_categorie', {'slug': 'professionnels'})}}"><h6>{{category.name}}</h6></a>
                     {% for sousCategorie in category.sousCategories %}
                             <li><a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{ sousCategorie.name }}</a></li>
                     {% endfor %}
