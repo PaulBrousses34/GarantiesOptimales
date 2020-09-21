@@ -138,34 +138,7 @@
         {% endif %}
     {% endblock %}
     <div class="container-fluid">
-    <header class="masthead">
-        <div class="container h-40">
-            {% for message in app.flashes('success') %}
-            <div class="flash-notice-success my-3">
-                <div class="alert alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p class="mb-0">{{message}}</p>
-                </div>
-            </div>
-            {% endfor %}
-            {% for flashError in app.flashes('reset_password_error') %}
-                <div class="flash-notice-failed my-3">
-                <div class="alert alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p class="mb-0">{{ flashError }}</p>
-                </div>
-                </div>
-            {% endfor %}
-            <div class="container-first row justify-content-center">
-                <img class="logoSite col-sm-12 col-lg-6 " src="{{ asset('assets/images/logo.png')}}" alt="Logo Garanties Optimales">
-                <div class="container-brand  col-sm-12 col-lg-6">
-                    {# <h1 class="siteBrand">Garanties-Optimales</h1> #}
-                    <p class="slogan">L'assurance des particuliers et des professionnels</p>
-                    <p class="slogan">Des garanties optimales à prix minimal</p>
-                </div>
-            </div>
-        </div>
-        </header>
+
     {% block body %}
     {% endblock %}
  
@@ -190,7 +163,7 @@
                         <i class="fas fa-envelope fa-3x mb-3"></i>
                         <p>Par email</p>
                         <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                        <a class="d-block" href="mailto:contact@yourwebsite.com">contact@garanties-optimales.com</a>
+                        <a class="d-block" href="mailto:contact@garanties-optimales.com">contact@garanties-optimales.com</a>
                     </div>
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-align-justify fa-3x mb-3"></i>
