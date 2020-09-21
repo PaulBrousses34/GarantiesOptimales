@@ -10501,7 +10501,7 @@ li, .entry-content .et_pb_slide_content ul li {
 }
 .sg-checked-list ul li:before, .entry-content .et_pb_text_inner ul li:before, .entry-content .et_pb_slide_content ul
 li:before {
-  content: "\f00c";
+  content: "\f14a";
   display: block;
   position: absolute;
   left: 0;
