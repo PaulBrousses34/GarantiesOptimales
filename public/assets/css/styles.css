@@ -7548,12 +7548,13 @@ header.masthead h1 {
   text-align: left;
 }
 
+
 #form {
   /*border: 5px solid white;*/
   border-radius: 15px;
   margin-bottom: 30px;
   background: linear-gradient(#dbccb9, white);
-  margin-top: 90px;
+  margin-top: 50px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -23157,5 +23158,8 @@ body #page-container .et_pb_section
 .et_pb_section.et_pb_section_2.et_pb_with_background.et_section_regular{
   margin-top: 70px;
   margin-bottom: 10px;
+}
+.container {
+  margin-top: 70px;
 }
 }

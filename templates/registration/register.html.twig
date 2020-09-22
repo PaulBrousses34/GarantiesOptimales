@@ -13,6 +13,7 @@
             </div>
             {% endfor %}
 {% set route = app.request.attributes.get('_route')%}
+
     {% if route == 'app_register' %}
     <div class="mt-2 fil-ariane">
         <p>
@@ -24,5 +25,6 @@
     <div class="row px-3 justify-content-center">
       {{ include('registration/_form.html.twig') }}
     </div>
+
 </main>
 {% endblock %}
