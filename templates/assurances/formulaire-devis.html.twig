@@ -7,7 +7,13 @@
 
 <main class="container">
 
-    <div class="justify-content-center">
+    		<div class="mt-2 fil-ariane">
+		<p>
+			<a href="{{ path('home')}}"> Accueil</a> -
+			<a href="{{ path('assurances_categorie', {'slug': 'professionnels'})}}"> Assurances Professionnels </a> - 
+			<a href="{{ path('assurances_devis_add')}}">Formulaire de demande de devis</a> 
+		</p>
+		</div>
 
 {{ form_start(proForm, {'attr': {'id': 'form'}}) }}
 

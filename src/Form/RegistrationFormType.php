@@ -70,7 +70,7 @@ class RegistrationFormType extends AbstractType
             ])
 
             ->add('adresse', null, [
-                'label'=> 'Numero, type et nom de voie',
+                'label'=> 'Adresse : Numero, type et nom de voie',
             ])
 
             ->add('codePostal', NumberType::class, [
