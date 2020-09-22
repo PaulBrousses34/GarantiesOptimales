@@ -75,9 +75,9 @@ class HomeController extends AbstractController
 
         $response = json_decode($response);
 
-        if ($form->isSubmitted() && $form->isValid()&& $response->success == true) {
+        if ($form->isSubmitted() && $form->isValid() && $response->success == true) {
 
-
+            dump($response);
                     $email = $form->get('email')->getData();
                     $subject = $form->get('subject')->getData();
                     $message = $form->get('message')->getData();
@@ -146,6 +146,7 @@ class HomeController extends AbstractController
 
 
         } elseif ($form->isSubmitted() && $form->isValid()&& $response->success != true) {
+            dump($response);
             $this->addFlash('error',
             'Problème de Captcha');
         }
