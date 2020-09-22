@@ -43,8 +43,9 @@ class RegistrationController extends AbstractController
 
         $response = json_decode($response);
 
-        if ($form->isSubmitted() && $form->isValid()&& $response->success == true) {
-            // encode the plain password
+        if ($form->isSubmitted() && $form->isValid() && $response->success == true) {
+            
+
             $user->setPassword(
                 $passwordEncoder->encodePassword(
                     $user,

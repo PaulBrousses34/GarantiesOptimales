@@ -66,17 +66,17 @@ class HomeController extends AbstractController
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
+        $responseKey = $request->request->get('g-recaptcha-response');
+        $userIP = $_SERVER['REMOTE_ADDR'];
 
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$responseKey.'&remoteip='.$userIP.'';
+        $response = file_get_contents($url);
 
-            $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
-            $responseKey = $request->request->get('g-recaptcha-response');
-            //$userIP = $_SERVER['REMOTE_ADDR'];
+        $response = json_decode($response);
 
-            $url = 'https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$responseKey;//'&remoteip='.$userIP.'';
-            $response = file_get_contents($url);
+        if ($form->isSubmitted() && $form->isValid()&& $response->success == true) {
 
-            $response = json_decode($response);
 
                     $email = $form->get('email')->getData();
                     $subject = $form->get('subject')->getData();
@@ -145,7 +145,10 @@ class HomeController extends AbstractController
                     return $this->redirectToRoute('home');
 
 
-        } 
+        } elseif ($form->isSubmitted() && $form->isValid()&& $response->success != true) {
+            $this->addFlash('error',
+            'Problème de Captcha');
+        }
 
         return $this->render('home/contact_form.html.twig', [
             'title'=>'Contact',

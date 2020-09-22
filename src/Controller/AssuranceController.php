@@ -74,8 +74,16 @@ class AssuranceController extends AbstractController
         $form = $this->createForm(ProfessionnelType::class);
         $form->handleRequest($request);
 
+        $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
+        $responseKey = $request->request->get('g-recaptcha-response');
+        $userIP = $_SERVER['REMOTE_ADDR'];
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$responseKey.'&remoteip='.$userIP.'';
+        $response = file_get_contents($url);
+
+        $response = json_decode($response);
+
+        if ($form->isSubmitted() && $form->isValid() && $response->success == true) {
             
             $formeJuridique = $form->get('formeJuridique')->getData();
             $societe = $form->get('societe')->getData();
@@ -125,7 +133,11 @@ class AssuranceController extends AbstractController
             return $this->redirectToRoute('home', [
                 
                 ]);
-        }
+        
+            } elseif ($form->isSubmitted() && $form->isValid()&& $response->success != true) {
+                $this->addFlash('error',
+                'Problème de Captcha');
+            }
 
         return $this->render('assurances/formulaire-devis.html.twig', [
             
