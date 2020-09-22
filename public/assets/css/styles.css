@@ -23162,5 +23162,7 @@ body #page-container .et_pb_section
 .container {
   margin-top: 100px;
 }
-
+.alert {
+  margin-top: 0,5rem;
+}
 }
