@@ -126,7 +126,7 @@ class HomeController extends AbstractController
                     }
                     $mailConfirm = (new TemplatedEmail())
 
-            ->from('contact@garanties-optimales.com')
+            ->from('contact@garanties-optimales.com', 'Confirmation de demande de contact')
             ->to($email)
             ->subject('Confirmation de votre demande de contact')
             ->htmlTemplate('email/contact/confirmation.html.twig')
