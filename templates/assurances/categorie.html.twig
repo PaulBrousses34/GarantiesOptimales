@@ -39,7 +39,22 @@
           <a href="{{ path('assurances_categorie', {'slug': categorie.slug})}}">{{categorie.name}}</a>
         </p>
       </div>
-{{ include('partials/cards.categorie.html.twig') }}
+	
+		<div class="container-cat-page">
+	  	<div class="row justify-content-center">
+		{% for sousCategories in categorie.sousCategories %}
+		
+		{% if sousCategories.name == 'Chien Chat' or sousCategories.name =='Habitation' or  sousCategories.name == 'Protection Juridique' or sousCategories.name == "Santé" %}
+			{% for type in sousCategories.types %}
+		<a href="{{ path('assurances_type', {'slug' : type.slug })}}"><img src="{{ asset('assets/images/photos/' ~ sousCategories.image)}}" alt="illustation cliquable {{sousCategories.name}}"></a>
+        {% endfor %}
+        {% else %}
+         <a href="{{ path('assurances_sous-categorie', {'slug' : sousCategories.slug })}}"><img src="{{ asset('assets/images/photos/' ~ sousCategories.image)}}" alt="illustation cliquable {{sousCategories.name}}"></a>
+        {% endif %}
+		</div>
+	</div>
+
+	{% endfor %}
 
 </main>
 

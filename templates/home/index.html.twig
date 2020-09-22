@@ -194,7 +194,21 @@
                 <hr class="divider my-4" />
                 {% for categorie in category %}
                 {% if categorie.name == "Assurances Particuliers" %}
-                {{ include('partials/cards.categorie.html.twig') }}
+                
+                <div class="container-cat">
+                <div class="row justify-content-center">
+                {% for sousCategories in categorie.sousCategories %}
+
+                {% if sousCategories.name == 'Santé' or sousCategories.name == 'Habitation' or sousCategories.name == 'Chien Chat' or sousCategories.name == 'Protection Juridique'%}
+                 {% for type in sousCategories.types %}
+                <a href="{{ path('assurances_type', {'slug' : type.slug })}}"><img src="{{ asset('assets/images/photos/' ~ sousCategories.image)}}" alt="illustation cliquable {{sousCategories.name}}"></a>
+                {% endfor %}
+                {% else %}
+                <a href="{{ path('assurances_sous-categorie', {'slug' : sousCategories.slug })}}"><img src="{{ asset('assets/images/photos/' ~ sousCategories.image)}}" alt="illustation cliquable {{sousCategories.name}}"></a>
+                {% endif %}
+                {% endfor %}
+                </div>
+                </div>
                 {% endif %}
                 {% endfor %}
             </section>
@@ -206,7 +220,13 @@
                 <hr class="divider my-4" />
                 {% for categorie in category %}
                 {% if categorie.name == "Assurances Professionnels" %}
-                {{ include('partials/cards.categorie.html.twig') }}
+                <div class="container-cat">
+                <div class="row justify-content-center">
+                {% for sousCategories in categorie.sousCategories %}
+                <a href="{{ path('assurances_sous-categorie', {'slug' : sousCategories.slug })}}"><img  src="{{ asset('assets/images/photos/' ~ sousCategories.image)}}" alt="illustation cliquable {{sousCategories.name}}"></a>
+                {% endfor %}
+                </div>
+                </div>
                 {% endif %}
                 {% endfor %}
             </section>
