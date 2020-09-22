@@ -300,7 +300,6 @@ small,
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 30px;
 }
 @media (min-width: 576px) {
   .container {
@@ -7554,7 +7553,7 @@ header.masthead h1 {
   border-radius: 15px;
   margin-bottom: 30px;
   background: linear-gradient(#dbccb9, white);
-  margin-top: 50px;
+  margin-top: 90px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
