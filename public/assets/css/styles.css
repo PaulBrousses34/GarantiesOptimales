@@ -7359,10 +7359,10 @@ hr.light {
 }
 
 header.masthead {
-  margin-top: 10px;
+
   padding-top: 15rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background-image: url("/../assets/images/photos/masthead.png");
+  background-image: url("/../assets/images/photos/masthead3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
