@@ -136,27 +136,22 @@
         <script type="text/javascript">
         tarteaucitron.init({
     	  "privacyUrl": "/mentions-legales", /* Privacy policy url */
-
     	  "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
     	  "cookieName": "tarteaucitron", /* Cookie name */
     
     	  "orientation": "middle", /* Banner position (top - bottom) */
     	  "showAlertSmall": false, /* Show the small banner on bottom right */
-    	  "cookieslist": false, /* Show the cookie list */
-
+    	  "cookieslist": true, /* Show the cookie list */
     	  "adblocker": false, /* Show a Warning if an adblocker is detected */
     	  "AcceptAllCta" : false, /* Show the accept all button when highPrivacy on */
     	  "highPrivacy": true, /* Disable auto consent */
     	  "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
-
     	  "removeCredit": false, /* Remove credit link */
-    	  "moreInfoLink": false, /* Show more info link */
+    	  "moreInfoLink": true, /* Show more info link */
     	  "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
-
     	  //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
                           
           "readmoreLink": "/mentions-legales", /* Change the default readmore link */
-
           "mandatory": false, /* Show a message about mandatory cookies */
         });
         </script>
@@ -165,7 +160,7 @@
     {% block nav %}
     {% set route =  app.request.attributes.get('_route') %}
         {% if route == 'home' %}
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 justify-content-center" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
             <div class="row justify-content-center">
                 <a class="navbar-brand js-scroll-trigger" class="societyName" href="#page-top">{{ societyName }}</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -188,7 +183,7 @@
             </div>
         </nav>
         {% else %}
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 justify-content-center" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
             <div class="row justify-content-center">
                 <a class="navbar-brand js-scroll-trigger" class="societyName" href="{{ path('home')}}">{{ societyName }}</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -230,6 +225,14 @@
                 </div>
                 </div>
             {% endfor %}
+            <div class="container-first row justify-content-center">
+                <img class="logoSite col-sm-12 col-lg-6 " src="{{ asset('assets/images/logo.png')}}" alt="Logo Garanties Optimales">
+                <div class="container-brand  col-sm-12 col-lg-6">
+                    {# <h1 class="siteBrand">Garanties-Optimales</h1> #}
+                    <p class="slogan">L'assurance des particuliers et des professionnels</p>
+                    <p class="slogan">Des garanties optimales à prix minimal</p>
+                </div>
+            </div>
         </div>
     </header>
     {% else %}
@@ -251,6 +254,14 @@
                 </div>
                 </div>
             {% endfor %}
+            <div class="container-first row justify-content-center">
+                <img class="logoSite col-sm-12 col-lg-6 " src="{{ asset('assets/images/logo.png')}}" alt="Logo Garanties Optimales">
+                <div class="container-brand  col-sm-12 col-lg-6">
+                    {# <h1 class="siteBrand">Garanties-Optimales</h1> #}
+                    <p class="slogan">L'assurance des particuliers et des professionnels</p>
+                    <p class="slogan">Des garanties optimales à prix minimal</p>
+                </div>
+            </div>
         </div>
     </header>
     {% endif %}
@@ -379,8 +390,3 @@
         {% endblock %}
     </body>
 </html>
-
-
-
-
-
