@@ -182,7 +182,6 @@ class HomeController extends AbstractController
     }
 
     /**
-     * Method for the page legal mentions
      * @Route("/newsletter", name="newsletter_index", methods={"GET"})
      */
     public function newsletterIndex(NewsletterRepository $newsletterRepository) {
@@ -215,27 +214,6 @@ class HomeController extends AbstractController
             ]);         
     }
 
-    /**
-     * Method for the page about us
-     * @Route("/conditions-generales-d'utilisation", name="cgu")
-     */
-    public function cgu() {
-
-        return $this->render('home/cgu.html.twig', [
-
-            ]);         
-    }
-
-    /**
-     * Method for the page about us
-     * @Route("/avis-clients", name="avis")
-     */
-    public function avis() {
-
-        return $this->render('home/avis.html.twig', [
-
-            ]);         
-    }
 
 
 }

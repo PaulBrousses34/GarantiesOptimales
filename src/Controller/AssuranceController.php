@@ -198,6 +198,20 @@ class AssuranceController extends AbstractController
  
     }
 
+
+    /**
+     * @Route("/devis/protection-juridique-particulier", name="devis_protection-juridique-particulier")
+     */
+    public function devisPj()
+    {
+ 
+     return $this->render('iframe/protection-juridique-particulier.html.twig', [
+             
+     ]);
+ 
+ 
+    }
+
     /**
      * @Route("/plaisance/assistance", name="assistance_nautique")
      */

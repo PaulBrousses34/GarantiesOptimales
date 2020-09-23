@@ -63,10 +63,56 @@
         {% elseif route == 'assurances_type' and slug == 'prevoyance-professionnelle' %}
         <meta name="description" content="La solution Prevoyance Professionnelle Garanties Optimales vous assure en cas de coup dur... Obtenez un devis... Et choisissez parmi nos diffèrentes formules.. FRAIS DE DOSSIER OFFERTS">
         {% elseif route == 'assurances_type' and slug == 'rc-pro' %}
-        <meta name="description" content="La solution Responsabilité Civile Professionnelle Garanties Optimales sécurise votre activité ... Obtenez un devis... Et choisissez parmi nos diffèrentes formules.. FRAIS DE DOSSIER OFFERTS">                                                   
+        <meta name="description" content="La solution Responsabilité Civile Professionnelle Garanties Optimales sécurise votre activité ... Obtenez un devis... Et choisissez parmi nos diffèrentes formules.. FRAIS DE DOSSIER OFFERTS">                                       
+        {% elseif route == 'assurances_devis_add'%}
+        <meta name="description" content="Pour toutes demandes de devis d'assurances professionnels remplissez notre formulaire et nous vous recontacterons sous 24h ...">    
+        {% elseif route == 'assurances_devis_plaisance'%}
+        <meta name="description" content="Besoin d'un devis d'assurance pour votre bateau, jet-ski, ... ? Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT"> 
+        {% elseif route == 'assurances_devis_sante'%}
+        <meta name="description" content="Besoin d'une couverture santé ? ... Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT">   
+        {% elseif route == 'assurances_devis_auto'%}
+        <meta name="description" content="Besoin d'une assurance auto ?  Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT"> 
+        {% elseif route == 'assurances_devis_cyclo'%}
+        <meta name="description" content="Besoin d'une assurance pour votre cyclo ? Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT">
+        {% elseif route == 'assurances_devis_protection-juridique-particulier'%}
+        <meta name="description" content="Besoin d'une protection juridique ? Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT">
+        {% elseif route == 'assurances_devis_chien-chat'%}
+        <meta name="description" content="Besoin d'une assurance pour votre animal de compagnie ? Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT">
+        {% elseif route == 'assurances_devis_habitation'%}
+        <meta name="description" content="Besoin d'une assurance pour votre logement ? Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT"> {% elseif route == 'assurances_devis_auto-temporaire'%}
+        <meta name="description" content="Besoin d'une assurance temporaire automobile ? Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT">  
+        {% elseif route == 'assurances_devis_moto'%}
+        <meta name="description" content="Besoin d'une assurance pour votre 2 roues ? Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT">
+        {% elseif route == 'assurances_devis_camping-car'%}
+        <meta name="description" content="Besoin d'une assurance pour votre camping-car ? Obtenez gratuitement en quelques clics un devis adaptés à vos besoins et à votre budget. FRAIS DE DOSSIER OFFERT">  
+        {% elseif route == 'assurances_protection_juridique_nautique'%}
+        <meta name="description" content="Découvrez nos formules  protection juridique nautique Garanties Optimales">
+        {% elseif route == 'assurances_remorque_nautique'%}
+        <meta name="description" content="Découvrez notre option pour les remorques bateaux/jet-ski Garanties Optimales">
+        {% elseif route == 'assurances_assistance_nautique'%}
+        <meta name="description" content="Découvrez nos formules d' assistance nautique parmi les plus complètes du marché pour naviguer sereinement...">
+        {% elseif route == 'assurances_sports_nautique'%}
+        <meta name="description" content="Découvrez l'option sports nautique Garanties Optimales...">
+        {% elseif route == 'contact_form'%}
+        <meta name="description" content="Contactez nous pour toute question, pour toute demande de devis ainsi que pour obtenir un devis sur une assurance particulière non présente sur notre site">
+        {% elseif route == 'about-us'%}
+        <meta name="description" content="Garanties Optimales l'assurance des particuliers et des professionnels. 20 ans de savoir faire dans le courtage. Des garanties optimales à prix minimal">
+        {% elseif route == 'legal_mentions'%}
+        <meta name="description" content="Veuillez lire nos mentions légales et les conditions d'utilisation de notre site. Le site Garanties Optimales veille à la sécurité de ses utilisateurs">
+        {% elseif route == 'newsletter_index'%}
+        <meta name="description" content="Découvrez les dernières actualités du domaine de l'assurance ainsi que nos promotions...">
+        {% elseif route == 'newsletter_show'%}
+        <meta name="description" content="{{ newsletter.content|striptags|u.truncate(120, '...')}}">
+        {% elseif route == 'protection'%}
+        <meta name="description" content="Dans un soucis de transparence vis à vis de ses utilisateurs; Garanties Optimales vous invite à lire sa politique de protection des données">
+        {% elseif route == 'app_register'%}
+        <meta name="description" content="Inscrivez-vous sur Garanties Optimales afin de retrouver facilement vos documents dans votre espace personnel. Vous n'avez pas besoin de vous inscrire pour souscrire à nos assurances ou pour obtenir un devis..">
+        {% elseif route == 'app_login'%}
+        <meta name="description" content="Connectez-vous à votre espace personnel Garanties Optimales et retrouvez vos documents facilement.. Vous n'avez pas besoin d'être inscrit ou connecté à votre espace personnel pour souscrire à une de nos assurances ou obtenir un devis...">
         {% endif %}
 
-        <meta name="author" content="Garanties Optimales" />
+        <meta name="author" content="Garanties Optimales - Paul Brousses" />
+        <meta name="copyright" content="Garanties Optimales - {{statusSociety}}" />
         <title>{% block title %}L'assurance des Particuliers et Professionnels | {{ societyName }}{% endblock %}</title>
         <!-- Favicon-->
          <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />
