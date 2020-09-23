@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Categorie;
 use App\Entity\SousCategorie;
 use App\Entity\Type;
+use App\Form\PjType;
 use App\Form\ProfessionnelType;
 use App\Repository\CategorieRepository;
 use App\Repository\SousCategorieRepository;
@@ -200,13 +201,65 @@ class AssuranceController extends AbstractController
 
 
     /**
-     * @Route("/devis/protection-juridique-particulier", name="devis_protection-juridique-particulier")
+     * @Route("/devis/protection-juridique-particulier", name="devis_protection-juridique-particulier", methods={"GET","POST"})
      */
-    public function devisPj()
+    public function devisPj(Request $request, MailerInterface $mailer)
     {
  
+
+        $form = $this->createForm(PjType::class);
+        $form->handleRequest($request);
+
+        $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
+        $responseKey = $request->request->get('g-recaptcha-response');
+        $userIP = $_SERVER['REMOTE_ADDR'];
+
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$responseKey.'&remoteip='.$userIP.'';
+        $response = file_get_contents($url);
+
+        $response = json_decode($response);
+
+        if ($form->isSubmitted() && $form->isValid() && $response->success == true) {
+            
+            $email = $form->get('email')->getData();
+            $lastname = $form->get('lastname')->getData();
+            $firstname = $form->get('firstname')->getData();
+            $dateNaissance = $form->get('dateNaissance')->getData();
+            $profession = $form->get('profession')->getData();
+
+
+            $email = (new TemplatedEmail())
+            ->from($email)
+            ->to('devis@garanties-optimales.com')
+            ->subject('Demande de devis')
+            ->htmlTemplate('email/devis/add-pj.html.twig')
+            ->context([
+                'nom' => $lastname,
+                'prenom' => $firstname,
+                'dateNaissance' => $dateNaissance,
+                'profession' => $profession, 
+            ]);
+    
+            $mailer->send($email);
+
+            $this->addFlash(
+                'success',
+                'Votre demande de devis a été effectué avec succés nous vous répondrons sous 24h'
+            );
+
+            return $this->redirectToRoute('home', [
+                
+                ]);
+        
+            } elseif ($form->isSubmitted() && $form->isValid()&& $response->success != true) {
+                $this->addFlash('error',
+                'Problème de Captcha');
+            }
+
+
+
      return $this->render('iframe/protection-juridique-particulier.html.twig', [
-             
+        'pjForm' => $form->createView(),
      ]);
  
  

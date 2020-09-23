@@ -34,18 +34,31 @@
 
 </section>
 <main class="container">
-          <div class="mt-2 fil-ariane">
-        <p>
-          <a href="{{ path('home')}}">Accueil</a> -
-		  <a href={{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}>{{sousCategorie.categorie.name}}</a>  - 
-          <a href={{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}>{{sousCategorie.name}}</a> 
-        </p>
+      <div class="mt-2 fil-ariane">
+			<p>
+			<a href="{{ path('home')}}">Accueil</a> -
+			<a href="{{ path('assurances_categorie', {'slug': sousCategorie.categorie.slug})}}">{{sousCategorie.categorie.name}}</a> -
+			<a href="{{ path('assurances_sous-categorie', {'slug': sousCategorie.slug})}}">{{sousCategorie.name}}</a> 
+			</p>
       </div>
+	
+	<div class="container-cat-page">
+	 
+<div class="row justify-content-center">
+    {% for particulier in particuliers %}
+    {% for type in sousCategorie.types %}
+			<a href="{{ path('assurances_type', {'slug' : type.slug })}}"><img class="card-img-top" src="{{asset('assets/images/photos/' ~ type.image) }}" alt="illustation cliquable {{type.name}}"></a>
 
+	{% endfor %}
+	{% endfor %}
 
-{{ include('partials/cards.sousCategories.html.twig') }}
+		</div>
+
+	</div>
+			
 
 </main>
+
 
 {% endblock %}
 

@@ -30,9 +30,65 @@
 									</div>
 
 
-<br><br><br>
+<br>
 
-<iframe src="https://rcdpro.fr/external.php?h=5f75b216c38878abc14d970205c33110&id=1131&form=decennale" width="100%" scrolling="auto" frameborder="0"></iframe>
+{{ form_start(pjForm, { 'attr': {'id': 'form' }}) }} 
+
+    <div class="row px-3 pt-3 main-title justify-content-center mx-0">
+      <h2 class= "title-register">Demande de devis Protection Juridique</h2>
+    </div>
+
+
+    <input type="hidden" id="recaptchaResponse" name="recaptcha-response" />
+
+    <div class="contact-form-label">{{form_label (pjForm.email) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="help">{{form_help (pjForm.email) }}</div>
+
+    {% if app.user.email is defined %}
+    <div>{{form_widget (pjForm.email, { 'attr': {'value': app.user.email }})}}</div>
+    {% else %}
+    <div>{{form_widget (pjForm.email)}}</div>
+    {% endif %}
+
+    <div class="contact-form-label">{{form_label (pjForm.lastname) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="help">{{form_help (pjForm.lastname) }}</div>
+    {% if app.user.lastname is defined %}
+    <div>{{form_widget (pjForm.lastname, { 'attr': {'value': app.user.lastname }}) }}</div>
+    {% else %}
+    <div>{{form_widget (pjForm.lastname)}}</div>
+    {% endif %}
+
+    <div class="contact-form-label">{{form_label (pjForm.firstname) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="help">{{form_help (pjForm.firstname) }}</div>
+    {% if app.user.firstname is defined %}
+    <div>{{form_widget (pjForm.firstname, { 'attr': {'value': app.user.firstname }}) }}</div>
+    {% else %}
+    <div>{{form_widget (pjForm.firstname)}}</div>
+    {% endif %}
+
+
+    <div class="contact-form-label">{{form_label (pjForm.dateNaissance) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="help">{{form_help (pjForm.dateNaissance) }}</div>
+    <div>{{form_widget (pjForm.dateNaissance) }}</div>
+
+
+
+    <div class="contact-form-label">{{form_label (pjForm.profession) }} <span class="form-asterisk-mandatory">*</span></div>
+    <div class="help">{{form_help (pjForm.profession) }}</div>
+    <div>{{form_widget (pjForm.profession) }}</div>
+   
+
+
+    <div class="container-captcha">
+     <div class="g-recaptcha" data-sitekey="6LfPCcsZAAAAAD5yAblWxtY9oL7mvRnL_HScbldu"></div>
+    </div>
+
+
+    <div class="help text-right mt-3"><span class="form-asterisk-mandatory">*</span><span class="form-text-mandatory"> Champs obligatoires</span></div>
+    <div class="submit-button-container">
+        <button type="submit" class="btn btn-outline-success">{{ button_label|default('Envoyer') }}</button>
+    </div>
+{{ form_end(pjForm) }}
 
 
 </div>
