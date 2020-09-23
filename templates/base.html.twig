@@ -160,7 +160,7 @@
     {% block nav %}
     {% set route =  app.request.attributes.get('_route') %}
         {% if route == 'home' %}
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 justify-content-center" id="mainNav">
             <div class="row justify-content-center">
                 <a class="navbar-brand js-scroll-trigger" class="societyName" href="#page-top">{{ societyName }}</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -183,7 +183,7 @@
             </div>
         </nav>
         {% else %}
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 justify-content-center" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 justify-content-center" id="mainNav">
             <div class="row justify-content-center">
                 <a class="navbar-brand js-scroll-trigger" class="societyName" href="{{ path('home')}}">{{ societyName }}</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -225,14 +225,7 @@
                 </div>
                 </div>
             {% endfor %}
-            <div class="container-first row justify-content-center">
-                <img class="logoSite col-sm-12 col-lg-6 " src="{{ asset('assets/images/logo.png')}}" alt="Logo Garanties Optimales">
-                <div class="container-brand  col-sm-12 col-lg-6">
-                    {# <h1 class="siteBrand">Garanties-Optimales</h1> #}
-                    <p class="slogan">L'assurance des particuliers et des professionnels</p>
-                    <p class="slogan">Des garanties optimales à prix minimal</p>
-                </div>
-            </div>
+            
         </div>
     </header>
     {% else %}
