@@ -85,7 +85,7 @@ class HomeController extends AbstractController
                     $nom = $form->get('lastname')->getData();
                     $prenom = $form->get('firstname')->getData();
 
-                    $fileName = $fileUploader->saveFile($form['file'], 'assets/images/attachment');
+                    $fileName = $fileUploader->saveFile($form['file'], '/../assets/images/attachment');
             
             if (isset($fileName)) {
                         $file = file_get_contents('assets/images/attachment/'.$fileName.'');
