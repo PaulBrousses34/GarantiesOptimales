@@ -7360,7 +7360,7 @@ hr.light {
 @media (max-width: 600px){
 header.masthead {
   margin-top: 70px;
-  padding-top: 12rem;
+  padding-top: 20rem;
   padding-bottom: calc(10rem - 4.5rem);
   background-image: url("/../assets/images/photos/masthead3.png");
   background-position: center;
@@ -7372,8 +7372,8 @@ header.masthead {
 }
 @media (min-width: 601px){
   header.masthead {
-  margin-top: 70px;
-    padding-top: 15rem;
+    margin-top: 70px;
+    padding-top: 25rem;
     padding-bottom: calc(10rem - 4.5rem);
     background-image: url("/../assets/images/photos/masthead3.png");
     background-position: center;
@@ -7386,7 +7386,7 @@ header.masthead {
   @media (min-width: 900px){
     header.masthead {
       
-      padding-top: 25rem;
+      padding-top: 35rem;
       padding-bottom: calc(10rem - 4.5rem);
       background-image: url("/../assets/images/photos/masthead3.png");
       background-position: center;
