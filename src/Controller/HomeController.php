@@ -215,6 +215,15 @@ class HomeController extends AbstractController
             ]);         
     }
 
+    /**
+     * Method for the page about us
+     * @Route("/sitemap", name="sitemap")
+     */
+    public function siteMap() {
 
+        return $this->render('home/sitemap.xsd', [
+
+        ]);
+    }
 
 }
