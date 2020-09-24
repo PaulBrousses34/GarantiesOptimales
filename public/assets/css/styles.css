@@ -7322,7 +7322,7 @@ hr.light {
 @media (min-width: 992px) {
   #mainNav {
     box-shadow: none;
-    background-color: transparent;
+  /*  background-color: transparent;*/
   }
   #mainNav .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
@@ -7394,7 +7394,7 @@ header.masthead {
       background-attachment: scroll;
       background-color: black;
       background-size: contain;
-      margin-top: -50px;
+      margin-top: -20px;
 
     }
     }
