@@ -221,7 +221,7 @@ class HomeController extends AbstractController
      */
     public function siteMap() {
 
-        return $this->render('home/sitemap.xsd', [
+        return $this->render('home/sitemap.xml', [
 
         ]);
     }
