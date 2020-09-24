@@ -56,11 +56,6 @@ class SousCategorie
     private $Image;
 
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $description;
-
 
 
     public function __construct()
