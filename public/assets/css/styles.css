@@ -7359,7 +7359,7 @@ hr.light {
 }
 @media (max-width: 600px){
 header.masthead {
-
+  margin-top: 70px;
   padding-top: 2rem;
   padding-bottom: calc(10rem - 4.5rem);
   background-image: url("/../assets/images/photos/masthead3.png");
