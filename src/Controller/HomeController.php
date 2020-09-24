@@ -96,7 +96,7 @@ class HomeController extends AbstractController
             ->to('contact@garanties-optimales.com')
             ->subject('Formulaire de contact')
             ->htmlTemplate('email/contact/send.html.twig')
-            ->attachFromPath('/assets/images/attachment/'.$fileName.'')
+            ->attachFromPath('/../assets/images/attachment/'.$fileName.'')
             ->context([
                 'mail' => $email,
                 'subject' => $subject,
