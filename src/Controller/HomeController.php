@@ -88,7 +88,7 @@ class HomeController extends AbstractController
                     $fileName = $fileUploader->saveFile($form['file'], '/../assets/images/attachment');
             
             if (isset($fileName)) {
-                        $file = file_get_contents('/../assets/images/attachment/'.$fileName.'');
+                        $file = file_get_contents('/public/assets/images/attachment/'.$fileName.'');
    
                         $emailToSend = (new TemplatedEmail())
 
