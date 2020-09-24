@@ -81,13 +81,13 @@ class HomeController extends AbstractController
                     $email = $form->get('email')->getData();
                     $subject = $form->get('subject')->getData();
                     $message = $form->get('message')->getData();
-                    $type = $form->get('type')->getData();
+                    //$type = $form->get('type')->getData();
                     $nom = $form->get('lastname')->getData();
                     $prenom = $form->get('firstname')->getData();
 
-                    $fileName = $fileUploader->saveFile($form['file'], '/../assets/images/attachment');
+                   // $fileName = $fileUploader->saveFile($form['file'], '/../assets/images/attachment');
             
-            if (isset($fileName)) {
+           /* if (isset($fileName)) {
                         $file = file_get_contents('/public/assets/images/attachment/'.$fileName.'');
    
                         $emailToSend = (new TemplatedEmail())
@@ -108,7 +108,7 @@ class HomeController extends AbstractController
             ]);
                 
                         $mailer->send($emailToSend);
-                    } else {
+                    } else {*/
                         $emailToSend = (new TemplatedEmail())
 
                 ->from($email)
@@ -124,7 +124,7 @@ class HomeController extends AbstractController
                 ]);
                     
                         $mailer->send($emailToSend);
-                    }
+                    //}
                     $mailConfirm = (new TemplatedEmail())
 
             ->from('contact@garanties-optimales.com')

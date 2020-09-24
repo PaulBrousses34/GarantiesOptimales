@@ -98,7 +98,7 @@ class ContactType extends AbstractType
                 'maxMessage' => 'L\'objet du message ne doit pas contenir plus de 1000 caractères',
                 ])
             ]])
-            ->add('file', FileType::class, [
+        /*    ->add('file', FileType::class, [
                 'required'=>false,
                 'label' => 'Joindre un fichier',
                 'attr' => ['placeholder' => 'Sélectionner votre fichier'],
@@ -126,7 +126,7 @@ class ContactType extends AbstractType
                     'Autre' => 'Autre',
                     ],
                 'multiple' => false,
-            ]);
+            ])*/;
 
     }
 
