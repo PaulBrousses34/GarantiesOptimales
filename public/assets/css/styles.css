@@ -7372,21 +7372,21 @@ header.masthead {
 }
 @media (min-width: 601px){
   header.masthead {
-  
-    padding-top: 5rem;
+  margin-top: 70px;
+    padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
     background-image: url("/../assets/images/photos/masthead3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-color: grey;
-    background-size: cover;
+    background-color: black;
+    background-size: contain;
   }
   }
   @media (min-width: 900px){
     header.masthead {
-    
-      padding-top: 55rem;
+      
+      padding-top: 25rem;
       padding-bottom: calc(10rem - 4.5rem);
       background-image: url("/../assets/images/photos/masthead3.png");
       background-position: center;
@@ -7394,7 +7394,7 @@ header.masthead {
       background-attachment: scroll;
       background-color: black;
       background-size: contain;
-      margin-top: -20px;
+      margin-top: 60px;
 
     }
     }
