@@ -88,7 +88,7 @@ class HomeController extends AbstractController
                     $fileName = $fileUploader->saveFile($form['file'], '/../assets/images/attachment');
             
             if (isset($fileName)) {
-                        //$file = file_get_contents('assets/images/attachment/'.$fileName.'');
+                       // $file = file_get_contents('assets/images/attachment/'.$fileName.'');
    
                         $emailToSend = (new TemplatedEmail())
 
@@ -96,7 +96,7 @@ class HomeController extends AbstractController
             ->to('contact@garanties-optimales.com')
             ->subject('Formulaire de contact')
             ->htmlTemplate('email/contact/send.html.twig')
-            ->attach($form['file'])
+            ->attachFromPath('assets/images/attachment/'.$fileName.'')
             ->context([
                 'mail' => $email,
                 'subject' => $subject,
