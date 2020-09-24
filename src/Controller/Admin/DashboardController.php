@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Categorie;
+use App\Entity\Document;
 use App\Entity\SousCategorie;
 use App\Entity\Type;
 use App\Entity\Utilisateur;
@@ -41,6 +42,7 @@ class DashboardController extends AbstractDashboardController
 
             MenuItem::section('Utilisateurs'),
             MenuItem::linkToCrud('Utilisateurs', 'fa fa-user', Utilisateur::class),
+            MenuItem::linkToCrud('Documents', 'fa fa-file-text', Document::class),
 
             //MenuItem::linkToLogout('Logout', 'fa fa-exit'),
         ];
