@@ -7108,15 +7108,16 @@ a.text-dark:hover, a.text-dark:focus {
   color: #231f20 !important;
 }
 
-.svg-inline--fa {
-  color: #cc6400 !important;
-}
-
 .svg-inline--fa.fa-facebook {
   color: #3B5998 !important;
 }
 .svg-inline--fa.fa-twitter {
   color: #08A0E9 !important;
+}
+
+
+.svg-inline--fa {
+  color: #cc6400 !important;
 }
 
 .fa-eye{
