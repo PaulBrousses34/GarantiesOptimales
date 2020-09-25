@@ -4,6 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="Robots" content="all">
+        <meta property="og:url" content="https://garanties-optimales.com/">
+        <meta property="og:title" content="Garanties Optimales">
+        <meta name="image" property="og:image" content="{{ asset('assets/images/logo.png') }}">
         {% set route =  app.request.attributes.get('_route') %}
         {% set slug = app.request.attributes.get('slug') %}
         {% if route == 'home' %}
@@ -209,6 +212,10 @@
     <div class="container-fluid">
     {% if route == 'home' %}
    <header class="masthead">
+            <div class="socialLink">
+            <a href="https://www.facebook.com/garantiesOptimales"><i class="fab fa-2x fa-facebook"></i></a>
+            <a href="https://twitter.com/GOptimales"><i class="fab fa-2x fa-twitter"></i></a>
+            </div>
         <div class="container h-40">
             {% for message in app.flashes('success') %}
             <div class="flash-notice-success my-3">
@@ -226,11 +233,14 @@
                 </div>
                 </div>
             {% endfor %}
-            
         </div>
     </header>
     {% else %}
     <header class="masthead d-none d-md-block d-lg-block">
+            <div class="socialLink">
+            <a href="https://www.facebook.com/garantiesOptimales"><i class="fab fa-2x fa-facebook"></i></a>
+            <a href="https://twitter.com/GOptimales"><i class="fab fa-2x fa-twitter"></i></a>
+            </div>
         <div class="container h-40">
             {% for message in app.flashes('success') %}
             <div class="flash-notice-success my-3">
@@ -247,8 +257,7 @@
                     <p class="mb-0">{{ flashError }}</p>
                 </div>
                 </div>
-            {% endfor %}
-            
+            {% endfor %} 
         </div>
     </header>
     {% endif %}
@@ -300,7 +309,11 @@
             <div class="row mx-0">
                 <div class="footer-link-principal col-lg-3 col-md-6 text-center">
                     <p style="color:white;">N°ORIAS : 10057313<br>SIRET 524 175 478 00014<br>Code NAF 6622Z<br>{{statusSociety}}<br>11 rue Honore Euzet<br> 34200 Sète</p>
-                </div>
+
+            <a href="https://www.facebook.com/garantiesOptimales"><i class="fab fa-2x fa-facebook"></i></a>
+            <a href="https://twitter.com/GOptimales"><i class="fab fa-2x fa-twitter"></i></a>
+
+               </div>
                 <div class="footer-link-about col-lg-3 col-md-6 text-center">
                     <ul>
                     <li><a href="{{ path('newsletter_index')}}">Actualités</a></li>

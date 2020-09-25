@@ -7112,6 +7112,13 @@ a.text-dark:hover, a.text-dark:focus {
   color: #cc6400 !important;
 }
 
+.svg-inline--fa.fa-facebook {
+  color: #3B5998 !important;
+}
+.svg-inline--fa.fa-twitter {
+  color: #08A0E9 !important;
+}
+
 .fa-eye{
   color: #2e4a85!important;
 }
@@ -23172,7 +23179,12 @@ body #page-container .et_pb_section
 .et_pb_section.et_pb_section_2.et_pb_with_background.et_section_regular{
   margin-top: 70px;
   margin-bottom: 10px;
+
 }
+.socialLink {
+  margin-right: -5px;
+}
+
 .container {
   margin-top: 68px;
 }
@@ -23180,3 +23192,26 @@ body #page-container .et_pb_section
   margin-top: 0,5rem;
 }
 }
+
+.socialLink {
+  color: white;
+  margin-right: 7px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+
+
+.fa-facebook {
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.fa-twitter {
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+
+}
+
