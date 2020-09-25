@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Newsletter;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,7 +19,7 @@ class NewsletterType extends AbstractType
             ->add('Image', null, [
                 'label' => 'Photo'
             ])
-            ->add('Content', null, [
+            ->add('Content', TextareaType::class, [
                 'label' => 'Contenu'
             ])
         ;
