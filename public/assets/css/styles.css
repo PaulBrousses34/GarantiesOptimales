@@ -23196,7 +23196,7 @@ body #page-container .et_pb_section
 
 .socialLink {
   color: white;
-  margin-right: 7px;
+  margin-right: 5px;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -23204,12 +23204,12 @@ body #page-container .et_pb_section
 
 
 
-.fa-facebook {
+.socialLink.fa-facebook {
   margin-top: 15px;
   margin-right: 15px;
   margin-bottom: 15px;
 }
-.fa-twitter {
+.socialLink.fa-twitter {
   margin-top: 15px;
   margin-right: 15px;
   margin-bottom: 15px;
