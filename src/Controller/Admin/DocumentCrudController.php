@@ -4,6 +4,11 @@ namespace App\Controller\Admin;
 
 use App\Entity\Document;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class DocumentCrudController extends AbstractCrudController
 {
@@ -12,14 +17,17 @@ class DocumentCrudController extends AbstractCrudController
         return Document::class;
     }
 
-    /*
+    
     public function configureFields(string $pageName): iterable
     {
-        return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
-        ];
+        
+            yield IntegerField::new('id', 'ID');
+            yield TextField::new('Fichier');
+            yield TextField::new('Type');
+            yield DateField::new('DateTelechargement');
+            yield AssociationField::new('utilisateur');
+
+        
     }
-    */
+    
 }

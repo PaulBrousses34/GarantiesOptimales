@@ -23,7 +23,6 @@ class TypeCrudController extends AbstractCrudController
         
             yield IntegerField::new('id', 'ID');
             yield TextField::new('name');
-            yield TextEditorField::new('description');
             yield AssociationField::new('SousCategorie');
 
         
