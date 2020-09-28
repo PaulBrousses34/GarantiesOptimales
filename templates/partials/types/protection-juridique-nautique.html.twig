@@ -1,21 +1,30 @@
+{% extends 'base.html.twig' %}
 
-<div id="page-container" style="padding-top: 55px; overflow-y: hidden; margin-top: -160px;" class="et-animated-content">
+{% block title %}Protection Juridique Nautique | {{ societyName }}{% endblock %}
+
+{% block body %}
+
+      
+<main class="container-fluid">
+
+<section class="card-sous-categorie">
+<div id="page-container" class="et-animated-content" style="padding-top: 55px; overflow-y: hidden; margin-top: -160px;">
 	<div id="et-main-area">
 		<div id="main-content">
-				<div class="entry-content">
-					<div id="et-boc" class="et-boc">
-						<div class="et_builder_inner_content et_pb_gutters3">
-							<div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
-								<div class="et_pb_row et_pb_row_3 et_pb_row_fullwidth">
-									<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
-										<div class="et_pb_module et_pb_text et_pb_text_3 et_pb_bg_layout_dark  et_pb_text_align_left">
-											<div class="et_pb_text_inner">
+			<div class="entry-content">
+				<div id="et-boc" class="et-boc">
+					<div class="et_builder_inner_content et_pb_gutters3">
+						<div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
+							<div class="et_pb_row et_pb_row_3 et_pb_row_fullwidth">
+								<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+									<div class="et_pb_module et_pb_text et_pb_text_3 et_pb_bg_layout_dark  et_pb_text_align_left">
+										<div class="et_pb_text_inner">
 												<h1>PROTECTION JURIDIQUE Nautique</h1>
-											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+						</div>
 							<div class="container">
 								<div class="mt-2 fil-ariane">
 									<p>
@@ -37,7 +46,7 @@
 										<div class="et_pb_module et_pb_text et_pb_text_5 et_pb_bg_layout_light  et_pb_text_align_left">
 											<div class="et_pb_text_inner">
 
-                                                <img src="{{ asset('assets/images/photos/moteur.jpg') }}">
+                                                <img src="{{ asset('assets/images/photos/protectionjuridique.jpg') }}">
 											</div>
 										</div>
 									</div>
@@ -503,3 +512,6 @@
 		<span class="et_pb_scroll_top et-pb-icon et-hidden" style="display: inline;"></span>
 	</div>
 </div>
+</section>
+</main>
+{% endblock %}
