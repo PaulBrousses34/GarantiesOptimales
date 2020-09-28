@@ -7,7 +7,7 @@
       xsi:schemaLocation="
             http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with PRO Sitemap Service https://pro-sitemaps.com -->
+
 
   <url>
        <loc>https://garanties-optimales.com/</loc>
@@ -356,5 +356,11 @@
        <lastmod>2020-09-28T08:16:15+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://garanties-optimales.com/sitemap.xml</loc>
+       <lastmod>2020-09-28T08:16:15+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.4000</priority>
   </url>
 </urlset>
