@@ -41,7 +41,6 @@ class ContactType extends AbstractType
 
             ->add('lastname', null, [
                 'label'=>'Nom',
-                'help'=>'Le nom d\'utilisateur ne peut pas contenir d\'espace ni de caractères spéciaux à l\'exception de \'-\' et \'_\'',
                 'constraints'=> [
                     new NotBlank([
                         'message'=>'Ce champ ne doit pas être vide',
@@ -56,7 +55,6 @@ class ContactType extends AbstractType
     
             ->add('firstname', null, [
                 'label'=>'Prénom',
-                'help'=>'Le prénom d\'utilisateur ne peut pas contenir d\'espace ni de caractères spéciaux à l\'exception de \'-\' et \'_\'',
                 'constraints'=> [
                     new NotBlank([
                         'message'=>'Ce champ ne doit pas être vide',
