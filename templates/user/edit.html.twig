@@ -5,8 +5,8 @@
       <div class="mt-2 fil-ariane">
         <p>
           <a href="{{ path('home')}}">Accueil</a> -
-          <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a> - 
-          <a href="{{ path('user_edit', {'lastname': app.user.lastname})}}">Modifier mon profil</a>
+          <a href="{{ path('user_read', {'lastname' : app.user.lastname, 'id': app.user.id })}}">Mon espace personnel</a> - 
+          <a href="{{ path('user_edit', {'lastname': app.user.lastname, 'id': app.user.id})}}">Modifier mon profil</a>
         </p>
       </div>
   <div class="row px-3 justify-content-center">

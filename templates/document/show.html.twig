@@ -8,7 +8,7 @@
       <div class="mt-2 fil-ariane">
         <p>
           <a href="{{ path('home')}}">Accueil</a> -
-          <a href="{{ path('user_read', {'lastname' : app.user.lastname })}}">Mon espace personnel</a> -
+          <a href="{{ path('user_read', {'lastname' : app.user.lastname, 'id': app.user.id })}}">Mon espace personnel</a> -
           <a href="{{ path('document_show', {'id' : document.id })}}">Document</a>
         </p>
       </div>
@@ -36,12 +36,12 @@
 
  
     <object type="application/pdf" width="100%" height="50%">
-   <param name="src" value="{{asset('assets/images/attachment/tmp/' ~ document.fichier)}}" />
+   <param name="src" value="{{asset('assets/images/attachment/user/' ~ document.fichier)}}" />
    </object>
     
-    <a href="{{asset('assets/images/attachment/tmp/' ~ document.fichier)}}"><button class="btn btn-outline-success">Télécharger</button></a>
+    <a href="{{asset('assets/images/attachment/user/' ~ document.fichier)}}"><button class="btn btn-outline-success">Télécharger</button></a>
     <br><br>
-    <a href="{{ path('user_read', {'lastname' : app.user.lastname})}}"><button class="btn btn-outline-info">Revenir à mon espace personnel</button></a>
+    <a href="{{ path('user_read', {'lastname' : app.user.lastname, 'id': app.user.id })}}"><button class="btn btn-outline-info">Revenir à mon espace personnel</button></a>
     <br><br>
     {{ include('document/_delete_form.html.twig') }}
 </div>

@@ -7,6 +7,8 @@
         <meta property="og:url" content="https://garanties-optimales.com/">
         <meta property="og:title" content="Garanties Optimales">
         <meta name="image" property="og:image" content="{{ asset('assets/images/logo.png') }}">
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         {% set route =  app.request.attributes.get('_route') %}
         {% set slug = app.request.attributes.get('slug') %}
         {% if route == 'home' %}
@@ -194,7 +196,7 @@
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('home')}}">Accueil</a></li>
                         {% if app.user is not null %}
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('user_read', {'lastname' : app.user.lastname})}}">Mon espace personnel</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('user_read', {'lastname' : app.user.lastname, 'id': app.user.id})}}">Mon espace personnel</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('assurances_categorie', {'slug': 'particuliers'})}}">Assurances particuliers</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ path('assurances_categorie', {'slug': 'professionnels'})}}">Assurances professionnels</a></li>
@@ -214,6 +216,7 @@
             <div class="socialLink">
             <a href="https://www.facebook.com/garantiesOptimales" target="_blank"><i class="fab fa-2x fa-facebook"></i></a>
             <a href="https://twitter.com/GOptimales" target="_blank"><i class="fab fa-2x fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/garanties-optimales/"><i class="fab fa-2x fa-linkedin"></i></a>
             </div>
         <div class="container h-40">
             {% for message in app.flashes('success') %}
@@ -239,6 +242,7 @@
             <div class="socialLink">
             <a href="https://www.facebook.com/garantiesOptimales" target="_blank"><i class="fab fa-2x fa-facebook"></i></a>
             <a href="https://twitter.com/GOptimales" target="_blank"><i class="fab fa-2x fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/garanties-optimales/"><i class="fab fa-2x fa-linkedin"></i></a>
             </div>
         <div class="container h-40">
             {% for message in app.flashes('success') %}
@@ -311,6 +315,7 @@
 
             <a href="https://www.facebook.com/garantiesOptimales"><i class="fab fa-2x fa-facebook"></i></a>
             <a href="https://twitter.com/GOptimales"><i class="fab fa-2x fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/garanties-optimales/"><i class="fab fa-2x fa-linkedin"></i></a>
 
                </div>
                 <div class="footer-link-about col-lg-3 col-md-6 text-center">
@@ -323,8 +328,8 @@
                         <li><a href="{{ path('app_register')}}">Inscription</a></li>
                         <li><a href="" data-toggle="modal" data-target="#connexionModale">Connexion</a></li>
                         {% else %}
-                        <li><a href="{{ path('user_read', {'lastname' : app.user.lastname})}}">Mon espace personnel</a></li>
-                        <li><a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}">Déclarer un sinistre</a></li>
+                        <li><a href="{{ path('user_read', {'lastname' : app.user.lastname, 'id': app.user.id})}}">Mon espace personnel</a></li>
+                        <li><a href="{{ path('user_sinistre', {'lastname' : app.user.lastname , 'id': app.user.id })}}">Déclarer un sinistre</a></li>
                         {% endif %}
                     </ul>
                 </div>

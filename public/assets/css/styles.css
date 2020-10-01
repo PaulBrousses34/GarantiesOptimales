@@ -7114,6 +7114,9 @@ a.text-dark:hover, a.text-dark:focus {
 .svg-inline--fa.fa-twitter {
   color: #08A0E9 !important;
 }
+.svg-inline--fa.fa-linkedin {
+  color: #0e76a8 !important;
+}
 
 
 .svg-inline--fa {
@@ -23210,6 +23213,12 @@ body #page-container .et_pb_section
   margin-bottom: 15px;
 }
 .socialLink.fa-twitter {
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+
+}
+.socialLink.fa-linkedin {
   margin-top: 15px;
   margin-right: 15px;
   margin-bottom: 15px;

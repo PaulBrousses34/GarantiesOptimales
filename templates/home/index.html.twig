@@ -10,8 +10,8 @@
                         <h2 class="text-black mt-0">Mon espace personnel</h2>
                         <hr class="divider light my-4" />
                         <p class="text-black-50 mb-4">Bonjour {{app.user.firstname}} !</p>
-                        <a href="{{ path('user_read', {'lastname' : app.user.lastname})}}" class="btn btn-outline-success">Accéder à mon espace personnel</a><br><br>
-                        <a href="{{ path('user_sinistre', {'lastname' : app.user.lastname})}}" class="btn btn-outline-primary">Déclarer un sinistre</a>
+                        <a href="{{ path('user_read', {'lastname' : app.user.lastname, 'id': app.user.id})}}" class="btn btn-outline-success">Accéder à mon espace personnel</a><br><br>
+                        <a href="{{ path('user_sinistre', {'lastname' : app.user.lastname, 'id': app.user.id})}}" class="btn btn-outline-primary">Déclarer un sinistre</a>
                     </div>
                 </div>
             </div>

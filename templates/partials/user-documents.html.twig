@@ -17,7 +17,7 @@
                     <a href="{{ path('document_show', {'id': document.id}) }}">Voir</a>
                 </td>
                 <td>
-                    <a href="{{asset('assets/images/attachment/tmp/' ~ document.fichier)}}"><i class="fas fa-download"></i></a>
+                    <a href="{{asset('assets/images/attachment/user/' ~ document.fichier)}}" target="_blank"><i class="fas fa-download"></i></a>
                 </td>
             </tr>
         {% else %}

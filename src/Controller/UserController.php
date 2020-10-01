@@ -25,7 +25,7 @@ class UserController extends AbstractController
     /**
      * Method to display the account page of the connected user
      * @IsGranted("IS_AUTHENTICATED_FULLY")
-     * @Route("/profil/{lastname}", name="user_read", methods={"GET"})
+     * @Route("/profil/{lastname}/{id}", name="user_read", methods={"GET"})
      */
     public function read(Utilisateur $utilisateur, DocumentRepository $documentRepository)
     {
@@ -40,7 +40,7 @@ class UserController extends AbstractController
     /**
      * Method to edit an existing account on the website
      * @IsGranted("IS_AUTHENTICATED_FULLY")
-     * @Route("/profil/edition/{lastname}", name="user_edit", methods={"GET","POST"})
+     * @Route("/profil/edition/{lastname}/{id}", name="user_edit", methods={"GET","POST"})
      */
     public function edit(Utilisateur $utilisateur, Request $request, MailerInterface $mailer, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -83,6 +83,7 @@ class UserController extends AbstractController
 
                 return $this->redirectToRoute('user_read', [
                         'lastname' => $utilisateur->getLastname(),
+                        'id' => $utilisateur->getId(),
                     ]);
             } else {
                 $em->refresh($utilisateur);
@@ -90,7 +91,7 @@ class UserController extends AbstractController
         }
             
         $formDelete = $this->createForm(DeleteType::class, null, [
-            'action' => $this->generateUrl('user_delete', ['lastname' => $utilisateur->getLastname()])
+            'action' => $this->generateUrl('user_delete', ['lastname' => $utilisateur->getLastname(), 'id' => $utilisateur->getId()])
         ]);
 
         return $this->render('user/edit.html.twig', [
@@ -103,7 +104,7 @@ class UserController extends AbstractController
     /**
      * Method to allow a user to delete his/her account on the website
      * @IsGranted("IS_AUTHENTICATED_FULLY")
-     * @Route("/profil/suppression/{lastname}", name="user_delete", methods={"DELETE"})
+     * @Route("/profil/suppression/{lastname}/{id}", name="user_delete", methods={"DELETE"})
      */
     public function delete(EntityManagerInterface $em, MailerInterface $mailer, Request $request, Utilisateur $utilisateur)
     {
@@ -148,13 +149,14 @@ class UserController extends AbstractController
 
         return $this->redirectToRoute('user_edit', [
             'lastname' => $utilisateur->getLastname(),
+            'id' => $utilisateur->getId(),
         ]);
     }
 
     /**
      * Method to do declaration of sinistre
      * @IsGranted("IS_AUTHENTICATED_FULLY")
-     * @Route("/sinistre/{lastname}", name="user_sinistre", methods={"GET","POST"})
+     * @Route("/sinistre/{lastname}/{id}", name="user_sinistre", methods={"GET","POST"})
      */
     public function sinistre(Request $request, MailerInterface $mailer, FileUploader $fileUploader, Utilisateur $utilisateur)
     {
@@ -173,7 +175,7 @@ class UserController extends AbstractController
             $text = $formSinistre->get('message')->getData();
             $number = $formSinistre->get('numberContract')->getData();
 
-            $fileConstat = $fileUploader->saveFile($formSinistre['constat'], 'assets/images/attachment/tmp');
+            $fileConstat = $fileUploader->saveFile($formSinistre['constat'], 'assets/images/attachment/user/');
             
 
 
@@ -189,7 +191,7 @@ class UserController extends AbstractController
 
                 $type = $formSinistre->get('type')->getData();
                 $document2 = New Document;
-                $otherFile = $fileUploader->saveFile($formSinistre['other'], 'assets/images/attachment/tmp');
+                $otherFile = $fileUploader->saveFile($formSinistre['other'], 'assets/images/attachment/user/');
                 $document2->setUtilisateur($this->getUser());
                 $document2->setFichier($otherFile);
                 $document2->setType($type);
@@ -219,6 +221,7 @@ class UserController extends AbstractController
             ->subject('Confirmation de votre declaration de sinistre')
             ->htmlTemplate('email/user/confirmation-sinistre.html.twig')
             ->context([
+                'name' => $name,
                 'firstname' => $firstname,
             ]);
 
@@ -232,6 +235,7 @@ class UserController extends AbstractController
 
             return $this->redirectToRoute('user_read', [
                 'lastname' => $utilisateur->getLastname(),
+                'id' => $utilisateur->getId(),
             ]);
         }
         return $this->render('user/sinistre.html.twig', [

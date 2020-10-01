@@ -45,7 +45,7 @@ class DocumentController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $document->setUtilisateur($this->getUser());
 
-            $file = $fileUploader->saveFile($form['Fichier'], 'assets/images/attachment/tmp/');
+            $file = $fileUploader->saveFile($form['Fichier'], 'assets/images/attachment/user/');
             $document->setFichier($file);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($document);
@@ -58,6 +58,7 @@ class DocumentController extends AbstractController
    
             return $this->redirectToRoute('user_read', [
                 'lastname' => $document->getUtilisateur()->getLastname(),
+                'id' => $document->getUtilisateur()->getId(),
             ]);
         }
 
@@ -99,6 +100,7 @@ class DocumentController extends AbstractController
 
         return $this->redirectToRoute('user_read', [
             'lastname' => $document->getUtilisateur()->getLastname(),
+            'id' => $document->getUtilisateur()->getId(),
         ]);
     }
 }

@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Categorie;
 use App\Entity\Newsletter;
 use App\Form\ContactType;
 use App\Repository\CategorieRepository;
