@@ -19,6 +19,17 @@ class DocumentRepository extends ServiceEntityRepository
         parent::__construct($registry, Document::class);
     }
 
+
+        
+    public function countAllDocuments()
+    {
+        $queryBuilder = $this->createQueryBuilder('d');
+        $queryBuilder->select('COUNT(d.id) as value');
+        return $queryBuilder->getQuery()->getOneOrNullResult()
+
+        ;
+    }
+
     // /**
     //  * @return Document[] Returns an array of Document objects
     //  */

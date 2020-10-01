@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Type;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
@@ -20,11 +21,12 @@ class TypeCrudController extends AbstractCrudController
     
     public function configureFields(string $pageName): iterable
     {
-        
-            yield IntegerField::new('id', 'ID');
-            yield TextField::new('name');
-            yield AssociationField::new('SousCategorie');
-
+        return [
+            IdField::new('id')->onlyOnIndex(),
+            TextField::new('name'),
+            TextField::new('slug'),
+            AssociationField::new('SousCategorie')
+        ];
         
     }
     

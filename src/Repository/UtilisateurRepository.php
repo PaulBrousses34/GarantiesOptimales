@@ -51,15 +51,14 @@ class UtilisateurRepository extends ServiceEntityRepository implements PasswordU
     }
     
 
-    /*
-    public function findOneBySomeField($value): ?Utilisateur
+    
+    public function countAllUtilisateur()
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
+        $queryBuilder = $this->createQueryBuilder('u');
+        $queryBuilder->select('COUNT(u.id) as value');
+        return $queryBuilder->getQuery()->getOneOrNullResult()
+
         ;
     }
-    */
+    
 }

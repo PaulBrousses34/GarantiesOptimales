@@ -32,7 +32,7 @@ class TypeRepository extends ServiceEntityRepository
                 ->getResult()
                 ;
 
-                dump($qb);
+
     }
 
     // /**

@@ -84,7 +84,12 @@ class Utilisateur implements UserInterface
     {
         $this->Document = new ArrayCollection();
     }
-
+    public function __toString(){
+        // to show the name of the Category in the select
+        return $this->lastname;
+        // to show the id of the Category in the select
+        // return $this->id;
+    }
     public function getId(): ?int
     {
         return $this->id;

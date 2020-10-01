@@ -21,10 +21,10 @@ class NewsletterCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
+            IdField::new('id')->onlyOnIndex(),
             TextField::new('Title'),
             TextEditorField::new('Content'),            
-            ImageField::new('Image'),
+            TextField::new('Image'),
             TextField::new('Title'),
             DateTimeField::new('createdAt'),
             DateTimeField::new('updatedAt'),

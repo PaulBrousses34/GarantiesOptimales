@@ -4,9 +4,13 @@ namespace App\Entity;
 
 use App\Repository\DocumentRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=DocumentRepository::class)
+ * @Vich\Uploadable
  */
 class Document
 {
@@ -21,6 +25,12 @@ class Document
      * @ORM\Column(type="string", length=500, nullable=false)
      */
     private $Fichier;
+
+     /**
+     * @var File
+     * @Vich\UploadableField(mapping="document_fichier", fileNameProperty="Fichier")
+     */
+    private $FichierFile;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
@@ -40,6 +50,17 @@ class Document
 
     private $utilisateur;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updated;
+
+    public function __toString(){
+        // to show the name of the Category in the select
+        return $this->Fichier;
+        // to show the id of the Category in the select
+        // return $this->id;
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +110,46 @@ class Document
     public function setUtilisateur(?Utilisateur $utilisateur): self
     {
         $this->utilisateur = $utilisateur;
+
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */ 
+    public function getFichierFile(): ?File
+    {
+        return $this->FichierFile;
+    }
+
+    /**
+     * @param File|null $FichierFile
+     */ 
+    public function setFichierFile(?File $FichierFile = null)
+    {
+        $this->FichierFile = $FichierFile;
+
+        if (null !== $FichierFile) {
+            $this->updated = new \Datetime();
+        }
+    }
+
+    /**
+     * Get the value of updated
+     */ 
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
+
+    /**
+     * Set the value of updated
+     *
+     * @return  self
+     */ 
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
 
         return $this;
     }

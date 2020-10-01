@@ -5,10 +5,11 @@ namespace App\Controller\Admin;
 use App\Entity\Document;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use Vich\UploaderBundle\Form\Type\VichFileType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class DocumentCrudController extends AbstractCrudController
 {
@@ -21,13 +22,26 @@ class DocumentCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         
-            yield IntegerField::new('id', 'ID');
-            yield TextField::new('Fichier');
-            yield TextField::new('Type');
-            yield DateField::new('DateTelechargement');
-            yield AssociationField::new('utilisateur');
-
-        
+        yield AssociationField::new('utilisateur');
+        yield DateTimeField::new('DateTelechargement');
+        yield ImageField::new('FichierFile')->setFormType(VichFileType::class);
+        yield ChoiceField::new('Type')->setChoices([
+            'Pièce d\'identité' => 'Pièce d\'identité',
+            'Permis de conduire' => 'Permis de conduire',
+            'Carte grise' => 'Carte grise',
+            'Contrat' => 'Contrat',
+            'Bail de location' => 'Bail de location',
+            'Justificatif de domicile' => 'Justificatif de domicile',
+            'Certificat de cession' => 'Certificat de cession',
+            'Relevé d\'information' => 'Relevé d\'information',
+            'RIB' => 'RIB',
+            'Constat' => 'Constat',
+            'Etat des lieux' => 'Etat des lieux',
+            'Carte grise' => 'Carte grise',
+            'K-BIS' => 'K-BIS',
+            'Justificatif d\'experience' => 'Justificatif d\'experience',
+            'Autre' => 'Autre',
+        ]);
     }
-    
+
 }
