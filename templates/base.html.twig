@@ -37,7 +37,7 @@
         <meta name="description" content="Vous recherchez une assurance pour votre activité professionnelle ? Nous avons ce qu'il vous faut. Une assurance sur mesure aves Garanties Optimales. Obtenez votre devis gratuitement en moins de 24 heures ! ">
         {% elseif route == 'assurances_type' and slug == 'moto' or slug == 'scooter' %}
         <meta name="description" content="Des offres sur mesures, des prix ultra-compétitifs et une large gamme de garanties pour votre Moto, Scooter et Quad c'est chez Garanties Optimales. Obtenez votre devis gratuitement en 2 minutes. FRAIS DE DOSSIER OFFERTS">  
-        {% elseif route == 'assurances_type' and slug == 'Voilier' or slug == 'a-moteur' %}
+        {% elseif route == 'assurances_type' and slug == 'voilier' or slug == 'a-moteur' %}
         <meta name="description" content="Découvrez nos solutions pour votre bateau (à moteur ou voilier)... Faites votre devis gratuitement en 2 minutes et choisissez parmi notre large gamme de formules et d'options... FRAIS DE DOSSIER OFFERTS">
         {% elseif route == 'assurances_type' and slug == 'yacht' %}
         <meta name="description" content="Découvrez nos solutions pour votre bateau de prestige... Obtenez votre devis en moins de 24 heures et choisissez parmi notre large gamme de formules et d'options... FRAIS DE DOSSIER OFFERTS">
@@ -50,7 +50,8 @@
         {% elseif route == 'assurances_type' and slug == 'standard-conducteur' %}
         <meta name="description" content="Découvrez nos solutions pour conducteur avec ou sans bonus... Obtenez votre devis en 2 minutes et choisissez parmi notre large gamme de formules et d'options... FRAIS DE DOSSIER OFFERTS">
         {% elseif route == 'assurances_type' and slug == 'vehicule-sans-permis' %}
-        <meta name="description" content="Découvrez nos solutions pour vehicule sans permis... Obtenez votre devis en 2 minutes... FRAIS DE DOSSIER OFFERTS">          {% elseif route == 'assurances_type' and slug == 'temporaire' %}
+        <meta name="description" content="Découvrez nos solutions pour vehicule sans permis... Obtenez votre devis en 2 minutes... FRAIS DE DOSSIER OFFERTS">          
+        {% elseif route == 'assurances_type' and slug == 'temporaire' %}
         <meta name="description" content="Découvrez nos solutions en assurance temporaire... Obtenez votre devis en 2 minutes... Et choisissez parmis nos formules et options, parmi les plus attractives du marché... FRAIS DE DOSSIER OFFERTS">
         {% elseif route == 'assurances_type' and slug == 'camping-car' %}
         <meta name="description" content="Découvrez nos solutions en assurance de camping-car... Obtenez votre devis en 2 minutes... Et choisissez parmis nos formules et options, parmi les plus attractives du marché... FRAIS DE DOSSIER OFFERTS">
@@ -115,7 +116,13 @@
         <meta name="description" content="Inscrivez-vous sur Garanties Optimales afin de retrouver facilement vos documents dans votre espace personnel. Vous n'avez pas besoin de vous inscrire pour souscrire à nos assurances ou pour obtenir un devis..">
         {% elseif route == 'app_login'%}
         <meta name="description" content="Connectez-vous à votre espace personnel Garanties Optimales et retrouvez vos documents facilement.. Vous n'avez pas besoin d'être inscrit ou connecté à votre espace personnel pour souscrire à une de nos assurances ou obtenir un devis...">
+        {% elseif route == 'app_reset_password'%}
+        <meta name="description" content="Mot de passe oublié? Recevez un email de changement de mot de passe">
+        {% elseif route == 'app_forgot_password_request'%}
+        <meta name="description" content="Mot de passe oublié? Recevez un email de changement de mot de passe">
+
         {% endif %}
+        
         <meta name="author" content="Garanties Optimales - Paul Brousses" />
         <meta name="copyright" content="Garanties Optimales - {{statusSociety}}" />
         <title>{% block title %}L'assurance des Particuliers et Professionnels | {{ societyName }}{% endblock %}</title>
