@@ -161,7 +161,7 @@ class AssuranceController extends AbstractController
         /**
      * @Route("/devis/sante", name="devis_sante")
      */
-   public function iframeSante()
+   /*public function iframeSante()
    {
 
     return $this->render('iframe/sante.html.twig', [
@@ -169,7 +169,7 @@ class AssuranceController extends AbstractController
     ]);
 
 
-   }
+   }*/
    
 
        /**
