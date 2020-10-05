@@ -296,7 +296,7 @@ class AssuranceController extends AbstractController
     /**
      * @Route("/devis/auto", name="devis_auto")
      */
-   public function iframeAuto()
+   /*public function iframeAuto()
    {
 
     return $this->render('iframe/auto.html.twig', [
@@ -304,12 +304,12 @@ class AssuranceController extends AbstractController
     ]);
 
 
-   }
+   }*/
 
    /**
      * @Route("/devis/cyclo", name="devis_cyclo")
      */
-    public function iframeCyclo()
+    /*public function iframeCyclo()
     {
  
      return $this->render('iframe/cyclo.html.twig', [
@@ -317,12 +317,12 @@ class AssuranceController extends AbstractController
      ]);
  
  
-    }
+    }*/
 
        /**
      * @Route("/devis/chien-chat", name="devis_chien-chat")
      */
-    public function iframeChienChat()
+    /*public function iframeChienChat()
     {
  
      return $this->render('iframe/chien-chat.html.twig', [
@@ -330,12 +330,12 @@ class AssuranceController extends AbstractController
      ]);
  
  
-    }
+    }*/
 
     /**
      * @Route("/devis/habitation", name="devis_habitation")
      */
-    public function iframeHabitation()
+    /*public function iframeHabitation()
     {
  
      return $this->render('iframe/habitation.html.twig', [
@@ -343,13 +343,13 @@ class AssuranceController extends AbstractController
      ]);
  
  
-    }
+    }*/
 
 
     /**
      * @Route("/devis/auto-temporaire", name="devis_auto-temporaire")
      */
-    public function iframeTemporaire()
+    /*public function iframeTemporaire()
     {
  
      return $this->render('iframe/temporaire.html.twig', [
@@ -357,12 +357,12 @@ class AssuranceController extends AbstractController
      ]);
  
  
-    }
+    }*/
 
     /**
      * @Route("/devis/camping-car", name="devis_camping-car")
      */
-    public function iframeCampingCar()
+    /*public function iframeCampingCar()
     {
  
      return $this->render('iframe/camping-car.html.twig', [
@@ -370,7 +370,7 @@ class AssuranceController extends AbstractController
      ]);
  
  
-    }
+    }*/
 
     /**
      * @Route("/devis/moto", name="devis_moto")
