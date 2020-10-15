@@ -23226,14 +23226,30 @@ body #page-container .et_pb_section
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-      background-color: rgb(162, 162, 165);
-      color: #FEFEFE;
+  
+  masthead {
+    background-color: black;
+  
+  }
+  body, .et_pb_section{
+      background-color: lightgrey;
+      color: rgb(90, 89, 89);
   }
   a {
-      color: #5FA9EE;
+      color: rgb(72, 136, 195);
   }
   img {
       filter: grayscale(20%);
+  }
+  .btn-outline-info {
+    color: darkgreen;
+    border-color: darkgreen;
+  }
+
+  div.phone{
+    color: darkgreen;
+  }
+  .form-text-mandatory, .contact-form-label, label, form{
+    color:black;
   }
 }
