@@ -23231,7 +23231,7 @@ body #page-container .et_pb_section
     background-color: black;
   
   }
-  body, .et_pb_section{
+  body, .et_pb_section, .et_builder_inner_content{
       background-color: lightgrey;
       color: rgb(90, 89, 89);
   }
