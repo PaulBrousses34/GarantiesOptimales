@@ -11,7 +11,7 @@
         <meta property="og:image:height" content="630" />
         {% set route =  app.request.attributes.get('_route') %}
         {% set slug = app.request.attributes.get('slug') %}
-        {% if route == 'home' %}
+        {#{% if route == 'home' %}
         <meta name="description" content="Découvrez nos assurances pour particuliers : Auto, 2 roues, Habitation, Santé, Animaux;  et professionnels : Decennale, MultiRisque, ... Obtenez un devis gratuitement avec un prix competitif et un choix parmi une multitude de formules">
         {% elseif route == 'assurances_categorie' and slug == 'particuliers'%}
         <meta name="description" content="Découvrez nos assurances pour particuliers : Auto, 2 roues, Habitation, Santé, Animaux, Plaisance, Protection Juridique.. Obtenez un devis gratuitement parmi une large gamme de formule adapté à vos besoins et votre budget..">
@@ -122,12 +122,10 @@
         <meta name="description" content="Mot de passe oublié? Recevez un email de changement de mot de passe">
 
         {% endif %}
-        
+        #}
         <meta name="author" content="Garanties Optimales - Paul Brousses" />
-        <meta name="copyright" content="Garanties Optimales - {{statusSociety}}" />
+        <meta name="copyright" content="Garanties Optimales" />
         <title>{% block title %}L'assurance des Particuliers et Professionnels | {{ societyName }}{% endblock %}</title>
-        <!-- Favicon-->
-         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -221,9 +219,9 @@
     {% if route == 'home' %}
    <header class="masthead">
             <div class="socialLink">
-            <a href="https://www.facebook.com/garantiesOptimales" target="_blank"><i class="fab fa-2x fa-facebook"></i></a>
-            <a href="https://twitter.com/GOptimales" target="_blank"><i class="fab fa-2x fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/garanties-optimales/"><i class="fab fa-2x fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-2x fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-2x fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-2x fa-linkedin"></i></a>
             </div>
         <div class="container h-40">
             {% for message in app.flashes('success') %}
@@ -247,9 +245,9 @@
     {% else %}
     <header class="masthead d-none d-md-block d-lg-block">
             <div class="socialLink">
-            <a href="https://www.facebook.com/garantiesOptimales" target="_blank"><i class="fab fa-2x fa-facebook"></i></a>
-            <a href="https://twitter.com/GOptimales" target="_blank"><i class="fab fa-2x fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/garanties-optimales/"><i class="fab fa-2x fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-2x fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-2x fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-2x fa-linkedin"></i></a>
             </div>
         <div class="container h-40">
             {% for message in app.flashes('success') %}
@@ -291,7 +289,7 @@
                     <div class="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3"></i>
                         <p>Par téléphone</p>
-                        <div class="phone">04 67 74 24 74</div>
+                        <div class="phone">+33 ** ** ** ** **</div>
                     </div>
                     <div class="col-lg-3 mr-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-envelope fa-3x mb-3"></i>
@@ -318,7 +316,6 @@
             <div class="container-footer">
             <div class="row mx-0">
                 <div class="footer-link-principal col-lg-3 col-md-6 text-center">
-                    <p style="color:white;">N°ORIAS : 10057313<br>SIRET 524 175 478 00014<br>Code NAF 6622Z<br>{{statusSociety}}<br>11 rue Honore Euzet<br> 34200 Sète</p>
 
             <a href="https://www.facebook.com/garantiesOptimales"><i class="fab fa-2x fa-facebook"></i></a>
             <a href="https://twitter.com/GOptimales"><i class="fab fa-2x fa-twitter"></i></a>
@@ -378,9 +375,6 @@
         {% endblock %}
         <!-- Bootstrap core JS-->
         {% block javascripts %} 
-        <!-- Start of garanties-optimales Zendesk Widget script -->
-        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=24b02882-41d4-4daa-aaab-b4a8e3940794"> </script>
-        <!-- End of garanties-optimales Zendesk Widget script -->
         <script type="text/javascript">
         tarteaucitron.user.gajsUa = 'UA-177456627-1';
         tarteaucitron.user.gajsMore = function () { /* add here your optionnal _ga.push() */ };
