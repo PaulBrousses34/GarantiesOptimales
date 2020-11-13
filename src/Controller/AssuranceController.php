@@ -75,7 +75,7 @@ class AssuranceController extends AbstractController
         $form = $this->createForm(ProfessionnelType::class);
         $form->handleRequest($request);
 
-        $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
+        $secretKey = '6Lfoi-IZAAAAADCPjjPh6TNx5_xhHzPb9uGGn9vO';
         $responseKey = $request->request->get('g-recaptcha-response');
         $userIP = $_SERVER['REMOTE_ADDR'];
 
@@ -103,7 +103,7 @@ class AssuranceController extends AbstractController
 
             $email = (new TemplatedEmail())
             ->from($adresseMail)
-            ->to('devis@garanties-optimales.com')
+            ->to('contact@go-projet.com')
             ->subject('Demande de devis')
             ->htmlTemplate('email/devis/add.html.twig')
             ->context([
@@ -210,7 +210,7 @@ class AssuranceController extends AbstractController
         $form = $this->createForm(PjType::class);
         $form->handleRequest($request);
 
-        $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
+        $secretKey = '6Lfoi-IZAAAAADCPjjPh6TNx5_xhHzPb9uGGn9vO';
         $responseKey = $request->request->get('g-recaptcha-response');
         $userIP = $_SERVER['REMOTE_ADDR'];
 
@@ -230,7 +230,7 @@ class AssuranceController extends AbstractController
 
             $email = (new TemplatedEmail())
             ->from($email)
-            ->to('devis@garanties-optimales.com')
+            ->to('contact@go-projet.com')
             ->subject('Demande de devis')
             ->htmlTemplate('email/devis/add-pj.html.twig')
             ->context([

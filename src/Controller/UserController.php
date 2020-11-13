@@ -66,7 +66,7 @@ class UserController extends AbstractController
                 $em->flush();
 
                 $email = (new TemplatedEmail())
-                      ->from('ne-pas-repondre@garanties-optimales.com')
+                      ->from('contact@go-projet.com')
                       ->to($utilisateur->getEmail())
                       ->subject('Votre profil a bien été modifié')
                       ->htmlTemplate('email/user/edit.html.twig')
@@ -129,7 +129,7 @@ class UserController extends AbstractController
             // We create a request for send a email of confirmation
 
             $email = (new TemplatedEmail())
-            ->from('ne-pas-repondre@garanties-optimales.com')
+            ->from('contact@go-projet.com')
             ->to($utilisateur->getEmail())
             ->subject('Votre compte a bien été supprimé')
             ->htmlTemplate('email/user/delete.html.twig')
@@ -202,7 +202,7 @@ class UserController extends AbstractController
             $emailToSend = (new TemplatedEmail())
 
             ->from($email)
-            ->to('sinistres@garanties-optimales.com')
+            ->to('contact@go-projet.com')
             ->subject('Déclaration de sinistre')
             ->htmlTemplate('email/user/sinistre.html.twig')
             ->context([
@@ -216,7 +216,7 @@ class UserController extends AbstractController
 
             $mailConfirm = (new TemplatedEmail())
 
-            ->from('sinistres@garanties-optimales.com')
+            ->from('contact@go-projet.com')
             ->to($email)
             ->subject('Confirmation de votre declaration de sinistre')
             ->htmlTemplate('email/user/confirmation-sinistre.html.twig')

@@ -51,7 +51,7 @@ class NewsletterController extends AbstractController
 
             $emailToSend = (new TemplatedEmail())
 
-            ->from('newsletter@garanties-optimales.com')
+            ->from('contact@go-projet.com')
             ->to($emailUtilisateur)
             ->subject($title)
             ->htmlTemplate('email/user/newsletter.html.twig')

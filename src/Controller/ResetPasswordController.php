@@ -164,7 +164,7 @@ class ResetPasswordController extends AbstractController
         }
 
         $email = (new TemplatedEmail())
-            ->from(new Address('ne-pas-repondre@garanties-optimales.com', 'Garanties Optimales'))
+            ->from(new Address('contact@go-projet.com', 'Garanties Optimales'))
             ->to($user->getEmail())
             ->subject('Votre demande de résiliation de mot de passe')
             ->htmlTemplate('reset_password/email.html.twig')

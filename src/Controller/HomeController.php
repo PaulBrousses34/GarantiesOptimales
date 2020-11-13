@@ -29,8 +29,8 @@ class HomeController extends AbstractController
 
             $emailToSend = (new TemplatedEmail())
 
-            ->from('contact@garanties-optimales.com')
-            ->to('contact@garanties-optimales.com')
+            ->from('contact@go-projet.com')
+            ->to('contact@go-projet.com')
             ->subject('Demande de rappel')
             ->htmlTemplate('email/contact/rappel.html.twig')
             ->context([
@@ -65,7 +65,7 @@ class HomeController extends AbstractController
 
         $form->handleRequest($request);
 
-        $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
+        $secretKey = '6Lfoi-IZAAAAADCPjjPh6TNx5_xhHzPb9uGGn9vO';
         $responseKey = $request->request->get('g-recaptcha-response');
         $userIP = $_SERVER['REMOTE_ADDR'];
 
@@ -111,7 +111,7 @@ class HomeController extends AbstractController
                         $emailToSend = (new TemplatedEmail())
 
                 ->from($email)
-                ->to('contact@garanties-optimales.com')
+                ->to('contact@go-projet.com')
                 ->subject('Formulaire de contact')
                 ->htmlTemplate('email/contact/send.html.twig')
                 ->context([
@@ -126,7 +126,7 @@ class HomeController extends AbstractController
                     //}
                     $mailConfirm = (new TemplatedEmail())
 
-            ->from('contact@garanties-optimales.com')
+            ->from('contact@go-projet.com')
             ->to($email)
             ->subject('Confirmation de votre demande de contact')
             ->htmlTemplate('email/contact/confirmation.html.twig')

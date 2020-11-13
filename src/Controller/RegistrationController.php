@@ -34,7 +34,7 @@ class RegistrationController extends AbstractController
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
-        $secretKey = '6LfPCcsZAAAAABQAWP7uh8r4cQEiE_NJr9aRHXr_';
+        $secretKey = '6Lfoi-IZAAAAADCPjjPh6TNx5_xhHzPb9uGGn9vO';
         $responseKey = $request->request->get('g-recaptcha-response');
         $userIP = $_SERVER['REMOTE_ADDR'];
 
@@ -64,7 +64,7 @@ class RegistrationController extends AbstractController
             // generate a signed url and email it to the user
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
                 (new TemplatedEmail())
-                    ->from(new Address('ne-pas-repondre@garanties-optimales.com', 'Confirmation de votre adresse Mail'))
+                    ->from(new Address('contact@go-projet.com', 'Confirmation de votre adresse Mail'))
                     ->to($user->getEmail())
                     ->subject('Merci de confirmer votre adresse email')
                     ->htmlTemplate('registration/confirmation_email.html.twig')
