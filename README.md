@@ -262,11 +262,13 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 
 Le développement du site se fera sur 6 semaines. Suite à la mise en production une veille technologique est à prévoir. Le développement du site ne pourra commencer que lorsque le cahier des charges sera complet. Chaque sprint dure 1 semaine sauf le 4eme qui est prévu sur 2 semaines. Le travail s’effectuera selon les principes de la méthodes Agile Scrum les cycles de développement seront donc découpés en sprint de la manière suivante : 
 
-|Sprint 1|Intégration HTML/CSS, création de la base de données, création de fixtures|
-|Sprint 2|Création des Controllers et des méthodes, création des formulaires, création des templates associés à toutes les méthodes|
-|Sprint 3|Mise en en place des diverses contraintes, gestion des rôles, création et configuration BackOffice|
-|Sprint 4|Création des fiches produits|
-|Sprint 5|Recherche et correction de bugs, tests unitaires et fonctionnels, mise en production|
+|Sprint|Tâches|
+|---    |:-:    |:-:    |
+|1|Intégration HTML/CSS, création de la base de données, création de fixtures|
+|2|Création des Controllers et des méthodes, création des formulaires, création des templates associés à toutes les méthodes|
+|3|Mise en en place des diverses contraintes, gestion des rôles, création et configuration BackOffice|
+|4|Création des fiches produits|
+|5|Recherche et correction de bugs, tests unitaires et fonctionnels, mise en production|
 
 ### b) Gestion du versionning
 
