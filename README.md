@@ -178,7 +178,7 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 |UserController|/profil/{nom}/{id}|GET|Read|Mon espace personnel|Affiche les informations utilisateurs et les documents|
 ||/profil/edition/ {nom}/{id}|GET-POST|Edit|Modifier mon profil|Affiche le formulaire de modification du profil|
 ||/profil/suppression/{nom}/{id}|DELETE|Delete|Bouton de suppression|Supprimer mon profil|
-|SecurityController|/connexion/{nom}/{id}|GET – POST|app_login|Connexion|Formulaire de connexion|
+|SecurityController|/connexion|GET – POST|app_login|Connexion|Formulaire de connexion|
 ||/deconnexion|POST|app_logout|Déconnexion|Bouton ou lien de deconnexion|
 | **BackOffice** |
 |NewsletterCrudController|/admin/newsletter|GET|Browse|Toutes les actualités|Liste des actualités|
