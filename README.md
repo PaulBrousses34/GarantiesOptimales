@@ -254,3 +254,21 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 ### h) Modèle Logique de Données
 
 ![Modèle Logique de Données](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/MLD.png)
+
+
+## 4. Organisation
+
+### a) Planning
+
+Le développement du site se fera sur 6 semaines. Suite à la mise en production une veille technologique est à prévoir. Le développement du site ne pourra commencer que lorsque le cahier des charges sera complet. Chaque sprint dure 1 semaine sauf le 4eme qui est prévu sur 2 semaines. Le travail s’effectuera selon les principes de la méthodes Agile Scrum les cycles de développement seront donc découpés en sprint de la manière suivante : 
+
+|Sprint 1|Intégration HTML/CSS, création de la base de données, création de fixtures|
+|Sprint 2|Création des Controllers et des méthodes, création des formulaires, création des templates associés à toutes les méthodes|
+|Sprint 3|Mise en en place des diverses contraintes, gestion des rôles, création et configuration BackOffice|
+|Sprint 4|Création des fiches produits|
+|Sprint 5|Recherche et correction de bugs, tests unitaires et fonctionnels, mise en production|
+
+### b) Gestion du versionning
+
+
+Chaque jour le développement se fera sur une nouvelle branche Git se nommant 12/12 par exemple si la date du jour est le 12 décembre. Cela permet de récupérer facilement la version voulue. Chaque jour les tâches effectuées seront notées dans un cahier de bord afin de récupérer plus facilement une partie du code en cas de problème. 
