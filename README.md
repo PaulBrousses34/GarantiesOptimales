@@ -165,6 +165,7 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 
 |Controller|URL|HTTP Method|Method|Title|Content|
 |---    |:-:    |:-:    |:-:    |:-:    |--:    |
+| ### FrontOffice |
 |HomeController|/|GET|home|Accueil|Actu, liste produit et contact|
 | |/contact-formulaire|GET-POST|contact|Contact|Formulaire de contact|
 |NewsletterController|/newsletter|GET|Browse|Actualités|Liste de tout les articles|
@@ -177,5 +178,9 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 |UserController|/profil/{nom}/{id}|GET|Read|Mon espace personnel|Affiche les informations utilisateurs et les documents|
 ||/profil/edition/ {nom}/{id}|GET-POST|Edit|Modifier mon profil|Affiche le formulaire de modification du profil|
 ||/profil/suppression/{nom}/{id}|DELETE|Delete|Bouton de suppression|Supprimer mon profil|
+|SecurityController|/connexion/{nom}/{id}|GET – POST|app_login|Connexion|Formulaire de connexion|
+||/deconnexion|POST|app_logout|Déconnexion|Bouton ou lien de deconnexion|
+| ### BackOffice |
+
 
 
