@@ -71,3 +71,10 @@ Au regard des éléments en ma possession et après un entretien avec Mr Liguori
 ![Legende](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/legendeMaquette.png)
 
 
+## 3. Description fonctionnelle et technique 
+
+### a) Arborescence du site
+
+![Arborescence](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/arborescence.png)
+
+... [Voir en meilleure qualité](https://www.gloomaps.com/tKhyTdfZmj ) ...
