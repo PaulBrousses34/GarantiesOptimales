@@ -163,8 +163,7 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 
 ### f) Dictionnaire des routes
 
-|URL|HTTP Method|Method|Title|Content|
-|---    |:-:    |:-:    |:-:    |--:    |
-|HomeController|
-  |/|GET|home|Accueil|Actu, liste produit et contact|
-|       |       |       |       |       |
+|Controller|URL|HTTP Method|Method|Title|Content|
+|---    |:-:    |:-:    |:-:    |:-:    |--:    |
+|Home Controller|/|GET|home|Accueil|Actu, liste produit et contact|
+| |       |       |       |       |       |
