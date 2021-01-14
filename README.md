@@ -249,3 +249,8 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 ||ville|VARCHAR (255)|NULL|
 ||codePostal|INT|NULL|
 ||newsletter|BOOL|NOT NULL|
+
+
+### h) Modèle Logique de Données
+
+![Modèle Logique de Données](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/MLD.png)
