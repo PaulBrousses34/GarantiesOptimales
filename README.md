@@ -148,16 +148,16 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 
 |En tant que|Je veux pouvoir|Afin de|
 |---    |:-:    |:-:    |
-|Visiteur|Consulter les actualités|Me tenir informé de l’actualité de l’assurance |       
+| Visiteur |Consulter les actualités|Me tenir informé de l’actualité de l’assurance |       
 |       |Consulter les informations juridiques de la société |Connaître les mentions légales |
 |       |En savoir plus sur MGL Courtage |Afin de connaître la société|
 |       |Contacter la société via un formulaire de contact|Obtenir de renseignements, proposer quelque chose ou porter une réclamation |
 |       |Consulter les diverses assurances proposées|Me renseigner sur les propositions faites par Garanties Optimales|
-|       |||
-|       |||
-|       |||
-|       |||
-|       |||
-|       |||
-|       |||
-|       |||
+|       |Obtenir un devis et/ou souscrire à une assurance|Souscrire ou obtenir un devis |
+|       |Créer un compte|Bénéficier d’un espace personnel|
+| Utilisateur connecté |Accéder à mes documents|Retrouver facilement les documents relatifs à mon/mes assurance(s)|
+|       |Echanger des documents facilement avec mon courtier|Faciliter l’échange de document|
+|       |Déclarer directement un sinistre en ligne|Faciliter la déclaration de sinistre|
+| Administrateur |Ajouter, modifier, supprimer un article|Gérer le contenu du site |
+|       |Ajouter, modifier, supprimer un utilisateur|Gérer le contenu du site |
+|       |Ajouter, modifier, supprimer un produit d’assurance|Gérer le contenu du site|
