@@ -201,11 +201,51 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 ||/admin/document/edition/{slug}|GET-POST|Edit|Modifier un document|Formulaire de modification d'un document|
 ||/admin/document/ajouter|GET-POST|Add|Ajouter un document|Formulaire d’ajout d’un document|
 ||/admin/document/suppression/{slug}|DELETE|Delete|Suppression d'un document|Bouton de suppression d'un document|
-|DocumentCrudController|/admin/utilisateurs|GET|Browse|Liste de tous les utilisateurs|Affichage de la liste des utilisateurs|
+|UtilisateurCrudController|/admin/utilisateurs|GET|Browse|Liste de tous les utilisateurs|Affichage de la liste des utilisateurs|
 ||/admin/utilisateur/{id}|GET|Read|Utilisateur {name}|Affichage d'un utilisateur|
 ||/admin/utilisateur/edition/{slug}|GET-POST|Edit|Modifier un utilisateur|Formulaire de modification d'un utilisateur|
 ||/admin/utilisateur/ajouter|GET-POST|Add|Ajouter un utilisateur|Formulaire d’ajout d’un utilisateur|
 ||/admin/utilisateur/suppression/{id}|DELETE|Delete|Suppression d'un utilisateur|Bouton de suppression d'un utilisateur|
 
+### g) Dictionnaire des données
 
-
+|Table|Champ|Type|Spécificités|
+|---    |:-:    |:-:    |:-:    |
+|Categorie|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+||name|VARCHAR (255)|NOT NULL|
+||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
+||updatedAt|TIMESTAMP|NULL|
+||slug|VARCHAR (255)|NOT NULL|
+|SousCategorie|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+||name|VARCHAR (255)|NOT NULL|
+||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
+||updatedAt|TIMESTAMP|NULL|
+||slug|VARCHAR (255)|NOT NULL|
+||categorie_id|INT|NOT NULL, FOREIGN KEY|
+|Type|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+||name|VARCHAR (255)|NOT NULL|
+||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
+||updatedAt|TIMESTAMP|NULL|
+||slug|VARCHAR (255)|NOT NULL|
+||Sous_categorie_id|INT|NOT NULL, FOREIGN KEY|
+|Newsletter|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+||title|VARCHAR (255)|NOT NULL|
+||image|VARCHAR (255)|NOT NULL|
+||content|VARCHAR (50000)|NOT NULL|
+||createdAt|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
+||updatedAt|TIMESTAMP|NULL|
+|Document|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+||utilisateur_id|INT|NOT NULL, FOREIGN KEY|
+||fichier|VARCHAR (255)|NOT NULL|
+||type|VARCHAR (255)|NOT NULL|
+||dateTelechargement|TIMESTAMP|NOT NULL, CURRENT_TIMESTAMP|
+||updated|TIMESTAMP|NULL|
+|User|id|INT|PRIMARY KEY, NOT NULL, AUTO_INCREMENT, UNSIGNED |
+||firstname|VARCHAR (255)|NOT NULL|
+||lastname|VARCHAR (255)|NOT NULL|
+||email|VARCHAR (255)|NOT NULL|
+||rôles|JSON|NOT NULL|
+||adress|VARCHAR (255)|NULL|
+||ville|VARCHAR (255)|NULL|
+||codePostal|INT|NULL|
+||newsletter|BOOL|NOT NULL|
