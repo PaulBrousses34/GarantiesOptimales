@@ -173,7 +173,7 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 |AssuranceController|/assurances/categorie/{slug}|GET|Browse|Assurance par catégorie|Liste des produits par catégorie|
 ||/assurances/sous-categorie/{slug}|GET|Browse|Assurance par sous-catégorie|Liste des produits par sous-catégorie|
 ||/assurances/types/{slug}|GET|Browse|Assurance par type|Liste des produits par type|
-||/assurances /demande-devis|GET-POST|askDevis|Formulaire de demande de devis|Formulaire spécifique demande de devis|
+||/assurances/demande-devis|GET-POST|askDevis|Formulaire de demande de devis|Formulaire spécifique demande de devis|
 ||/assurances/devis/{slug}|GET|Read|Devis {slug}|Affiche le tarificateur selon le produit souhaité|
 |UserController|/profil/{nom}/{id}|GET|Read|Mon espace personnel|Affiche les informations utilisateurs et les documents|
 ||/profil/edition/ {nom}/{id}|GET-POST|Edit|Modifier mon profil|Affiche le formulaire de modification du profil|
@@ -181,6 +181,31 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 |SecurityController|/connexion/{nom}/{id}|GET – POST|app_login|Connexion|Formulaire de connexion|
 ||/deconnexion|POST|app_logout|Déconnexion|Bouton ou lien de deconnexion|
 | **BackOffice** |
+|NewsletterCrudController|/admin/newsletter|GET|Browse|Toutes les actualités|Liste des actualités|
+||/admin/newsletter/{id}|GET|Read|{title} de l'article|Affichage d’un article en particulier|
+||/admin/newsletter/edition/{id}|GET-POST|Edit|Modifier un article|Formulaire de modification de l’article|
+||/admin/newsletter/ajouter|GET-POST|Add|Ajouter un article|Formulaire d’ajout d’un article|
+||/admin/newsletter/suppression/{slug}|DELETE|Delete|Suppression d'un article|Bouton de suppression d'un article|
+|SousCategorieCrudController|/admin/assurances/sous-categorie|GET|Browse|Liste de toutes les sous catégories|Affichage de la liste des types par sous catégorie|
+||/admin/sous-categorie/{slug}|GET|Read|Sous catégorie {slug}|Affichage d'une sous catégorie|
+||/admin/sous-categorie/edition/{slug}|GET-POST|Edit|Modifier une sous catégorie|Formulaire de modification d'une sous catégorie|
+||/admin/sous-categorie/ajouter|GET-POST|Add|Ajouter une sous catégorie|Formulaire d’ajout d’une sous catégorie|
+||/admin/sous-categorie/suppression/{slug}|DELETE|Delete|Suppression d'une sous catégorie|Bouton de suppression d'une sous catégorie|
+|TypeCrudController|/admin/assurances/types|GET|Browse|Liste de toutes les types|Affichage de la liste des types|
+||/admin/types/{slug}|GET|Read|Type {slug}|Affichage d'un type|
+||/admin/types/edition/{slug}|GET-POST|Edit|Modifier un type|Formulaire de modification d'un type|
+||/admin/types/ajouter|GET-POST|Add|Ajouter un type|Formulaire d’ajout d’un type|
+||/admin/types/suppression/{slug}|DELETE|Delete|Suppression d'un type|Bouton de suppression d'un type|
+|DocumentCrudController|/admin/document|GET|Browse|Liste de tous les documents|Affichage de la liste des documents|
+||/admin/document/{id}|GET|Read|Document {id}|Affichage d'un document|
+||/admin/document/edition/{slug}|GET-POST|Edit|Modifier un document|Formulaire de modification d'un document|
+||/admin/document/ajouter|GET-POST|Add|Ajouter un document|Formulaire d’ajout d’un document|
+||/admin/document/suppression/{slug}|DELETE|Delete|Suppression d'un document|Bouton de suppression d'un document|
+|DocumentCrudController|/admin/utilisateurs|GET|Browse|Liste de tous les utilisateurs|Affichage de la liste des utilisateurs|
+||/admin/utilisateur/{id}|GET|Read|Utilisateur {name}|Affichage d'un utilisateur|
+||/admin/utilisateur/edition/{slug}|GET-POST|Edit|Modifier un utilisateur|Formulaire de modification d'un utilisateur|
+||/admin/utilisateur/ajouter|GET-POST|Add|Ajouter un utilisateur|Formulaire d’ajout d’un utilisateur|
+||/admin/utilisateur/suppression/{id}|DELETE|Delete|Suppression d'un utilisateur|Bouton de suppression d'un utilisateur|
 
 
 
