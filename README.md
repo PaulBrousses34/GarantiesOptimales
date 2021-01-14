@@ -26,3 +26,24 @@ Il servira également de plateforme d’échange de documents et d’assistance 
 ### c) La cible
 
 Toutes personnes majeures, de n’importe quelle CSP. Que ce soit particulier ou professionnel, de la France entière.  
+
+### d) Périmètre du projet 
+
+Le site se devra d’être totalement responsive (adaptable sur mobile, tablette et desktop), j’estime que le trafic sera très hétérogène en matière de support, d’où l’importance d’apporter une attention toute particulière à cela.  
+
+Le site en revanche ne nécessite pas d’être multilingue au vu de la cible (France). 
+
+
+## 2. Description graphique
+
+### a) Charte Graphique
+
+Je possède déjà le logo de MGL Courtage, et à partir de celui pourrait définir une palette couleur. 
+
+Les logos en ma possession : 
+
+![Logo Garanties Optimales](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/enseignes LIGUORI ASSURANCE-01.jpg)
+
+
+
+
