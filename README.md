@@ -42,5 +42,9 @@ Je possède déjà le logo de MGL Courtage, et à partir de celui pourrait défi
 
 Les logos en ma possession : 
 
-![Logo Société](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/logoDouble.png)
+![Logos Société](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/logoDouble.png)
+
+La palette graphique à partir du logo : 
+
+![Palette graphique](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/palette.png)
 
