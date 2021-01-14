@@ -5,6 +5,7 @@
 ## Garanties Optimales ##
 ### *L'assurance des professionnels et des particuliers, des garanties optimales à prix minimal* 
 
+
 ## 1. Présentation du projet
 
 ### a) Présentation de la société
@@ -34,17 +35,35 @@ Le site se devra d’être totalement responsive (adaptable sur mobile, tablette
 Le site en revanche ne nécessite pas d’être multilingue au vu de la cible (France). 
 
 
+
 ## 2. Description graphique
 
 ### a) Charte Graphique
 
 Je possède déjà le logo de MGL Courtage, et à partir de celui pourrait définir une palette couleur. 
 
-Les logos en ma possession : 
+#####Les logos en ma possession : 
 
 ![Logos Société](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/logoDouble.png)
 
-La palette graphique à partir du logo : 
+#####La palette graphique à partir du logo : 
 
 ![Palette graphique](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/palette.png)
+
+### b) Design
+
+Le design du site se veut plutôt simpliste et intuitif. La première version doit être mis en ligne assez rapidement et certainement des améliorations sur le design seront mis en œuvre dans les versions suivantes. 
+
+### c) Maquettes
+
+Au regard des éléments en ma possession et après un entretien avec Mr Liguori, j’ai effectué les maquettes du site. 
+
+##### Proposition page d’accueil Desktop : 
+
+![Maquette Home Desktop](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/maquetteHomeDesktop.png)
+
+![Maquette Home Mobile](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/maquetteHomeMobile.png)
+
+![Maquette Home Desktop](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/legende.png)
+
 
