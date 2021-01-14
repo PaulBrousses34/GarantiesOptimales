@@ -165,5 +165,17 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 
 |Controller|URL|HTTP Method|Method|Title|Content|
 |---    |:-:    |:-:    |:-:    |:-:    |--:    |
-|Home Controller|/|GET|home|Accueil|Actu, liste produit et contact|
-| |       |       |       |       |       |
+|HomeController|/|GET|home|Accueil|Actu, liste produit et contact|
+| |/contact-formulaire|GET-POST|contact|Contact|Formulaire de contact|
+|NewsletterController|/newsletter|GET|Browse|Actualités|Liste de tout les articles|
+| |/newsletter/{id}|GET|Read|Article|Un article|
+|AssuranceController|/assurances/categorie/{slug}|GET|Browse|Assurance par catégorie|Liste des produits par catégorie|
+||/assurances/sous-categorie/{slug}|GET|Browse|Assurance par sous-catégorie|Liste des produits par sous-catégorie|
+||/assurances/types/{slug}|GET|Browse|Assurance par type|Liste des produits par type|
+||/assurances /demande-devis|GET-POST|askDevis|Formulaire de demande de devis|Formulaire spécifique demande de devis|
+||/assurances/devis/{slug}|GET|Read|Devis {slug}|Affiche le tarificateur selon le produit souhaité|
+|UserController|/profil/{nom}/{id}|GET|Read|Mon espace personnel|Affiche les informations utilisateurs et les documents|
+||/profil/edition/ {nom}/{id}|GET-POST|Edit|Modifier mon profil|Affiche le formulaire de modification du profil|
+||/profil/suppression/{nom}/{id}|DELETE|Delete|Bouton de suppression|Supprimer mon profil|
+
+
