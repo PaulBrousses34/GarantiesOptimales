@@ -2,6 +2,8 @@
 
 ![Logo Garanties Optimales](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/GO.png)
 
+*nb: Après un désaccord d'ordre financier le site a fermé, j'ai donc modifié toutes les informations (toutes les images également) me liant à la société de courtage et republier le site sur un autre nom de domaine* [voir ici](https://go-projet.com).
+
 ## Garanties Optimales ##
 ### *L'assurance des professionnels et des particuliers, des garanties optimales à prix minimal* 
 
