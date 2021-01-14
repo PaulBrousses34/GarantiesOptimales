@@ -42,11 +42,11 @@ Le site en revanche ne nécessite pas d’être multilingue au vu de la cible (F
 
 Je possède déjà le logo de MGL Courtage, et à partir de celui pourrait définir une palette couleur. 
 
-#####Les logos en ma possession : 
+##### Les logos en ma possession : 
 
 ![Logos Société](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/logoDouble.png)
 
-#####La palette graphique à partir du logo : 
+##### La palette graphique à partir du logo : 
 
 ![Palette graphique](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/palette.png)
 
@@ -104,7 +104,7 @@ Le contenu devra dans le même temps être ajouté aux réseaux sociaux.
 
 ### d) Technologies utilisées 
 
-####Outils de conception et de stockage :  
+#### Outils de conception et de stockage :  
 
 -    GitHub, pour le stockage et la gestion des versions. 
 
@@ -120,7 +120,7 @@ Le contenu devra dans le même temps être ajouté aux réseaux sociaux.
 
 -    Toolki, pour la palette de couleur. 
 
-#####Développement côté Frontend :  
+##### Développement côté Frontend :  
 
 -    Twig, le moteur de Template de Symfony. 
 
@@ -130,7 +130,7 @@ Le contenu devra dans le même temps être ajouté aux réseaux sociaux.
 
 -    Bootstrap, le Framework JavaScript/CSS afin de styliser le site et faciliter le responsive design. 
 
-#####Développement côté Backend :  
+##### Développement côté Backend :  
 
 -    Symfony 5, le Framework PHP. 
 
@@ -148,6 +148,6 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 
 |En tant que|Je veux pouvoir|Afin de|
 |---    |:-:    |:-:    |
-|       |       |       |       
-|       |       |       |
-|       |       |       |
+|Visiteur|Consulter les actualités|Me tenir informé de l’actualité de l’assurance |       
+|       |Consulter les informations juridiques de la société |Connaître les mentions légales |
+|       |En savoir plus sur MGL Courtage |Afin de connaître la société|
