@@ -62,8 +62,12 @@ Au regard des éléments en ma possession et après un entretien avec Mr Liguori
 
 ![Maquette Home Desktop](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/maquetteHomeDesktop.png)
 
+##### Proposition page d’accueil Mobile :
+
 ![Maquette Home Mobile](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/maquetteHomeMobile.png)
 
-![Maquette Home Desktop](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/legende.png)
+##### Legende maquette :
+
+![Legende](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/legendeMaquette.png)
 
 
