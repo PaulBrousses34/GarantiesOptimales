@@ -42,7 +42,9 @@ Je possède déjà le logo de MGL Courtage, et à partir de celui pourrait défi
 
 Les logos en ma possession : 
 
-![Logo Garanties Optimales](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/enseignes LIGUORI ASSURANCE-01.jpg)
+![Logo Garanties Optimales](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/logoGO1.jpg)
+
+![Logo Garanties Optimales](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/assets/images/photos/logoGO2.png)
 
 
 
