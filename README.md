@@ -151,3 +151,13 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 |Visiteur|Consulter les actualités|Me tenir informé de l’actualité de l’assurance |       
 |       |Consulter les informations juridiques de la société |Connaître les mentions légales |
 |       |En savoir plus sur MGL Courtage |Afin de connaître la société|
+|       |Contacter la société via un formulaire de contact|Obtenir de renseignements, proposer quelque chose ou porter une réclamation |
+|       |Consulter les diverses assurances proposées|Me renseigner sur les propositions faites par Garanties Optimales|
+|       |||
+|       |||
+|       |||
+|       |||
+|       |||
+|       |||
+|       |||
+|       |||
