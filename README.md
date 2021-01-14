@@ -77,4 +77,77 @@ Au regard des éléments en ma possession et après un entretien avec Mr Liguori
 
 ![Arborescence](https://raw.githubusercontent.com/PaulBrousses34/GarantiesOptimales/master/public/arborescence.png)
 
-... [Voir en meilleure qualité](https://www.gloomaps.com/tKhyTdfZmj ) ...
+[Voir en meilleure qualité](https://www.gloomaps.com/tKhyTdfZmj )
+
+### b) Description fonctionnelle
+
+Au regard de notre premier entretien, nous avons défini les grandes lignes du futur site et évalué les besoins. L’application devra donc comprendre : 
+-     Un Back-Office. 
+-     Un espace membre, où retrouver ses documents, les échanger et déclarer un sinistre 
+-     Une base de données. 
+-     Une possibilité d’inscription à la newsletter. 
+
+On peut donc identifier 3 types d’utilisateurs : 
+-     Le visiteur ayant accès à l’ensemble du site (sauf espace membre et back office). 
+-     L'utilisateur connecté bénéficiant d’un espace membre. 
+-     Les administrateurs ayant accès au back office. 
+
+
+### c) Informations relatives aux contenus
+
+Les divers éléments amenés à alimenter l’application sont notamment des articles, des modifications, ajouts et suppressions de formules d’assurances, l’ajout de nouveau produits. 
+
+Tout cela sera fourni par les compagnies d’assurance et par le gérant de la société. Ce contenu sera intégré à la base de données.  
+
+Le contenu devra dans le même temps être ajouté aux réseaux sociaux. 
+
+
+### d) Technologies utilisées 
+
+####Outils de conception et de stockage :  
+
+-    GitHub, pour le stockage et la gestion des versions. 
+
+-    Trello, pour l’organisation des tâches. 
+
+-    Google Drive, pour le stockage de la documentation. 
+
+-    Mocodo, pour la création du Modèle Conceptuel de Données. 
+
+-    Balsamiq, pour la création des Wireframes. 
+
+-    GlooMaps, pour la conception de l’arborescence. 
+
+-    Toolki, pour la palette de couleur. 
+
+#####Développement côté Frontend :  
+
+-    Twig, le moteur de Template de Symfony. 
+
+-    JavaScript, langage pour dynamiser les éléments. 
+
+-    JQuery, librairie JavaScript. 
+
+-    Bootstrap, le Framework JavaScript/CSS afin de styliser le site et faciliter le responsive design. 
+
+#####Développement côté Backend :  
+
+-    Symfony 5, le Framework PHP. 
+
+-    MySQL, le gestionnaire de base de données. 
+
+-    Doctrine, l’Object Relational Mapping de Symfony. 
+
+-    PhpMyAdmin, l’interface de gestion de base de données. 
+
+J’utiliserai également Google Analytics afin d’avoir des informations sur le trafic du site ainsi que “tarteauciton” pour la gestion des cookies.  
+
+
+### e) User stories
+
+
+|En tant que|Je veux pouvoir|Afin de|
+|---    |:-:    |:-:    |
+|       |       |       |       
+|       |       |       |
+|       |       |       |
