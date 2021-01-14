@@ -35,7 +35,6 @@ Le site se devra d’être totalement responsive (adaptable sur mobile, tablette
 Le site en revanche ne nécessite pas d’être multilingue au vu de la cible (France). 
 
 
-
 ## 2. Description graphique
 
 ### a) Charte Graphique
@@ -161,3 +160,11 @@ J’utiliserai également Google Analytics afin d’avoir des informations sur l
 | Administrateur |Ajouter, modifier, supprimer un article|Gérer le contenu du site |
 |       |Ajouter, modifier, supprimer un utilisateur|Gérer le contenu du site |
 |       |Ajouter, modifier, supprimer un produit d’assurance|Gérer le contenu du site|
+
+### f) Dictionnaire des routes
+
+|URL|HTTP Method|Method|Title|Content|
+|---    |:-:    |:-:    |:-:    |--:    |
+|HomeController|
+  |/|GET|home|Accueil|Actu, liste produit et contact|
+|       |       |       |       |       |
